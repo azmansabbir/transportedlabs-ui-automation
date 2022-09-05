@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662308309640' stop='1662308331337'>
+    <name>TC001</name>
+    <title>TC001</title>
+    <test-cases>
+        <test-case start='1662308316310' status='failed' stop='1662308331335'>
+            <name>Login positive _ JIRA101</name>
+            <title>Login positive _ JIRA101</title>
+            <labels>
+                <label name='story' value='JIRA101'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1662308316312' status='passed' stop='1662308316447'>
+                    <name>Navigate to letcode</name>
+                    <title>Navigate to letcode</title>
+                    <attachments>
+                        <attachment title='naviagation' source='566149fb-073c-4366-ac03-0b2e762d270d-attachment.png' type='image/png' size='5322'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662308316447' status='undefined'>
+                    <name>Click login link</name>
+                    <title>Click login link</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>: Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.Error: 
+                    at new Spec (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmine\Spec.js:124:22)
+                    at new Spec (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\setup_jest_globals.js:81:9)
+                    at specFactory (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmine\Env.js:476:22)
+                    at Env.it (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmine\Env.js:541:22)
+                    at Env.it (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:161:23)
+                    at it (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:83:21)
+                    at Suite.&lt;anonymous> (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\TC002.test.ts:25:5)
+                    at addSpecsToSuite (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmine\Env.js:425:49)
+                    at Env.describe (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmine\Env.js:395:9)
+                    at describe (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmine\jasmineLight.js:71:18)</stack-trace>
+            </failure>
+            <description type='text'>Login into LetCode</description>
+        </test-case>
+        <test-case start='1662308331335' status='pending' stop='1662308331336'>
+            <name>Login again</name>
+            <title>Login again</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Temporarily disabled with xit</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

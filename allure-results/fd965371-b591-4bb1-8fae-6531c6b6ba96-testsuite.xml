@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662318564734' stop='1662318566127'>
+    <name>TC001</name>
+    <title>TC001</title>
+    <test-cases>
+        <test-case start='1662318566113' status='failed' stop='1662318566126'>
+            <name>Login positive _ JIRA101</name>
+            <title>Login positive _ JIRA101</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "https://letcode.in/"
+                Received: "https://garrett.testingdxp.com//admin/#/sign-in"</message>
+                <stack-trace>Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "https://letcode.in/"
+                Received: "https://garrett.testingdxp.com//admin/#/sign-in"
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\Login004.test.ts:19:36
+                    at Generator.next (&lt;anonymous>)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\Login004.test.ts:8:71
+                    at new Promise (&lt;anonymous>)
+                    at Object.&lt;anonymous>.__awaiter (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\Login004.test.ts:4:12)
+                    at Object.&lt;anonymous> (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\Login004.test.ts:17:53)
+                    at Object.asyncJestTest (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:133:37)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:46:12
+                    at new Promise (&lt;anonymous>)
+                    at mapper (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:29:19)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

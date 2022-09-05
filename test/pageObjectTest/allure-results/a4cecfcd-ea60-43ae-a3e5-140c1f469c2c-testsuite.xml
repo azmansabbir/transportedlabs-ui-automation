@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662323391537' stop='1662323398811'>
+    <name>TC001</name>
+    <title>TC001</title>
+    <test-cases>
+        <test-case start='1662323392917' status='pending' stop='1662323392918'>
+            <name>Login positive _ATASK001</name>
+            <title>Login positive _ATASK001</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Temporarily disabled with xit</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1662323392918' status='passed' stop='1662323398810'>
+            <name>Login again</name>
+            <title>Login again</title>
+            <labels>
+                <label name='story' value='ATASK101'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1662323393109' status='passed' stop='1662323397860'>
+                    <name>Enter username</name>
+                    <title>Enter username</title>
+                    <attachments>
+                        <attachment title='username' source='490d7360-fa3c-48c2-a646-fb78515f4ee6-attachment.png' type='image/png' size='26837'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662323397860' status='passed' stop='1662323398156'>
+                    <name>Enter Password</name>
+                    <title>Enter Password</title>
+                    <attachments>
+                        <attachment title='Enter Password' source='325158b2-e4da-4412-9ab7-bf458945191b-attachment.png' type='image/png' size='27449'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Login into LetCode</description>
+        </test-case>
+        <test-case start='1662323398811' status='pending' stop='1662323398811'>
+            <name>Login New</name>
+            <title>Login New</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Temporarily disabled with xit</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

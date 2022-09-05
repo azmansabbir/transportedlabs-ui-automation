@@ -1,0 +1,33 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662319007303' stop='1662319011661'>
+    <name>Validate transported labs login</name>
+    <title>Validate transported labs login</title>
+    <test-cases>
+        <test-case start='1662319007303' status='failed' stop='1662319011661'>
+            <name>Login a user</name>
+            <title>Login a user</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: page.goto: Navigation failed because page was closed!
+                =========================== logs ===========================
+                navigating to "https://letcode.in/", waiting until "load"
+                ============================================================</message>
+                <stack-trace>page.goto: Navigation failed because page was closed!
+                =========================== logs ===========================
+                navigating to "https://letcode.in/", waiting until "load"
+                ============================================================
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\login03.test.ts:18:20
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\login03.test.ts:8:71
+                    at Object.&lt;anonymous>.__awaiter (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\login03.test.ts:4:12)
+                    at Object.&lt;anonymous> (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\login03.test.ts:14:40)
+                    at Object.asyncJestTest (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:133:37)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:46:12
+                    at mapper (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:29:19)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:76:41</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

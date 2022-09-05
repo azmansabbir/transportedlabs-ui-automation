@@ -1,0 +1,146 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662354343828' stop='1662354355842'>
+    <name>TL001</name>
+    <title>TL001</title>
+    <test-cases>
+        <test-case start='1662354345101' status='pending' stop='1662354345102'>
+            <name>Login positive _ATASK001</name>
+            <title>Login positive _ATASK001</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Temporarily disabled with xit</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1662354345102' status='passed' stop='1662354352521'>
+            <name>Try to login with invalid Credentials</name>
+            <title>Try to login with invalid Credentials</title>
+            <labels>
+                <label name='story' value='ATASK101'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1662354345297' status='passed' stop='1662354350902'>
+                    <name>Enter username</name>
+                    <title>Enter username</title>
+                    <attachments>
+                        <attachment title='username' source='372e0323-bf7f-48d1-a0b7-bd7d1ebad067-attachment.png' type='image/png' size='27640'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662354350902' status='passed' stop='1662354351182'>
+                    <name>Enter Password</name>
+                    <title>Enter Password</title>
+                    <attachments>
+                        <attachment title='Enter Password' source='ff4f8b01-f43b-4aaf-856d-326e6d67d122-attachment.png' type='image/png' size='28200'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662354351182' status='passed' stop='1662354351485'>
+                    <name>Click on the login button</name>
+                    <title>Click on the login button</title>
+                    <attachments>
+                        <attachment title='Click on the login button' source='631a403e-9cfb-4062-be2d-aa14a6ebd5b0-attachment.png' type='image/png' size='27500'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662354351485' status='passed' stop='1662354351934'>
+                    <name>Invalid credentials</name>
+                    <title>Invalid credentials</title>
+                    <attachments>
+                        <attachment title='Invalid credentials' source='e5cbc097-61da-419b-9595-69e26c2cf01c-attachment.png' type='image/png' size='28264'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662354351934' status='passed' stop='1662354352329'>
+                    <name>Click on the ok button</name>
+                    <title>Click on the ok button</title>
+                    <attachments>
+                        <attachment title='Click on the ok button' source='21c4e23b-94dd-4afb-99a1-1d75e1d649d5-attachment.png' type='image/png' size='36884'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662354352329' status='passed' stop='1662354352521'>
+                    <name>Should be show login page</name>
+                    <title>Should be show login page</title>
+                    <attachments>
+                        <attachment title='Should be show login page' source='0deadcd2-6127-4df2-bced-ab24c67eaf76-attachment.png' type='image/png' size='27295'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Login into LetCode</description>
+        </test-case>
+        <test-case start='1662354352521' status='failed' stop='1662354355842'>
+            <name>Try to login with valid Credentials</name>
+            <title>Try to login with valid Credentials</title>
+            <labels>
+                <label name='story' value='ATASK101'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1662354352724' status='passed' stop='1662354355248'>
+                    <name>Enter username</name>
+                    <title>Enter username</title>
+                    <attachments>
+                        <attachment title='username' source='cf00fe18-f55c-44bb-9914-0acc2924b9a4-attachment.png' type='image/png' size='26502'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662354355248' status='passed' stop='1662354355505'>
+                    <name>Enter Password</name>
+                    <title>Enter Password</title>
+                    <attachments>
+                        <attachment title='Enter Password' source='a9e770c5-6256-4a86-bfce-9b111e5be00c-attachment.png' type='image/png' size='27173'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662354355505' status='passed' stop='1662354355838'>
+                    <name>Click on the login button</name>
+                    <title>Click on the login button</title>
+                    <attachments>
+                        <attachment title='Click on the login button' source='2f5faeb9-a096-410f-82ae-386d51c474ff-attachment.png' type='image/png' size='26477'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662354355838' status='undefined'>
+                    <name>Should be show home page</name>
+                    <title>Should be show home page</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toContain(expected) // indexOf
+                
+                Expected substring: "https://garrett.testingdxp.com//admin/#/home/air-drop"
+                Received string:    "https://garrett.testingdxp.com//admin/#/sign-in"</message>
+                <stack-trace>Error: expect(received).toContain(expected) // indexOf
+                
+                Expected substring: "https://garrett.testingdxp.com//admin/#/home/air-drop"
+                Received string:    "https://garrett.testingdxp.com//admin/#/sign-in"
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\TL001.test.ts:125:28
+                    at Generator.next (&lt;anonymous>)
+                    at fulfilled (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\TL001.test.ts:5:58)</stack-trace>
+            </failure>
+            <description type='text'>Login into LetCode</description>
+        </test-case>
+        <test-case start='1662354355842' status='pending' stop='1662354355842'>
+            <name>Login New</name>
+            <title>Login New</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Temporarily disabled with xit</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

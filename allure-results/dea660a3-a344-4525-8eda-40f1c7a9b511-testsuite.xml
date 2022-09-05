@@ -1,0 +1,43 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662318306326' stop='1662318306955'>
+    <name>TC002</name>
+    <title>TC002</title>
+    <test-cases>
+        <test-case start='1662318306795' status='failed' stop='1662318306815'>
+            <name>TC002 Login 1</name>
+            <title>TC002 Login 1</title>
+            <labels>
+                <label name='story' value='JIRA101'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1662318306796' status='undefined'>
+                    <name>Navigate to letcode</name>
+                    <title>Navigate to letcode</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: page.goto: Navigation failed because page was closed!
+                =========================== logs ===========================
+                navigating to "https://letcode.in/", waiting until "load"
+                ============================================================</message>
+                <stack-trace>page.goto: Navigation failed because page was closed!
+                =========================== logs ===========================
+                navigating to "https://letcode.in/", waiting until "load"
+                ============================================================
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\TC003.test.ts:19:20
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\TC003.test.ts:8:71
+                    at Object.&lt;anonymous>.__awaiter (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\TC003.test.ts:4:12)
+                    at Object.&lt;anonymous> (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\TC003.test.ts:18:26)
+                    at Object.asyncJestLifecycle (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\jasmineAsyncInstall.js:72:37)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:46:12
+                    at mapper (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:29:19)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:76:41</stack-trace>
+            </failure>
+            <description type='text'>Login into LetCode</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

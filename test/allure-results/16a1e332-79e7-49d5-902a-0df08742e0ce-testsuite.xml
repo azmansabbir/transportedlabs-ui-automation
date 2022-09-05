@@ -1,0 +1,65 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662319811744' stop='1662319829933'>
+    <name>TC002</name>
+    <title>TC002</title>
+    <test-cases>
+        <test-case start='1662319819730' status='failed' stop='1662319829749'>
+            <name>TC002 Login 1</name>
+            <title>TC002 Login 1</title>
+            <labels>
+                <label name='story' value='JIRA101'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1662319819732' status='passed' stop='1662319820305'>
+                    <name>Navigate to letcode</name>
+                    <title>Navigate to letcode</title>
+                    <attachments>
+                        <attachment title='naviagation' source='19e1d253-4331-403e-9816-1c42db7f811f-attachment.png' type='image/png' size='114531'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662319820305' status='passed' stop='1662319820664'>
+                    <name>Click login link</name>
+                    <title>Click login link</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1662319820665' status='passed' stop='1662319821749'>
+                    <name>enter username</name>
+                    <title>enter username</title>
+                    <attachments>
+                        <attachment title='username' source='d664e648-14e7-4a81-bc00-d7c8cd99b27c-attachment.png' type='image/png' size='163487'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662319821749' status='passed' stop='1662319822238'>
+                    <name>enter password</name>
+                    <title>enter password</title>
+                    <attachments>
+                        <attachment title='screenshot' source='55068567-0817-4e06-b8fe-099fde81cfa9-attachment.png' type='image/png' size='161787'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>Error: page.waitForSelector: Target closed
+                =========================== logs ===========================
+                waiting for selector "div[role='alertdialog']" to be visible
+                ============================================================</message>
+                <stack-trace>page.waitForSelector: Target closed
+                =========================== logs ===========================
+                waiting for selector "div[role='alertdialog']" to be visible
+                ============================================================
+                    at CommonFunctions.&lt;anonymous> (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\page\common.page.ts:10:43)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\page\common.page.ts:8:71
+                    at Object.&lt;anonymous>.__awaiter (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\page\common.page.ts:4:12)
+                    at CommonFunctions.toaster (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\page\common.page.ts:10:26)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\TC003.test.ts:54:38
+                    at fulfilled (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\test\pageObjectTest\TC003.test.ts:5:58)</stack-trace>
+            </failure>
+            <description type='text'>Login into LetCode</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

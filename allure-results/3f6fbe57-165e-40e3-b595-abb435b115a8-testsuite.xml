@@ -1,0 +1,55 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662359219883' stop='1662359264924'>
+    <name>TL001</name>
+    <title>TL001</title>
+    <test-cases>
+        <test-case start='1662359234901' status='failed' stop='1662359249914'>
+            <name>Try to login with invalid Credentials</name>
+            <title>Try to login with invalid Credentials</title>
+            <labels>
+                <label name='story' value='ATASK101'/>
+            </labels>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.Error: Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.
+                    at mapper (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:28:45)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:76:41</stack-trace>
+            </failure>
+            <description type='text'>Login into TransportedLabs</description>
+        </test-case>
+        <test-case start='1662359249914' status='failed' stop='1662359264922'>
+            <name>Try to login with valid Credentials</name>
+            <title>Try to login with valid Credentials</title>
+            <labels>
+                <label name='story' value='ATASK101'/>
+            </labels>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.Error: Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.
+                    at mapper (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:28:45)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:76:41</stack-trace>
+            </failure>
+            <description type='text'>Login into LetCode</description>
+        </test-case>
+        <test-case start='1662359264922' status='pending' stop='1662359264923'>
+            <name>Login New</name>
+            <title>Login New</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.</message>
+                <stack-trace>Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.Error: Timeout - Async callback was not invoked within the 15000 ms timeout specified by jest.setTimeout.
+                    at mapper (D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:28:45)
+                    at D:\Work Station\Unidevgo\TransportedLabs\Automation\PlayWright\Transportedlabs-UI-Automation\node_modules\jest-jasmine2\build\queueRunner.js:76:41</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
