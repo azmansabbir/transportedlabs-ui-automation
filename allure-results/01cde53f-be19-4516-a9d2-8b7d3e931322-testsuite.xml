@@ -1,0 +1,139 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1662462959661' stop='1662462977585'>
+    <name>TL001</name>
+    <title>TL001</title>
+    <test-cases>
+        <test-case start='1662462963273' status='passed' stop='1662462971962'>
+            <name>Try to login with invalid Credentials</name>
+            <title>Try to login with invalid Credentials</title>
+            <labels>
+                <label name='story' value='Task001'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1662462963274' status='passed' stop='1662462963791'>
+                    <name>Navigate to the url</name>
+                    <title>Navigate to the url</title>
+                    <attachments>
+                        <attachment title='Navigate to the url' source='6990e34b-7c21-4ef5-8fa4-8b49b26ab829-attachment.png' type='image/png' size='5322'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662462963791' status='passed' stop='1662462970398'>
+                    <name>Enter username</name>
+                    <title>Enter username</title>
+                    <attachments>
+                        <attachment title='username' source='fc452a0f-4224-4d76-b74c-b13b5e3d4623-attachment.png' type='image/png' size='27640'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662462970398' status='passed' stop='1662462970678'>
+                    <name>Enter Password</name>
+                    <title>Enter Password</title>
+                    <attachments>
+                        <attachment title='Enter Password' source='3c461fe9-b17e-4f44-a810-24c6e03afb60-attachment.png' type='image/png' size='28273'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662462970678' status='passed' stop='1662462971052'>
+                    <name>Click on the login button</name>
+                    <title>Click on the login button</title>
+                    <attachments>
+                        <attachment title='Click on the login button' source='c09a3b06-6e9a-49fa-8ee3-f4964b136899-attachment.png' type='image/png' size='27558'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662462971052' status='passed' stop='1662462971280'>
+                    <name>Invalid credentials</name>
+                    <title>Invalid credentials</title>
+                    <attachments>
+                        <attachment title='Invalid credentials' source='74c66d3b-8f30-4387-9388-9bc70db22510-attachment.png' type='image/png' size='27771'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662462971280' status='passed' stop='1662462971698'>
+                    <name>Click on the ok button</name>
+                    <title>Click on the ok button</title>
+                    <attachments>
+                        <attachment title='Click on the ok button' source='9e4632e0-572f-479d-a691-6e9943afca3d-attachment.png' type='image/png' size='39045'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662462971698' status='passed' stop='1662462971960'>
+                    <name>Should be show login page</name>
+                    <title>Should be show login page</title>
+                    <attachments>
+                        <attachment title='Should be show login page' source='7524123d-42f5-4c88-81d5-2940d8bdbd95-attachment.png' type='image/png' size='27295'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Login into TransportedLabs with valid credentials</description>
+        </test-case>
+        <test-case start='1662462971962' status='passed' stop='1662462977584'>
+            <name>Try to login with valid Credentials</name>
+            <title>Try to login with valid Credentials</title>
+            <labels>
+                <label name='story' value='Task002'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1662462971963' status='passed' stop='1662462972578'>
+                    <name>Navigate to the url</name>
+                    <title>Navigate to the url</title>
+                    <attachments>
+                        <attachment title='Navigate to the url' source='284507d2-2417-4511-b155-63f1af02821e-attachment.png' type='image/png' size='5322'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662462972578' status='passed' stop='1662462976684'>
+                    <name>Enter username</name>
+                    <title>Enter username</title>
+                    <attachments>
+                        <attachment title='username' source='9be13f4f-78ba-40ae-a6a4-18cb4014833c-attachment.png' type='image/png' size='26501'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662462976684' status='passed' stop='1662462977003'>
+                    <name>Enter Password</name>
+                    <title>Enter Password</title>
+                    <attachments>
+                        <attachment title='Enter Password' source='ee3b763a-9ee8-4401-828d-7b598cd07580-attachment.png' type='image/png' size='27137'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662462977003' status='passed' stop='1662462977328'>
+                    <name>Click on the login button</name>
+                    <title>Click on the login button</title>
+                    <attachments>
+                        <attachment title='Click on the login button' source='44645a30-e524-416b-ab76-4a70e63b3433-attachment.png' type='image/png' size='26437'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1662462977328' status='passed' stop='1662462977584'>
+                    <name>Should be show home page</name>
+                    <title>Should be show home page</title>
+                    <attachments>
+                        <attachment title='Should be show home page' source='556e2fc2-d3b3-40d4-9644-9a9323cacef7-attachment.png' type='image/png' size='26704'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Login into TransportedLabs with valid credentials</description>
+        </test-case>
+        <test-case start='1662462977585' status='pending' stop='1662462977585'>
+            <name>Login New</name>
+            <title>Login New</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Temporarily disabled with xit</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
