@@ -38,7 +38,7 @@
       [
         "html",
         {
-          "open": "never"
+          "open": "always"
         }
       ]
     ],
@@ -88,18 +88,62 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 57810,
+                      "duration": 73814,
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
                           "title": "Verify that admin saccessfully go to the mobiledesign page",
-                          "duration": 26494
+                          "duration": 19160
                         },
                         {
-                          "title": "Upload First Image",
-                          "duration": 30077
+                          "title": "Verify that admin saccessfully upload a font into",
+                          "duration": 3063
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input parimary color",
+                          "duration": 9990
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input secondary color",
+                          "duration": 6686
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input Tertiary color",
+                          "duration": 3737
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input Button color",
+                          "duration": 3818
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input Button Glow color",
+                          "duration": 3756
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input Text Field color",
+                          "duration": 3766
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input Text Field color",
+                          "duration": 3656
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input Header Field color",
+                          "duration": 3830
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input Header Field color",
+                          "duration": 3831
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input Gamification Field color",
+                          "duration": 3786
+                        },
+                        {
+                          "title": "Verify that admin saccessfully input Gamification Glow Line Field color",
+                          "duration": 3807
                         }
                       ],
                       "attachments": [

@@ -87,7 +87,7 @@ const config: PlaywrightTestConfig = {
         ["dot"], // -> console
         ["json", { outputFile: "test-result.json" }], //  -> JSON
         ['html', {
-            open: "never"
+            open: "always"
         }] // -> HTML
     ],
     // globalTeardown: './helper/globalsetup.ts'

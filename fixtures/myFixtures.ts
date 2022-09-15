@@ -6,7 +6,7 @@ type Azman = {
 
 
 const fixture = baseTest.extend<Azman>({
-    hey: "I am letcode",
+    hey: "I am ",
 
 })
 
