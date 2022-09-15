@@ -1,14 +1,30 @@
-{
+    {
         "compilerOptions": {
-            "target": "es6",
+            "lib":["es2015","ES6", "dom", "es2018.promise"],
+            "target": "ESNext",
             "strict": true,
             "module": "commonjs",
             "sourceMap": true,
             "resolveJsonModule": true,
             "types": [
-                "@types/jest",
-                "jest-playwright-preset",
-                "expect-playwright",
-            ]
+                "node", "jest", "@testing-library/jest-dom"
+                 
+            ],
+            "baseUrl": ".",
+            "paths": {
+                "@pages/*": [
+                    "pages/*"
+                ],
+                "@fixtures/*": [
+                    "fixtures/*"
+                ],
+                "@data/*": [
+                    "data/*"
+                ],
+                "@utils/*": [
+                    "utils/*"
+                ]
+            }
         }
     }
+

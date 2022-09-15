@@ -1,0 +1,132 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Work Station/Unidevgo/TransportedLabs/Automation/PlayWright/Transportedlabs-UI-Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "name": "",
+        "testDir": "D:/Work Station/Unidevgo/TransportedLabs/Automation/PlayWright/Transportedlabs-UI-Automation",
+        "testIgnore": [],
+        "testMatch": [
+          "TL002MD.test.ts"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "reporter": [
+      [
+        "dot",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-result.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "rootDir": "D:/Work Station/Unidevgo/TransportedLabs/Automation/PlayWright/Transportedlabs-UI-Automation",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.25.2",
+    "workers": 2,
+    "webServer": null,
+    "_watchMode": false,
+    "_webServers": [],
+    "_globalOutputDir": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation",
+    "_configDir": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation",
+    "_testGroupsCount": 1,
+    "_workerIsolation": "isolate-pools"
+  },
+  "suites": [
+    {
+      "title": "tests\\MainMenu\\TL002MD.test.ts",
+      "file": "tests/MainMenu/TL002MD.test.ts",
+      "line": 0,
+      "column": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Mobile Design Functionality",
+          "file": "tests/MainMenu/TL002MD.test.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "E2E test",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 57810,
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Verify that admin saccessfully go to the mobiledesign page",
+                          "duration": 26494
+                        },
+                        {
+                          "title": "Upload First Image",
+                          "duration": 30077
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\test-results\\tests-MainMenu-TL002MD-Mobile-Design-Functionality-E2E-test\\video.webm"
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\test-results\\tests-MainMenu-TL002MD-Mobile-Design-Functionality-E2E-test\\test-finished-1.png"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "file": "tests/MainMenu/TL002MD.test.ts",
+              "line": 9,
+              "column": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

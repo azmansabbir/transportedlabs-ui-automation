@@ -1,3 +1,10 @@
-node_modules
-1-getting-started
-2-advanced-examples
+node_modules/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/test-results/
+/playwright-report/
+/playwright/.cache/
