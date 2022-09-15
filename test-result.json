@@ -38,7 +38,7 @@
       [
         "html",
         {
-          "open": "always"
+          "open": "never"
         }
       ]
     ],
@@ -88,70 +88,69 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 73814,
+                      "duration": 106175,
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
                           "title": "Verify that admin saccessfully go to the mobiledesign page",
-                          "duration": 19160
+                          "duration": 22666
                         },
                         {
                           "title": "Verify that admin saccessfully upload a font into",
-                          "duration": 3063
+                          "duration": 3114
                         },
                         {
                           "title": "Verify that admin saccessfully input parimary color",
-                          "duration": 9990
+                          "duration": 9853
                         },
                         {
                           "title": "Verify that admin saccessfully input secondary color",
-                          "duration": 6686
+                          "duration": 6610
                         },
                         {
                           "title": "Verify that admin saccessfully input Tertiary color",
-                          "duration": 3737
+                          "duration": 3677
                         },
                         {
                           "title": "Verify that admin saccessfully input Button color",
-                          "duration": 3818
+                          "duration": 3660
                         },
                         {
                           "title": "Verify that admin saccessfully input Button Glow color",
-                          "duration": 3756
+                          "duration": 3693
                         },
                         {
                           "title": "Verify that admin saccessfully input Text Field color",
-                          "duration": 3766
+                          "duration": 3652
                         },
                         {
                           "title": "Verify that admin saccessfully input Text Field color",
-                          "duration": 3656
+                          "duration": 3640
                         },
                         {
                           "title": "Verify that admin saccessfully input Header Field color",
-                          "duration": 3830
+                          "duration": 3671
                         },
                         {
                           "title": "Verify that admin saccessfully input Header Field color",
-                          "duration": 3831
+                          "duration": 3672
                         },
                         {
                           "title": "Verify that admin saccessfully input Gamification Field color",
-                          "duration": 3786
+                          "duration": 3598
                         },
                         {
                           "title": "Verify that admin saccessfully input Gamification Glow Line Field color",
-                          "duration": 3807
+                          "duration": 3620
+                        },
+                        {
+                          "title": "Upload First Image",
+                          "duration": 30268
                         }
                       ],
                       "attachments": [
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\test-results\\tests-MainMenu-TL002MD-Mobile-Design-Functionality-E2E-test\\video.webm"
-                        },
                         {
                           "name": "screenshot",
                           "contentType": "image/png",

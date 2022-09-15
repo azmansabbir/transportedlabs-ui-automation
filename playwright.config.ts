@@ -40,7 +40,7 @@ const config: PlaywrightTestConfig = {
         headless: !true,
         // browserName: "chromium",
         screenshot: "on",
-        video: "on",
+        video: "off",
         // trace: "on",
         baseURL: "https://garrett.testingdxp.com/",
         // baseURL: "https://dev107189.service-now.com/api/now/table/incident",
@@ -87,7 +87,7 @@ const config: PlaywrightTestConfig = {
         ["dot"], // -> console
         ["json", { outputFile: "test-result.json" }], //  -> JSON
         ['html', {
-            open: "always"
+            open: "never"
         }] // -> HTML
     ],
     // globalTeardown: './helper/globalsetup.ts'

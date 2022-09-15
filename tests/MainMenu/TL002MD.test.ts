@@ -46,14 +46,6 @@ await test.step("Verify that admin saccessfully go to the mobiledesign page", as
 
 
 await test.step("Verify that admin saccessfully upload a font into", async () => {
-
-
-
-
-
-
-
-
                 // let ele = MainMenu.clickMobileDesign()
                 // expect(await ele.getAtribute("placeholder")).toBe("Mobile Deseign")
                 // console.log(await MainMenu.mobileDesign())
@@ -66,26 +58,7 @@ await test.step("Verify that admin saccessfully upload a font into", async () =>
                 })
                 await MainMenu.clickUploadFontInputFiled()
 
-                await page.waitForTimeout(3000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+         await page.waitForTimeout(3000);
 
 })
 
@@ -424,20 +397,21 @@ await test.step("Verify that admin saccessfully input Gamification Glow Line Fie
 
 })
 
-// await test.step("Upload First Image", async () => {
+await test.step("Upload First Image", async () => {
 
-// const filePath1 = "files/page.png"  
+const filePath1 = "files/page.png"  
 
-// await page
-//         .on("filechooser", async (filechooser) => {
-//                 await filechooser.setFiles([filePath1])
-//     })
+await page
+        .on("filechooser", async (filechooser) => {
+                await filechooser.setFiles([filePath1])
+    })
+    await page.locator('text=Landscape Background:ImageVideo >> div').nth(3).click();
 //     await MainMenu.clickLandscapeBackgroundInputField();
         
-// await page.waitForTimeout(30000)
+await page.waitForTimeout(30000)
 
 
-// })
+})
 
 
         
