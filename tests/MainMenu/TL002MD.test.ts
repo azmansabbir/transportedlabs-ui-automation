@@ -23,15 +23,15 @@ await test.step("Verify that admin saccessfully go to the mobiledesign page", as
         
                         await MainMenu.clickHomeAvater();
         
-                        await page.waitForTimeout(3000);
+                        await page.waitForTimeout(6000);
         
                         await MainMenu.mainMenuBtn();
         
-                        await page.waitForTimeout(3000);
+                        await page.waitForTimeout(6000);
 
                         await MainMenu.clickMobileDesign();
 
-                        await page.waitForTimeout(3000)
+                        await page.waitForTimeout(6000)
         
                         // await expect(page).toHaveURL(Env.MobileDesignPageUrl)
         
@@ -77,7 +77,7 @@ await test.step("Verify that admin saccessfully upload a font into", async () =>
         //         })
         //         await MainMenu.clickUploadFontInputFiled()
 
-        //  await page.waitForTimeout(3000);
+        //  await page.waitForTimeout(6000);
 
         await MainMenu.clickUploadFontAndUploadFiles()
 
@@ -96,12 +96,12 @@ await test.step("Verify that admin saccessfully input parimary color", async () 
 
 
                 await MainMenu.clickClearAllBtn();
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
                 await MainMenu.checkPrimaryColortxt()
 
                 await MainMenu.clickPrimaryColorField()
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
   
 
@@ -116,7 +116,7 @@ await test.step("Verify that admin saccessfully input parimary color", async () 
                 await MainMenu.primaryColorHexInputField()
 
                 await MainMenu.clickSaveBtn()
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
 
 
@@ -159,7 +159,7 @@ await test.step("Verify that admin saccessfully input secondary color", async ()
                 await MainMenu.checkSecondaryText();
 
                 await MainMenu.clickSecondaryColorBtn();
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
                 await MainMenu.SecondaryColorFirstInputField()
 
@@ -171,7 +171,7 @@ await test.step("Verify that admin saccessfully input secondary color", async ()
 
                 await MainMenu.SecondaryColorHexInputField()
 
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
                 await MainMenu.clickSaveBtn()
 
@@ -188,7 +188,7 @@ await test.step("Verify that admin saccessfully input Tertiary color", async () 
                 await MainMenu.checkTertiaryText();
 
                 await MainMenu.clickTertiaryColorBtn();
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
                 
                 await MainMenu.TertiaryColorFirstInputField()
@@ -216,7 +216,7 @@ await test.step("Verify that admin saccessfully input Button color", async () =>
                 await MainMenu.checkButtonText();
 
                 await MainMenu.clickButtonColorBtn();
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
                 await MainMenu.ButtonColorFirstInputField()
 
@@ -242,7 +242,7 @@ await test.step("Verify that admin saccessfully input Button Glow color", async 
                 await MainMenu.checkButtonGlowText();
 
                 await MainMenu.clickButtonGlowColorBtn();
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
                 await MainMenu.ButtonGlowColorFirstInputField()
 
@@ -262,31 +262,31 @@ await test.step("Verify that admin saccessfully input Button Glow color", async 
 
 })
 
-await test.step("Verify that admin saccessfully input Text Field color", async () => {
+// await test.step("Verify that admin saccessfully input Text Field color", async () => {
 
 
-                await MainMenu.checkTextText();
+//                 await MainMenu.checkTextText();
 
-                await MainMenu.clickTextColorBtn();
-                await page.waitForTimeout(3000);
+//                 await MainMenu.clickTextColorBtn();
+//                 await page.waitForTimeout(6000);
 
-                await MainMenu.TextColorFirstInputField()
+//                 await MainMenu.TextColorFirstInputField()
 
-                await MainMenu.TextColorSecondInputField()
+//                 await MainMenu.TextColorSecondInputField()
 
-                await MainMenu.TextColorThirdInputField()
+//                 await MainMenu.TextColorThirdInputField()
 
-                await MainMenu.TextColorOpacityInputField()
+//                 await MainMenu.TextColorOpacityInputField()
 
-                await MainMenu.TextColorHexInputField()
+//                 await MainMenu.TextColorHexInputField()
 
-                await MainMenu.clickSaveBtn()
+//                 await MainMenu.clickSaveBtn()
 
                 
 
 
 
-})
+// })
 
 // await test.step("Verify that admin saccessfully input Text Field color", async () => {
 
@@ -294,7 +294,7 @@ await test.step("Verify that admin saccessfully input Text Field color", async (
 //                 await MainMenu.checkTextDialogBoxText();
 
 //                 await MainMenu.clickTextDialogBoxColorBtn();
-//                 await page.waitForTimeout(3000);
+//                 await page.waitForTimeout(6000);
 
 //                 await MainMenu.TextDialogBoxColorFirstInputField()
 
@@ -320,7 +320,7 @@ await test.step("Verify that admin saccessfully input Header Field color", async
                 await MainMenu.checkHeaderFieldText();
 
                 await MainMenu.clickHeaderFieldColorBtn();
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
                 await MainMenu.HeaderColorFirstInputField()
 
@@ -346,7 +346,7 @@ await test.step("Verify that admin saccessfully input Header Field color", async
                 await MainMenu.checkHeaderTextFieldText();
 
                 await MainMenu.clickHeaderTextFieldColorBtn();
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
                 await MainMenu.HeaderTextColorFirstInputField()
 
@@ -372,7 +372,7 @@ await test.step("Verify that admin saccessfully input Gamification Field color",
                 await MainMenu.checkGamificationFieldText();
 
                 await MainMenu.clickGamificationFieldColorBtn();
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
                 await MainMenu.GamificationColorFirstInputField()
 
@@ -398,7 +398,7 @@ await test.step("Verify that admin saccessfully input Gamification Glow Line Fie
                 await MainMenu.checkGamificationGlowLineFieldText();
 
                 await MainMenu.clickGamificationGlowLineFieldColorBtn();
-                await page.waitForTimeout(3000);
+                await page.waitForTimeout(6000);
 
                 await MainMenu.GamificationGlowLineColorFirstInputField()
 
@@ -460,7 +460,7 @@ await test.step("Upload First Image", async () => {
 // await page.dispatchEvent('YOUR_TARGET_SELECTOR', 'drop', { dataTransfer });
 
         
-// await page.waitForTimeout(30000)
+// await page.waitForTimeout(60000)
 
 // const buffer = readFileSync('testData/videos/test-video-1.mp4');
 //         // Create the DataTransfer and File

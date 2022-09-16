@@ -68,7 +68,7 @@ const config: PlaywrightTestConfig = {
          */
      },
     
-    timeout: 120000,
+    timeout: 200000,
    
 
     forbidOnly: !!process.env.CI,

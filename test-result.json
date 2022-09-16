@@ -21,7 +21,7 @@
         "testMatch": [
           "TL002MD.test.ts"
         ],
-        "timeout": 120000
+        "timeout": 200000
       }
     ],
     "reporter": [
@@ -80,7 +80,7 @@
               "tags": [],
               "tests": [
                 {
-                  "timeout": 120000,
+                  "timeout": 200000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectName": "",
@@ -88,70 +88,66 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 108189,
+                      "duration": 138104,
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
                           "title": "Verify that admin saccessfully go to the mobiledesign page",
-                          "duration": 33473
+                          "duration": 31621
                         },
                         {
                           "title": "Verify that admin saccessfully upload a font into",
-                          "duration": 116
+                          "duration": 50
                         },
                         {
                           "title": "Verify that admin saccessfully input parimary color",
-                          "duration": 9814
+                          "duration": 18873
                         },
                         {
                           "title": "Verify that admin saccessfully input secondary color",
-                          "duration": 6601
+                          "duration": 12715
                         },
                         {
                           "title": "Verify that admin saccessfully input Tertiary color",
-                          "duration": 3712
+                          "duration": 6651
                         },
                         {
                           "title": "Verify that admin saccessfully input Button color",
-                          "duration": 3734
+                          "duration": 6645
                         },
                         {
                           "title": "Verify that admin saccessfully input Button Glow color",
-                          "duration": 3690
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input Text Field color",
-                          "duration": 3702
+                          "duration": 6695
                         },
                         {
                           "title": "Verify that admin saccessfully input Header Field color",
-                          "duration": 3657
+                          "duration": 6794
                         },
                         {
                           "title": "Verify that admin saccessfully input Header Field color",
-                          "duration": 3688
+                          "duration": 6621
                         },
                         {
                           "title": "Verify that admin saccessfully input Gamification Field color",
-                          "duration": 3617
+                          "duration": 6606
                         },
                         {
                           "title": "Verify that admin saccessfully input Gamification Glow Line Field color",
-                          "duration": 3720
+                          "duration": 6687
                         },
                         {
                           "title": "Upload First Image",
-                          "duration": 9907
+                          "duration": 9393
                         },
                         {
                           "title": "Upload Second Image",
-                          "duration": 9104
+                          "duration": 9183
                         },
                         {
                           "title": "Upload Third Image",
-                          "duration": 8703
+                          "duration": 8529
                         }
                       ],
                       "attachments": [
