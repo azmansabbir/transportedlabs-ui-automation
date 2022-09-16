@@ -19,7 +19,7 @@
         "testDir": "D:/Work Station/Unidevgo/TransportedLabs/Automation/PlayWright/Transportedlabs-UI-Automation",
         "testIgnore": [],
         "testMatch": [
-          "TL002MD.test.ts"
+          "TL001Login.test.ts"
         ],
         "timeout": 200000
       }
@@ -62,21 +62,21 @@
   },
   "suites": [
     {
-      "title": "tests\\MainMenu\\TL002MD.test.ts",
-      "file": "tests/MainMenu/TL002MD.test.ts",
+      "title": "tests\\Login\\TL001Login.test.ts",
+      "file": "tests/Login/TL001Login.test.ts",
       "line": 0,
       "column": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Mobile Design Functionality",
-          "file": "tests/MainMenu/TL002MD.test.ts",
-          "line": 6,
+          "title": "Login functionality validation",
+          "file": "tests/Login/TL001Login.test.ts",
+          "line": 10,
           "column": 6,
           "specs": [
             {
               "title": "E2E test",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -87,84 +87,39 @@
                   "results": [
                     {
                       "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 138104,
+                      "status": "failed",
+                      "duration": 34345,
+                      "error": {
+                        "message": "locator.type: Target page, context or browser has been closed",
+                        "stack": "locator.type: Target page, context or browser has been closed\n    at LoginPage.enterEmail (D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\pages\\loginPage\\Login.page.ts:18:14)\n    at LoginPage.login (D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\pages\\loginPage\\Login.page.ts:11:20)\n    at D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\tests\\Login\\TL001Login.test.ts:28:33\n    at D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\tests\\Login\\TL001Login.test.ts:15:9"
+                      },
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
-                          "title": "Verify that admin saccessfully go to the mobiledesign page",
-                          "duration": 31621
-                        },
-                        {
-                          "title": "Verify that admin saccessfully upload a font into",
-                          "duration": 50
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input parimary color",
-                          "duration": 18873
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input secondary color",
-                          "duration": 12715
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input Tertiary color",
-                          "duration": 6651
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input Button color",
-                          "duration": 6645
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input Button Glow color",
-                          "duration": 6695
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input Header Field color",
-                          "duration": 6794
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input Header Field color",
-                          "duration": 6621
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input Gamification Field color",
-                          "duration": 6606
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input Gamification Glow Line Field color",
-                          "duration": 6687
-                        },
-                        {
-                          "title": "Upload First Image",
-                          "duration": 9393
-                        },
-                        {
-                          "title": "Upload Second Image",
-                          "duration": 9183
-                        },
-                        {
-                          "title": "Upload Third Image",
-                          "duration": 8529
+                          "title": "Verify the valid page title",
+                          "duration": 33957,
+                          "error": {
+                            "message": "locator.type: Target page, context or browser has been closed",
+                            "stack": "locator.type: Target page, context or browser has been closed\n    at LoginPage.enterEmail (D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\pages\\loginPage\\Login.page.ts:18:14)\n    at LoginPage.login (D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\pages\\loginPage\\Login.page.ts:11:20)\n    at D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\tests\\Login\\TL001Login.test.ts:28:33\n    at D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\tests\\Login\\TL001Login.test.ts:15:9"
+                          }
                         }
                       ],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\test-results\\tests-MainMenu-TL002MD-Mobile-Design-Functionality-E2E-test\\test-finished-1.png"
-                        }
-                      ]
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\tests\\Login\\TL001Login.test.ts",
+                        "column": 33,
+                        "line": 28
+                      }
                     }
                   ],
-                  "status": "expected"
+                  "status": "unexpected"
                 }
               ],
-              "file": "tests/MainMenu/TL002MD.test.ts",
-              "line": 11,
-              "column": 1
+              "file": "tests/Login/TL001Login.test.ts",
+              "line": 13,
+              "column": 9
             }
           ]
         }

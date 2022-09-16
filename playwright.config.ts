@@ -82,8 +82,9 @@ const config: PlaywrightTestConfig = {
     // grep: [new RegExp("@smoke"), new RegExp("@reg")],
     testMatch: [
                 // "uploadfile.test.ts",
-                "TL002MD.test.ts",
-                // "mobile.test.ts"
+                // "TL002MD.test.ts",
+                // "mobile.test.ts",
+                "TL001Login.test.ts"
                 ],
     retries: 0,
     // reporter: "./customReport/myReporter.ts"

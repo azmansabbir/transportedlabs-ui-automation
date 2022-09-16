@@ -21,9 +21,9 @@ test.describe('Login functionality validation', async () =>{
 
                 await page.waitForTimeout(6000)
 
-                expect(await page.screenshot({
-                        fullPage: true
-                    })).toMatchSnapshot("login-page-UI.png")
+                // expect(await page.screenshot({
+                //         fullPage: true
+                //     })).toMatchSnapshot("login-page-UI.png")
 
                 await loginPage.login(data.username, data.password)
 
