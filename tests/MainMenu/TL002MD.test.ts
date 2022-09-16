@@ -54,13 +54,32 @@ await test.step("Verify that admin saccessfully upload a font into", async () =>
 
                 // await MainMenu.clickUploadFontAndUploadFiles();
 
+              
+                // const buffer = readFileSync('./videos/a.png');
+                // // Create the DataTransfer and File
+                // const dataTransfer = await page.evaluateHandle((data) => {
+                // const dt = new DataTransfer();
+                // // Convert the buffer to a hex array
+                // const file = new File([data.toString('hex')], 'a.png', { type: 'application/png' });
+                // dt.items.add(file);
+                // return dt;
+                // }, buffer);
+                
+                // // Now dispatch
+                // await page.dispatchEvent('[type="font"]', 'drop', { dataTransfer });
+                
+                
+                // await page.waitForTimeout(6000)
 
-                page.on("filechooser", async (filechooser) => {
-                        await filechooser.setFiles([filePath0])
-                })
-                await MainMenu.clickUploadFontInputFiled()
 
-         await page.waitForTimeout(3000);
+        //         page.on("filechooser", async (filechooser) => {
+        //                 await filechooser.setFiles([filePath0])
+        //         })
+        //         await MainMenu.clickUploadFontInputFiled()
+
+        //  await page.waitForTimeout(3000);
+
+        await MainMenu.clickUploadFontAndUploadFiles()
 
 })
 
@@ -269,31 +288,31 @@ await test.step("Verify that admin saccessfully input Text Field color", async (
 
 })
 
-await test.step("Verify that admin saccessfully input Text Field color", async () => {
+// await test.step("Verify that admin saccessfully input Text Field color", async () => {
 
 
-                await MainMenu.checkTextDialogBoxText();
+//                 await MainMenu.checkTextDialogBoxText();
 
-                await MainMenu.clickTextDialogBoxColorBtn();
-                await page.waitForTimeout(3000);
+//                 await MainMenu.clickTextDialogBoxColorBtn();
+//                 await page.waitForTimeout(3000);
 
-                await MainMenu.TextDialogBoxColorFirstInputField()
+//                 await MainMenu.TextDialogBoxColorFirstInputField()
 
-                await MainMenu.TextDialogBoxColorSecondInputField()
+//                 await MainMenu.TextDialogBoxColorSecondInputField()
 
-                await MainMenu.TextDialogBoxColorThirdInputField()
+//                 await MainMenu.TextDialogBoxColorThirdInputField()
 
-                await MainMenu.TextDialogBoxColorOpacityInputField()
+//                 await MainMenu.TextDialogBoxColorOpacityInputField()
 
-                await MainMenu.TextDialogBoxColorHexInputField()
+//                 await MainMenu.TextDialogBoxColorHexInputField()
 
-                await MainMenu.clickSaveBtn()
+//                 await MainMenu.clickSaveBtn()
 
                 
 
 
 
-})
+// })
 
 await test.step("Verify that admin saccessfully input Header Field color", async () => {
 
@@ -531,16 +550,6 @@ await page.waitForTimeout(6000)
 
 })
 
-test.skip("Upload using on function", async ({ page}) => {
-       
-
-        await page.goto('https://the-internet.herokuapp.com/upload');
-        page.on("filechooser", async (filechooser) => {
-            //  filechooser.isMultiple();
-            await filechooser.setFiles([filePath0, filePath0])
-        })
-        await page.click(".example + div#drag-drop-upload", { force: true })
-    })
 
 
 })

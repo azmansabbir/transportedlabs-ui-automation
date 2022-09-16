@@ -262,12 +262,12 @@ export default class MobileDesign{
     }
 
     async TextColorFirstInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("123")
+        await this.page.locator('#mui-45').fill("123")
     }
 
     
     async TextColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("313")
+        await this.page.locator('#mui-46').fill("313")
     }
 
     async TextColorThirdInputField() {
@@ -279,7 +279,7 @@ export default class MobileDesign{
     }
 
     async TextColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[5]').fill("573e98ff")
+        await this.page.locator('(//input[@type="text"])[5]').fill("7bffff87")
     }
 
 
@@ -465,10 +465,6 @@ export default class MobileDesign{
         await this.page.locator("(//div[@class='MuiBox-root css-v2612'])[2]").click()
     }
 
-    async uploadLandscapeBackground() {
-    
-    
-}
 
 
 
@@ -510,7 +506,4 @@ export default class MobileDesign{
    
 }
 
-function readFileSync(arg0: string) {
-    throw new Error("Function not implemented.");
-}
 

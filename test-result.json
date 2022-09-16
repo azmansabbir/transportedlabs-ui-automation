@@ -88,74 +88,70 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 98138,
+                      "duration": 108189,
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
                           "title": "Verify that admin saccessfully go to the mobiledesign page",
-                          "duration": 18608
+                          "duration": 33473
                         },
                         {
                           "title": "Verify that admin saccessfully upload a font into",
-                          "duration": 3051
+                          "duration": 116
                         },
                         {
                           "title": "Verify that admin saccessfully input parimary color",
-                          "duration": 9958
+                          "duration": 9814
                         },
                         {
                           "title": "Verify that admin saccessfully input secondary color",
-                          "duration": 6528
+                          "duration": 6601
                         },
                         {
                           "title": "Verify that admin saccessfully input Tertiary color",
-                          "duration": 3538
+                          "duration": 3712
                         },
                         {
                           "title": "Verify that admin saccessfully input Button color",
-                          "duration": 3771
+                          "duration": 3734
                         },
                         {
                           "title": "Verify that admin saccessfully input Button Glow color",
-                          "duration": 3653
+                          "duration": 3690
                         },
                         {
                           "title": "Verify that admin saccessfully input Text Field color",
-                          "duration": 3689
-                        },
-                        {
-                          "title": "Verify that admin saccessfully input Text Field color",
-                          "duration": 3686
+                          "duration": 3702
                         },
                         {
                           "title": "Verify that admin saccessfully input Header Field color",
-                          "duration": 3739
+                          "duration": 3657
                         },
                         {
                           "title": "Verify that admin saccessfully input Header Field color",
-                          "duration": 3590
+                          "duration": 3688
                         },
                         {
                           "title": "Verify that admin saccessfully input Gamification Field color",
-                          "duration": 3764
+                          "duration": 3617
                         },
                         {
                           "title": "Verify that admin saccessfully input Gamification Glow Line Field color",
-                          "duration": 3634
+                          "duration": 3720
                         },
                         {
                           "title": "Upload First Image",
-                          "duration": 9043
+                          "duration": 9907
                         },
                         {
                           "title": "Upload Second Image",
-                          "duration": 8503
+                          "duration": 9104
                         },
                         {
                           "title": "Upload Third Image",
-                          "duration": 8499
+                          "duration": 8703
                         }
                       ],
                       "attachments": [
@@ -173,38 +169,6 @@
               "file": "tests/MainMenu/TL002MD.test.ts",
               "line": 11,
               "column": 1
-            },
-            {
-              "title": "Upload using on function",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [
-                    {
-                      "type": "skip"
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "file": "tests/MainMenu/TL002MD.test.ts",
-              "line": 534,
-              "column": 6
             }
           ]
         }
