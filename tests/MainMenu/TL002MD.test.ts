@@ -1,11 +1,13 @@
 import test, { expect } from "@fixtures/basePages";
-import * as data from "../../data/login.cred.json";
+import * as data from "@testData/login.cred.json"
 import Env from "@utils/environment";
+import { readFileSync } from 'fs'
 
+test.describe('Mobile Design Functionality', async () =>{   
+        
+const filePath0 = './videos/a.png';
 
-test.describe('Mobile Design Functionality', async () =>{      
    
-const filePath0 = "files/Midnight.ttf"  
 test("E2E test", async ({  loginPage, MainMenu, page }) => {
 
 await test.step("Verify that admin saccessfully go to the mobiledesign page", async () => {
@@ -399,24 +401,146 @@ await test.step("Verify that admin saccessfully input Gamification Glow Line Fie
 
 await test.step("Upload First Image", async () => {
 
-const filePath1 = "files/page.png"  
+// const [fileChooser] = await Promise.all([
+// // It is important to call waitForEvent before click to set up waiting.
+// page.waitForEvent('filechooser'),
+//                 // Opens the file chooser.
+//  page.click("(//div[@class='MuiBox-root css-1bfcot9']//div)[2]", {force:true})
+// ]);
+// await fileChooser.setFiles('device.png');
 
-await page
-        .on("filechooser", async (filechooser) => {
-                await filechooser.setFiles([filePath1])
+// page.on('filechooser', async (fileChooser) => {
+//         await page.click("(//div[@class='MuiBox-root css-1bfcot9']//div)[2]", {force: true})
+//         await fileChooser.setFiles('testData/images/icon.png');
+//       });
+
+
+
+//         page.on("filechooser", async (filechooser) => {       
+        
+//         await filechooser.setFiles([filePath0])
+//     })
+//     await page.click("(//div[@class='MuiBox-root css-1bfcot9']//div)[2]", {force: true})
+
+// //     await page.locator('text=Landscape Background:ImageVideo >> div').nth(3).click();
+// //     await MainMenu.clickLandscapeBackgroundInputField();
+
+// Read your file into a buffer.
+// const buffer = readFileSync('./runtime_config/common/file.pdf');
+
+// // Create the DataTransfer and File
+// const dataTransfer = await scope.page.evaluateHandle((data) => {
+//     const dt = new DataTransfer();
+//     // Convert the buffer to a hex array
+//     const file = new File([data.toString('hex')], 'file.pdf', { type: 'application/pdf' });
+//     dt.items.add(file);
+//     return dt;
+// }, buffer);
+
+// // Now dispatch
+// await page.dispatchEvent('YOUR_TARGET_SELECTOR', 'drop', { dataTransfer });
+
+        
+// await page.waitForTimeout(30000)
+
+// const buffer = readFileSync('testData/videos/test-video-1.mp4');
+//         // Create the DataTransfer and File
+//   const dataTransfer = await page.evaluateHandle((data) => {
+//         const dt = new DataTransfer();
+//         // Convert the buffer to a hex array
+//         const file = new File([data.toString('hex')], 'test-video-1.mp4', { type: 'application/mp4' });
+//         dt.items.add(file);
+//         return dt;
+//       }, buffer);
+
+      
+//       // Now dispatch
+//       await page.dispatchEvent("(//div[@type='image']//div)[1]", 'drop', { dataTransfer });
+
+        
+       
+const buffer = readFileSync('./videos/a.png');
+// Create the DataTransfer and File
+const dataTransfer = await page.evaluateHandle((data) => {
+const dt = new DataTransfer();
+// Convert the buffer to a hex array
+const file = new File([data.toString('hex')], 'a.png', { type: 'application/png' });
+dt.items.add(file);
+return dt;
+}, buffer);
+
+// Now dispatch
+await page.dispatchEvent("(//div[@type='image']//div)[1]", 'drop', { dataTransfer });
+
+
+await page.waitForTimeout(6000)
+
+
+
+})
+
+await test.step("Upload Second Image", async () => {
+
+        
+              
+const buffer = readFileSync('./videos/a.png');
+// Create the DataTransfer and File
+const dataTransfer = await page.evaluateHandle((data) => {
+const dt = new DataTransfer();
+// Convert the buffer to a hex array
+const file = new File([data.toString('hex')], 'a.png', { type: 'application/png' });
+dt.items.add(file);
+return dt;
+}, buffer);
+
+// Now dispatch
+await page.dispatchEvent("(//div[@type='image']//div)[2]", 'drop', { dataTransfer });
+
+
+await page.waitForTimeout(6000)
+        
+      
+        
+        
+        })
+
+await test.step("Upload Third Image", async () => {
+
+        
+              
+const buffer = readFileSync('./videos/a.png');
+// Create the DataTransfer and File
+const dataTransfer = await page.evaluateHandle((data) => {
+const dt = new DataTransfer();
+// Convert the buffer to a hex array
+const file = new File([data.toString('hex')], 'a.png', { type: 'application/png' });
+dt.items.add(file);
+return dt;
+}, buffer);
+
+// Now dispatch
+await page.dispatchEvent("(//div[@type='image']//div)[3]", 'drop', { dataTransfer });
+
+
+await page.waitForTimeout(6000)
+              
+                
+                
+        })
+   
+
+})
+
+test.skip("Upload using on function", async ({ page}) => {
+       
+
+        await page.goto('https://the-internet.herokuapp.com/upload');
+        page.on("filechooser", async (filechooser) => {
+            //  filechooser.isMultiple();
+            await filechooser.setFiles([filePath0, filePath0])
+        })
+        await page.click(".example + div#drag-drop-upload", { force: true })
     })
-    await page.locator('text=Landscape Background:ImageVideo >> div').nth(3).click();
-//     await MainMenu.clickLandscapeBackgroundInputField();
-        
-await page.waitForTimeout(30000)
-
-
-})
-
-
-        
-
-})
 
 
 })

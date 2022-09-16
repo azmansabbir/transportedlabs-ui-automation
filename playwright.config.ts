@@ -80,7 +80,11 @@ const config: PlaywrightTestConfig = {
     
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     // grep: [new RegExp("@smoke"), new RegExp("@reg")],
-    testMatch: ["TL002MD.test.ts"],
+    testMatch: [
+                // "uploadfile.test.ts",
+                "TL002MD.test.ts",
+                // "mobile.test.ts"
+                ],
     retries: 0,
     // reporter: "./customReport/myReporter.ts"
     reporter: [

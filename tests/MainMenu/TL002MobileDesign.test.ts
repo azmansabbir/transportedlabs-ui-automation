@@ -1,5 +1,5 @@
 import test, { expect } from "@fixtures/basePages";
-import * as data from "../../data/login.cred.json";
+import * as data from "@testData/login.cred.json";
 import Env from "@utils/environment";
 
 

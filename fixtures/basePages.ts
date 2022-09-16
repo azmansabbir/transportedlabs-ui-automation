@@ -1,5 +1,6 @@
-import LoginPage from "@pages/Login.page"
-import MainMeun from "@pages/mainmenu.page";
+import LoginPage from "@pages/Login.page";
+import MobileDesign from "@pages/mobileDesign.page";
+import languagePage from "@pages/language.page";
 import { test as baseTest } from "@playwright/test";
 
 
@@ -7,7 +8,8 @@ import { test as baseTest } from "@playwright/test";
 
 const test = baseTest.extend<{
     loginPage: LoginPage;
-    MainMenu: MainMeun;
+    MainMenu: MobileDesign;
+    languagePage: languagePage;
 
 }>({
     loginPage: async ({ page }, use) => {
@@ -15,7 +17,11 @@ const test = baseTest.extend<{
     },
 
     MainMenu: async ({ page }, use) => {
-        await use(new MainMeun(page));
+        await use(new MobileDesign(page));
+    },
+
+    languagePage: async ({ page }, use) => {
+        await use(new languagePage(page));
     }
     
 })

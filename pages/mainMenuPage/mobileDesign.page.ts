@@ -1,6 +1,6 @@
 import { expect } from "@fixtures/basePages";
 import { Page } from "@playwright/test";
-export default class MainMeun {
+export default class MobileDesign{
     [x: string]: any;
 
     private page: Page;
@@ -12,7 +12,9 @@ export default class MainMeun {
    
 
     async clickHomeAvater() {
-        await this.page.locator('button').nth(2).click()
+        const ele = this.page.locator('button').nth(2)
+        expect(ele).toBeEnabled()
+        await ele.click()
     }
 
     async HomeAvater() {
@@ -20,11 +22,16 @@ export default class MainMeun {
     }
 
     async mainMenuBtn() {
-        await this.page.locator('text=Main Menu').click()
+        const ele = this.page.locator('text=Main Menu')
+        expect(ele).toBeEnabled()
+        await ele.click()
+        
     }
 
     async clickMobileDesign() {
-        await this.page.locator('text=Mobile Design').click()
+        const ele = this.page.locator('text=Mobile Design')
+        expect(ele).toContainText('Mobile Design')
+        await ele.click()        
     }
     
     async mobileDesign() {
@@ -43,14 +50,14 @@ export default class MainMeun {
         await this.page.locator("(//div[@class='MuiBox-root css-1bfcot9']//div)[1]").first().click()
     }
 
-
-
-    
-
+    //click on the clear button
     async clickClearAllBtn() {
-        await this.page.locator("//button[text()='Clear All']").click()
+        const ele = this.page.locator("//button[text()='Clear All']")
+        expect(ele).toContainText('Clear All')
+        await ele.click()       
     }
 
+    //Primary Color Input field Element
     async checkPrimaryColortxt() {
         await this.page.locator("//p[text()='Primary']").isVisible()
     }
@@ -60,7 +67,10 @@ export default class MainMeun {
     // }
 
     async clickPrimaryColorField() {
-        await this.page.locator("(//button[@backgroundcolor='#f1c40f']//div)[1]").click({force:true})
+        const ele = this.page.locator("//p[text()='Primary']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()
+
     }
 
     
@@ -94,13 +104,17 @@ export default class MainMeun {
         await this.page.locator("div.MuiBox-root.css-1x8a1gr").click()
     }
 
+    //Secondary Color Field Ele
     async checkSecondaryText() {
         const locator = this.page.locator("//p[text()='Secondary']");
         await expect(locator).toContainText('Secondary');        
     }
 
     async clickSecondaryColorBtn() {
-        await this.page.locator("//button[@backgroundcolor='#212936']//div[1]").click()                
+        const ele = this.page.locator("//p[text()='Secondary']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()
+                     
         
     }
 
@@ -126,13 +140,17 @@ export default class MainMeun {
         await this.page.locator("#mui-29").fill("fd2b6aff")
     }
 
+    //Tertiary color input field ele
     async checkTertiaryText() {
         const locator = this.page.locator("//p[text()='Tertiary']");
         await expect(locator).toContainText('Tertiary');        
     }
 
     async clickTertiaryColorBtn() {
-        await this.page.locator("//button[@backgroundcolor='#2b3648']").click()                
+        const ele = this.page.locator("//p[text()='Tertiary']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()                   
+                      
         
     }
 
@@ -157,13 +175,17 @@ export default class MainMeun {
         await this.page.locator("#mui-34").fill("fd2b6aff")
     }
 
+    //Bitton color Input Field Ele
     async checkButtonText() {
         const locator = this.page.locator("//p[text()='Button']");
         await expect(locator).toContainText('Button');        
     }
 
     async clickButtonColorBtn() {
-        await this.page.locator("//button[@backgroundcolor='#577c98']//div[1]").click()                
+        const ele = this.page.locator("//p[text()='Button']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()
+                        
         
     }
 
@@ -195,7 +217,10 @@ export default class MainMeun {
     }
 
     async clickButtonGlowColorBtn() {
-        await this.page.locator("//button[@backgroundcolor='#5FBCD2']//div[1]").click() 
+        const ele = this.page.locator("//p[text()='Button Glow']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()      
+        
                        
         
     }
@@ -229,7 +254,9 @@ export default class MainMeun {
     }
 
     async clickTextColorBtn() {
-        await this.page.locator("(//div[@class='MuiBox-root css-1meaen1'])[1]").click() 
+        const ele = this.page.locator("//p[text()='Text']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()          
                        
         
     }
@@ -263,7 +290,10 @@ export default class MainMeun {
     }
 
     async clickTextDialogBoxColorBtn() {
-        await this.page.locator("//p[text()='Text Dialog Box']/following-sibling::button").click()
+        const ele = this.page.locator("//p[text()='Text Dialog Box']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()  
+        
         
     }
 
@@ -296,7 +326,10 @@ export default class MainMeun {
     }
 
     async clickHeaderFieldColorBtn() {
-        await this.page.locator("//p[text()='Header']/following-sibling::button").click()
+        const ele = this.page.locator("//p[text()='Header']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()  
+        
         
     }
 
@@ -330,7 +363,10 @@ export default class MainMeun {
     }
 
     async clickHeaderTextFieldColorBtn() {
-        await this.page.locator("//p[text()='Header Text']/following-sibling::button").click()
+        const ele = this.page.locator("//p[text()='Header Text']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()  
+        
         
     }
 
@@ -363,7 +399,9 @@ export default class MainMeun {
     }
 
     async clickGamificationFieldColorBtn() {
-        await this.page.locator("//p[text()='Gamification']/following-sibling::button").click()
+        const ele = this.page.locator("//p[text()='Gamification']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()
         
     }
 
@@ -395,7 +433,10 @@ export default class MainMeun {
     }
 
     async clickGamificationGlowLineFieldColorBtn() {
-        await this.page.locator("//p[text()='Gamification Glow Line']/following-sibling::button").click()
+        const ele = this.page.locator("//p[text()='Gamification Glow Line']/following-sibling::button")
+        expect(ele).toBeVisible()
+        await ele.click()
+        
         
     }
 
@@ -424,7 +465,12 @@ export default class MainMeun {
         await this.page.locator("(//div[@class='MuiBox-root css-v2612'])[2]").click()
     }
 
+    async uploadLandscapeBackground() {
     
+    
+}
+
+
 
 
     
@@ -462,5 +508,9 @@ export default class MainMeun {
     
 
    
+}
+
+function readFileSync(arg0: string) {
+    throw new Error("Function not implemented.");
 }
 

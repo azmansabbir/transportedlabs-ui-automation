@@ -13,16 +13,21 @@
             "baseUrl": ".",
             "paths": {
                 "@pages/*": [
-                    "pages/*"
+                    "pages/loginPage/*",
+                    "pages/mainMenuPage/*"
                 ],
                 "@fixtures/*": [
                     "fixtures/*"
-                ],
-                "@data/*": [
-                    "data/*"
-                ],
+                ],                
                 "@utils/*": [
                     "utils/*"
+                ],
+                "@testData/*": [
+                    "testData/*",
+                    "testData/audios/*",
+                    "testData/images/*",
+                    "testData/videos*"
+                    
                 ]
             }
         }
