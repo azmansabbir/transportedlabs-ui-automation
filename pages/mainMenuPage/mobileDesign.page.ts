@@ -262,24 +262,24 @@ export default class MobileDesign{
     }
 
     async TextColorFirstInputField() {
-        await this.page.locator('#mui-45').fill("123")
+        await this.page.locator('//input[@type="number"]').fill("123")
     }
 
     
     async TextColorSecondInputField() {
-        await this.page.locator('#mui-46').fill("313")
+        await this.page.locator('(//input[@type="text"])[1]').fill("313")
     }
 
     async TextColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("402")
+        await this.page.locator('(//input[@type="text"])[2]').fill("402")
     }
 
     async TextColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("53")
+        await this.page.locator('(//input[@type="text"])[3]').fill("53")
     }
 
     async TextColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[5]').fill("7bffff87")
+        await this.page.locator('(//input[@type="text"])[4]').fill("7bffff87")
     }
 
 
@@ -298,24 +298,24 @@ export default class MobileDesign{
     }
 
     async TextDialogBoxColorFirstInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("123")
+        await this.page.locator('//input[@type="number"]').fill("123")
     }
 
     
     async TextDialogBoxColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("313")
+        await this.page.locator('(//input[@type="text"])[1]').fill("313")
     }
 
     async TextDialogBoxColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("402")
+        await this.page.locator('(//input[@type="text"])[2]').fill("402")
     }
 
     async TextDialogBoxColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("53")
+        await this.page.locator('(//input[@type="text"])[3]').fill("53")
     }
 
     async TextDialogBoxColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[5]').fill("573e98ff")
+        await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
     }
 
 
@@ -334,24 +334,24 @@ export default class MobileDesign{
     }
 
     async HeaderColorFirstInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("123")
+        await this.page.locator('//input[@type="number"]').fill("23")
     }
 
     
     async HeaderColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("313")
+        await this.page.locator('(//input[@type="text"])[1]').fill("13")
     }
 
     async HeaderColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("402")
+        await this.page.locator('(//input[@type="text"])[2]').fill("40")
     }
 
     async HeaderColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("53")
+        await this.page.locator('(//input[@type="text"])[3]').fill("53")
     }
 
     async HeaderColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[5]').fill("573e98ff")
+        await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
     }
 
 
@@ -371,24 +371,24 @@ export default class MobileDesign{
     }
 
     async HeaderTextColorFirstInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("123")
+        await this.page.locator('//input[@type="number"]').fill("123")
     }
 
     
     async HeaderTextColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("313")
+        await this.page.locator('(//input[@type="text"])[1]').fill("313")
     }
 
     async HeaderTextColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("402")
+        await this.page.locator('(//input[@type="text"])[2]').fill("402")
     }
 
     async HeaderTextColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("53")
+        await this.page.locator('(//input[@type="text"])[3]').fill("53")
     }
 
     async HeaderTextColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[5]').fill("573e98ff")
+        await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
     }
 
 
@@ -406,24 +406,24 @@ export default class MobileDesign{
     }
 
     async GamificationColorFirstInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("123")
+        await this.page.locator('//input[@type="number"]').fill("123")
     }
 
     
     async GamificationColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("313")
+        await this.page.locator('(//input[@type="text"])[1]').fill("31")
     }
 
     async GamificationColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("402")
+        await this.page.locator('(//input[@type="text"])[2]').fill("40")
     }
 
     async GamificationColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("53")
+        await this.page.locator('(//input[@type="text"])[3]').fill("100")
     }
 
     async GamificationColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[5]').fill("573e98ff")
+        await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
     }
 
       //Text Gamification Glow Line Filed Eelement
@@ -441,24 +441,24 @@ export default class MobileDesign{
     }
 
     async GamificationGlowLineColorFirstInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("123")
+        await this.page.locator('//input[@type="number"]').fill("123")
     }
 
     
     async GamificationGlowLineColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("313")
+        await this.page.locator('(//input[@type="text"])[1]').fill("313")
     }
 
     async GamificationGlowLineColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("402")
+        await this.page.locator('(//input[@type="text"])[2]').fill("402")
     }
 
     async GamificationGlowLineColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("53")
+        await this.page.locator('(//input[@type="text"])[3]').fill("53")
     }
 
     async GamificationGlowLineColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[5]').fill("573e98ff")
+        await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
     }
 
     async clickLandscapeBackgroundInputField() {

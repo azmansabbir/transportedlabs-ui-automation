@@ -1,4 +1,4 @@
-import { devices, PlaywrightTestConfig } from "@playwright/test";
+import type { devices, PlaywrightTestConfig } from '@playwright/test';
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -34,8 +34,12 @@ const config: PlaywrightTestConfig = {
     //     //     use: { ...devices['Desktop Safari'] },
     //     // },
     // ],
-
+    globalSetup: require.resolve('./global-setup'),
     use: {
+        actionTimeout: 10 * 5000,
+        navigationTimeout: 30 * 6000,
+        // Tell all tests to load signed-in state from 'storageState.json'.
+        // storageState: 'storageState.json',
         viewport: null,
         headless: !true,
         // browserName: "chromium",
@@ -68,7 +72,7 @@ const config: PlaywrightTestConfig = {
          */
      },
     
-    timeout: 200000,
+    timeout: 120000,
    
 
     forbidOnly: !!process.env.CI,
@@ -84,7 +88,9 @@ const config: PlaywrightTestConfig = {
                 // "uploadfile.test.ts",
                 // "TL002MD.test.ts",
                 // "mobile.test.ts",
-                "TL001Login.test.ts"
+                // "TL001Login.test.ts",
+                // "demologin.test.ts",
+                "TL003Language.test.ts"
                 ],
     retries: 0,
     // reporter: "./customReport/myReporter.ts"
@@ -105,5 +111,10 @@ const config: PlaywrightTestConfig = {
   //   command: 'npm run start',
   //   port: 3000,
   // },
+
+  
+  
 }
+
+
 export default config;

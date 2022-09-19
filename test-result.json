@@ -2,7 +2,7 @@
   "config": {
     "forbidOnly": false,
     "fullyParallel": false,
-    "globalSetup": null,
+    "globalSetup": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\global-setup.ts",
     "globalTeardown": null,
     "globalTimeout": 0,
     "grep": {},
@@ -19,9 +19,9 @@
         "testDir": "D:/Work Station/Unidevgo/TransportedLabs/Automation/PlayWright/Transportedlabs-UI-Automation",
         "testIgnore": [],
         "testMatch": [
-          "TL001Login.test.ts"
+          "TL003Language.test.ts"
         ],
-        "timeout": 200000
+        "timeout": 120000
       }
     ],
     "reporter": [
@@ -62,63 +62,60 @@
   },
   "suites": [
     {
-      "title": "tests\\Login\\TL001Login.test.ts",
-      "file": "tests/Login/TL001Login.test.ts",
+      "title": "tests\\MainMenu\\TL003Language.test.ts",
+      "file": "tests/MainMenu/TL003Language.test.ts",
       "line": 0,
       "column": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Login functionality validation",
-          "file": "tests/Login/TL001Login.test.ts",
-          "line": 10,
+          "title": "Mobile Design Functionality",
+          "file": "tests/MainMenu/TL003Language.test.ts",
+          "line": 9,
           "column": 6,
           "specs": [
             {
               "title": "E2E test",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
-                  "timeout": 200000,
+                  "timeout": 120000,
                   "annotations": [],
                   "expectedStatus": "passed",
                   "projectName": "",
                   "results": [
                     {
                       "workerIndex": 0,
-                      "status": "failed",
-                      "duration": 34345,
-                      "error": {
-                        "message": "locator.type: Target page, context or browser has been closed",
-                        "stack": "locator.type: Target page, context or browser has been closed\n    at LoginPage.enterEmail (D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\pages\\loginPage\\Login.page.ts:18:14)\n    at LoginPage.login (D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\pages\\loginPage\\Login.page.ts:11:20)\n    at D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\tests\\Login\\TL001Login.test.ts:28:33\n    at D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\tests\\Login\\TL001Login.test.ts:15:9"
-                      },
+                      "status": "passed",
+                      "duration": 56181,
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
-                          "title": "Verify the valid page title",
-                          "duration": 33957,
-                          "error": {
-                            "message": "locator.type: Target page, context or browser has been closed",
-                            "stack": "locator.type: Target page, context or browser has been closed\n    at LoginPage.enterEmail (D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\pages\\loginPage\\Login.page.ts:18:14)\n    at LoginPage.login (D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\pages\\loginPage\\Login.page.ts:11:20)\n    at D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\tests\\Login\\TL001Login.test.ts:28:33\n    at D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\tests\\Login\\TL001Login.test.ts:15:9"
-                          }
+                          "title": "Verify that admin saccessfully go to the mobiledesign page",
+                          "duration": 42420
+                        },
+                        {
+                          "title": "Verify that admin saccessfully go to the mobiledesign page",
+                          "duration": 13049
                         }
                       ],
-                      "attachments": [],
-                      "errorLocation": {
-                        "file": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\tests\\Login\\TL001Login.test.ts",
-                        "column": 33,
-                        "line": 28
-                      }
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\test-results\\tests-MainMenu-TL003Language-Mobile-Design-Functionality-E2E-test\\test-finished-1.png"
+                        }
+                      ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
-              "file": "tests/Login/TL001Login.test.ts",
-              "line": 13,
+              "file": "tests/MainMenu/TL003Language.test.ts",
+              "line": 14,
               "column": 9
             }
           ]
