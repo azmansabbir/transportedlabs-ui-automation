@@ -19,7 +19,7 @@
         "testDir": "D:/Work Station/Unidevgo/TransportedLabs/Automation/PlayWright/Transportedlabs-UI-Automation",
         "testIgnore": [],
         "testMatch": [
-          "TL003Language.test.ts"
+          "TL002MD.test.ts"
         ],
         "timeout": 120000
       }
@@ -62,16 +62,16 @@
   },
   "suites": [
     {
-      "title": "tests\\MainMenu\\TL003Language.test.ts",
-      "file": "tests/MainMenu/TL003Language.test.ts",
+      "title": "tests\\MainMenu\\TL002MD.test.ts",
+      "file": "tests/MainMenu/TL002MD.test.ts",
       "line": 0,
       "column": 0,
       "specs": [],
       "suites": [
         {
           "title": "Mobile Design Functionality",
-          "file": "tests/MainMenu/TL003Language.test.ts",
-          "line": 9,
+          "file": "tests/MainMenu/TL002MD.test.ts",
+          "line": 6,
           "column": 6,
           "specs": [
             {
@@ -88,25 +88,81 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 56181,
+                      "duration": 51570,
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
                           "title": "Verify that admin saccessfully go to the mobiledesign page",
-                          "duration": 42420
+                          "duration": 16635
                         },
                         {
-                          "title": "Verify that admin saccessfully go to the mobiledesign page",
-                          "duration": 13049
+                          "title": "MD003-01 | Verify that admin saccessfully upload a font into",
+                          "duration": 74
+                        },
+                        {
+                          "title": "MD003-02 | Verify that admin saccessfully input parimary color",
+                          "duration": 882
+                        },
+                        {
+                          "title": "MD003-03 | Verify that admin saccessfully input secondary color",
+                          "duration": 666
+                        },
+                        {
+                          "title": "MD003-04 | Verify that admin saccessfully input Tertiary color",
+                          "duration": 589
+                        },
+                        {
+                          "title": "MD003-05 | Verify that admin saccessfully input Button color",
+                          "duration": 564
+                        },
+                        {
+                          "title": "MD003-05 | Verify that admin saccessfully input Button Glow color",
+                          "duration": 656
+                        },
+                        {
+                          "title": "MD003-06 | Verify that admin saccessfully input Text Field color",
+                          "duration": 649
+                        },
+                        {
+                          "title": "MD003-07 | Verify that admin saccessfully input Text Field color",
+                          "duration": 615
+                        },
+                        {
+                          "title": "MD003-08 | Verify that admin saccessfully input Header Field color",
+                          "duration": 586
+                        },
+                        {
+                          "title": "MD003-09 | Verify that admin saccessfully input Header Text Field color",
+                          "duration": 600
+                        },
+                        {
+                          "title": "MD003-010 | Verify that admin saccessfully input Gamification Field color",
+                          "duration": 596
+                        },
+                        {
+                          "title": "MD003-011 | Verify that admin saccessfully input Gamification Glow Line Field color",
+                          "duration": 632
+                        },
+                        {
+                          "title": "MD003-012 | Upload Landscape Background Image",
+                          "duration": 9390
+                        },
+                        {
+                          "title": "MD003-013 | Upload Portrait Background Image",
+                          "duration": 8946
+                        },
+                        {
+                          "title": "MD003-014 | Upload Portrait Background Header Image",
+                          "duration": 8628
                         }
                       ],
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\test-results\\tests-MainMenu-TL003Language-Mobile-Design-Functionality-E2E-test\\test-finished-1.png"
+                          "path": "D:\\Work Station\\Unidevgo\\TransportedLabs\\Automation\\PlayWright\\Transportedlabs-UI-Automation\\test-results\\tests-MainMenu-TL002MD-Mobile-Design-Functionality-E2E-test\\test-finished-1.png"
                         }
                       ]
                     }
@@ -114,9 +170,9 @@
                   "status": "expected"
                 }
               ],
-              "file": "tests/MainMenu/TL003Language.test.ts",
-              "line": 14,
-              "column": 9
+              "file": "tests/MainMenu/TL002MD.test.ts",
+              "line": 11,
+              "column": 1
             }
           ]
         }

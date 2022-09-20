@@ -76,24 +76,24 @@ export default class MobileDesign{
     
 
     async primaryColorFirstInputField() {
-        await this.page.locator("#mui-20").fill("231")
+        await this.page.locator("//input[@type='number']").fill("231")
     }
 
     
     async primaryColorSecondInputField() {
-        await this.page.locator("#mui-21").fill("195")
+        await this.page.locator("(//input[@type='text'])[1]").fill("195")
     }
 
     async primaryColorThirdInputField() {
-        await this.page.locator("#mui-22").fill("14")
+        await this.page.locator("(//input[@type='text'])[2]").fill("14")
     }
 
     async primaryColorOpacityInputField() {
-        await this.page.locator("#mui-23").fill("50")
+        await this.page.locator("(//input[@type='text'])[3]").fill("50")
     }
 
     async primaryColorHexInputField() {
-        await this.page.locator("#mui-24").fill("ff2b6aff")
+        await this.page.locator("(//input[@type='text'])[4]").fill("ff2b6aff")
     }
 
     async clickSaveBtn() {
@@ -120,24 +120,24 @@ export default class MobileDesign{
 
     
     async SecondaryColorFirstInputField() {
-        await this.page.locator("#mui-25").fill("20")
+        await this.page.locator("//input[@type='number']").fill("20")
     }
 
     
     async SecondaryColorSecondInputField() {
-        await this.page.locator("#mui-26").fill("10")
+        await this.page.locator("(//input[@type='text'])[1]").fill("10")
     }
 
     async SecondaryColorThirdInputField() {
-        await this.page.locator("#mui-27").fill("13")
+        await this.page.locator("(//input[@type='text'])[2]").fill("13")
     }
 
     async SecondaryColorOpacityInputField() {
-        await this.page.locator("#mui-28").fill("55")
+        await this.page.locator("(//input[@type='text'])[3]").fill("55")
     }
 
     async SecondaryColorHexInputField() {
-        await this.page.locator("#mui-29").fill("fd2b6aff")
+        await this.page.locator("(//input[@type='text'])[4]").fill("fd2b6aff")
     }
 
     //Tertiary color input field ele
@@ -155,24 +155,24 @@ export default class MobileDesign{
     }
 
     async TertiaryColorFirstInputField() {
-        await this.page.locator("#mui-30").fill("20")
+        await this.page.locator("//input[@type='number']").fill("20")
     }
 
     
     async TertiaryColorSecondInputField() {
-        await this.page.locator("#mui-31").fill("10")
+        await this.page.locator("(//input[@type='text'])[1]").fill("10")
     }
 
     async TertiaryColorThirdInputField() {
-        await this.page.locator("#mui-32").fill("13")
+        await this.page.locator("(//input[@type='text'])[2]").fill("13")
     }
 
     async TertiaryColorOpacityInputField() {
-        await this.page.locator("#mui-33").fill("55")
+        await this.page.locator("(//input[@type='text'])[3]").fill("55")
     }
 
     async TertiaryColorHexInputField() {
-        await this.page.locator("#mui-34").fill("fd2b6aff")
+        await this.page.locator("(//input[@type='text'])[4]").fill("fd2b6aff")
     }
 
     //Bitton color Input Field Ele
@@ -190,24 +190,24 @@ export default class MobileDesign{
     }
 
     async ButtonColorFirstInputField() {
-        await this.page.locator("#mui-35").fill("50")
+        await this.page.locator("//input[@type='number']").fill("50")
     }
 
     
     async ButtonColorSecondInputField() {
-        await this.page.locator("#mui-36").fill("303")
+        await this.page.locator("(//input[@type='text'])[1]").fill("303")
     }
 
     async ButtonColorThirdInputField() {
-        await this.page.locator("#mui-37").fill("432")
+        await this.page.locator("(//input[@type='text'])[2]").fill("432")
     }
 
     async ButtonColorOpacityInputField() {
-        await this.page.locator("#mui-38").fill("53")
+        await this.page.locator("(//input[@type='text'])[3]").fill("53")
     }
 
     async ButtonColorHexInputField() {
-        await this.page.locator("#mui-39").fill("573c98ff")
+        await this.page.locator("(//input[@type='text'])[4]").fill("573c98ff")
     }
 
     //Element of the Button Glow Field
@@ -226,24 +226,24 @@ export default class MobileDesign{
     }
 
     async ButtonGlowColorFirstInputField() {
-        await this.page.locator("#mui-40").fill("110")
+        await this.page.locator("//input[@type='number']").fill("110")
     }
 
     
     async ButtonGlowColorSecondInputField() {
-        await this.page.locator("#mui-41").fill("302")
+        await this.page.locator("(//input[@type='text'])[1]").fill("302")
     }
 
     async ButtonGlowColorThirdInputField() {
-        await this.page.locator("#mui-42").fill("431")
+        await this.page.locator("(//input[@type='text'])[2]").fill("431")
     }
 
     async ButtonGlowColorOpacityInputField() {
-        await this.page.locator("#mui-43").fill("51")
+        await this.page.locator("(//input[@type='text'])[3]").fill("51")
     }
 
     async ButtonGlowColorHexInputField() {
-        await this.page.locator("#mui-44").fill("573c98ff")
+        await this.page.locator("(//input[@type='text'])[4]").fill("573c98ff")
     }
 
 

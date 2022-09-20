@@ -1,5 +1,42 @@
 import { expect, Page } from "@playwright/test";
-export default class languagePage {        
+export default class languagePage {
+        static clickLanguagePage() {
+                throw new Error("Method not implemented.");
+        }
+        static
+                //Language Controls Elable disable btn Element
+                checkLanguageHeaderText() {
+                        throw new Error("Method not implemented.");
+        }
+        static checkLanguageControlsText() {
+                throw new Error("Method not implemented.");
+        }
+        static checkLanguageControlsDisabledBtn() {
+                throw new Error("Method not implemented.");
+        }
+        static checkUserSelectableText() {
+                throw new Error("Method not implemented.");
+        }
+        static clickUserSelectableRadioBtn() {
+                throw new Error("Method not implemented.");
+        }
+        static clickUserRegistrationSelectableInputField() {
+                throw new Error("Method not implemented.");
+        }
+        static clickUserProfileSelectableInputField() {
+                throw new Error("Method not implemented.");
+        }
+        static checkUserForcedLanguageText() {
+                throw new Error("Method not implemented.");
+        }
+        static
+                //Language Controls Elable disable btn Element
+                clickUserForceLanguage() {
+                        throw new Error("Method not implemented.");
+        }
+        static clickUserForceLanguageinputfield() {
+                throw new Error("Method not implemented.");
+        }        
 
     private page: Page;
         static login: any;           
@@ -43,6 +80,7 @@ export default class languagePage {
     async checkUserSelectableText() {
         const ele = this.page.locator("//span[text()='User Selectable']");
         expect(ele).toContainText("User Selectable")
+        await ele.click({force:true})
 
        
     }
@@ -63,13 +101,55 @@ export default class languagePage {
             expect(ele).toBeVisible()
             await ele.click()
        
-        }
+    }
+
+        //select language type english
+    async selectEnglishLanguage() {
+            const ele = this.page.locator("//li[text()='English']");
+            expect(ele).toBeVisible()
+            await ele.click()       
+    }
+
+            //select language type Francias
+    async selectFranciasLanguage() {
+            const ele = this.page.locator("//li[text()='Francias']");
+            expect(ele).toBeVisible()
+            await ele.click()       
+    }
+
+        //select language type Russian
+    async selectRussianLanguage() {
+            const ele = this.page.locator("//li[text()='Russian']");
+            expect(ele).toBeVisible()
+            await ele.click()       
+    }
+
+        //select language type Arabic
+    async selectArabicLanguage() {
+            const ele = this.page.locator("//li[text()='Arabic']");
+            expect(ele).toBeVisible()
+            await ele.click()       
+    }
+
+        //select language type Spanish
+    async selectSpanishLanguage() {
+            const ele = this.page.locator("//li[text()='Spanish']");
+            expect(ele).toBeVisible()
+            await ele.click()       
+    }
+
+        //select language type Japanese
+    async selectJapaneseLanguage() {
+            const ele = this.page.locator("//li[text()='Japanese']");
+            expect(ele).toBeVisible()
+            await ele.click()       
+    }
 
         //Language Controls Elable disable btn Element
         async clickUserProfileSelectableInputField() {
             const ele = this.page.locator("(//div[@role='button'])[2]");
             expect(ele).toBeVisible()
-            await ele.click({force:true})
+            await ele.dblclick()
 
        
         }        
@@ -81,12 +161,13 @@ export default class languagePage {
         async checkUserForcedLanguageText() {
             const ele = this.page.locator("//span[text()='Forced Language']");
             expect(ele).toContainText('Forced Language')
+            await ele.click({force:true})
 
        
         }
 
         //Language Controls Elable disable btn Element
-        async clickUserForceLanguage() {
+        async clickUserForceLanguageOption() {
          const ele = this.page.locator("input[value='forced']");
             expect(ele).toBeVisible()
             await ele.click()   
@@ -96,9 +177,9 @@ export default class languagePage {
     
         //Language Controls Elable disable btn Element
         async clickUserForceLanguageinputfield() {
-            const ele = this.page.locator("xpath=//div[@role='button']");
+            const ele = this.page.locator("//div[@role='button']");
             expect(ele).toBeVisible()
-            await ele.click()
+            await ele.click({force:true})
 
        
         }

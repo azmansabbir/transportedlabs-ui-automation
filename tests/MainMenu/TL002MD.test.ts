@@ -47,7 +47,7 @@ await test.step("Verify that admin saccessfully go to the mobiledesign page", as
 })        
 
 
-await test.step("Verify that admin saccessfully upload a font into", async () => {
+await test.step("MD003-01 | Verify that admin saccessfully upload a font into", async () => {
                 // let ele = MainMenu.clickMobileDesign()
                 // expect(await ele.getAtribute("placeholder")).toBe("Mobile Deseign")
                 // console.log(await MainMenu.mobileDesign())
@@ -84,7 +84,7 @@ await test.step("Verify that admin saccessfully upload a font into", async () =>
 
 })
 
-await test.step("Verify that admin saccessfully input parimary color", async () => {
+await test.step("MD003-02 | Verify that admin saccessfully input parimary color", async () => {
 
 
 
@@ -149,7 +149,7 @@ await test.step("Verify that admin saccessfully input parimary color", async () 
 
 
         })
-await test.step("Verify that admin saccessfully input secondary color", async () => {
+await test.step("MD003-03 | Verify that admin saccessfully input secondary color", async () => {
 
 
 
@@ -183,7 +183,7 @@ await test.step("Verify that admin saccessfully input secondary color", async ()
 
 })
 
-await test.step("Verify that admin saccessfully input Tertiary color", async () => {
+await test.step("MD003-04 | Verify that admin saccessfully input Tertiary color", async () => {
 
 
                 await MainMenu.checkTertiaryText();
@@ -211,7 +211,7 @@ await test.step("Verify that admin saccessfully input Tertiary color", async () 
 
 })
 
-await test.step("Verify that admin saccessfully input Button color", async () => {
+await test.step("MD003-05 | Verify that admin saccessfully input Button color", async () => {
 
 
                 await MainMenu.checkButtonText();
@@ -237,7 +237,7 @@ await test.step("Verify that admin saccessfully input Button color", async () =>
 
 })
 
-await test.step("Verify that admin saccessfully input Button Glow color", async () => {
+await test.step("MD003-05 | Verify that admin saccessfully input Button Glow color", async () => {
 
 
                 await MainMenu.checkButtonGlowText();
@@ -263,7 +263,7 @@ await test.step("Verify that admin saccessfully input Button Glow color", async 
 
 })
 
-await test.step("Verify that admin saccessfully input Text Field color", async () => {
+await test.step("MD003-06 | Verify that admin saccessfully input Text Field color", async () => {
 
 
                 await MainMenu.checkTextText();
@@ -289,7 +289,7 @@ await test.step("Verify that admin saccessfully input Text Field color", async (
 
 })
 
-await test.step("Verify that admin saccessfully input Text Field color", async () => {
+await test.step("MD003-07 | Verify that admin saccessfully input Text Field color", async () => {
 
 
                 await MainMenu.checkTextDialogBoxText();
@@ -315,7 +315,7 @@ await test.step("Verify that admin saccessfully input Text Field color", async (
 
 })
 
-await test.step("Verify that admin saccessfully input Header Field color", async () => {
+await test.step("MD003-08 | Verify that admin saccessfully input Header Field color", async () => {
 
 
                 await MainMenu.checkHeaderFieldText();
@@ -341,7 +341,7 @@ await test.step("Verify that admin saccessfully input Header Field color", async
 
 })
 
-await test.step("Verify that admin saccessfully input Header Text Field color", async () => {
+await test.step("MD003-09 | Verify that admin saccessfully input Header Text Field color", async () => {
 
 
                 await MainMenu.checkHeaderTextFieldText();
@@ -367,7 +367,7 @@ await test.step("Verify that admin saccessfully input Header Text Field color", 
 
 })
 
-await test.step("Verify that admin saccessfully input Gamification Field color", async () => {
+await test.step("MD003-010 | Verify that admin saccessfully input Gamification Field color", async () => {
 
 
                 await MainMenu.checkGamificationFieldText();
@@ -393,7 +393,7 @@ await test.step("Verify that admin saccessfully input Gamification Field color",
 
 })
 
-await test.step("Verify that admin saccessfully input Gamification Glow Line Field color", async () => {
+await test.step("MD003-011 | Verify that admin saccessfully input Gamification Glow Line Field color", async () => {
 
 
                 await MainMenu.checkGamificationGlowLineFieldText();
@@ -419,7 +419,7 @@ await test.step("Verify that admin saccessfully input Gamification Glow Line Fie
 
 })
 
-await test.step("Upload Landscape Background Image", async () => {
+await test.step("MD003-012 | Upload Landscape Background Image", async () => {
 
 // const [fileChooser] = await Promise.all([
 // // It is important to call waitForEvent before click to set up waiting.
@@ -499,7 +499,7 @@ await page.waitForTimeout(6000)
 
 })
 
-await test.step("Upload Portrait Background Image", async () => {
+await test.step("MD003-013 | Upload Portrait Background Image", async () => {
 
         
               
@@ -524,7 +524,7 @@ await page.waitForTimeout(6000)
         
         })
 
-await test.step("Upload Portrait Background Header Image", async () => {
+await test.step("MD003-014 | Upload Portrait Background Header Image", async () => {
 
         
               
