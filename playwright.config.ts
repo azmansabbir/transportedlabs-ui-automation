@@ -85,9 +85,9 @@ const config: PlaywrightTestConfig = {
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     // grep: [new RegExp("@smoke"), new RegExp("@reg")],
     testMatch: [
-                // "TL001Login.test.ts",
+                "TL001Login.test.ts",
                 "TL002MD.test.ts",           
-                // "TL003Language.test.ts"
+                "TL003Language.test.ts"
                 ],
     retries: 0,
     // reporter: "./customReport/myReporter.ts"
