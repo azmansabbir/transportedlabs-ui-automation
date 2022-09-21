@@ -12,7 +12,7 @@
     },
     {
       "name": "ARRAffinitySameSite",
-      "value": "184b93d9bd44b3d34ffbdb54e8c0a88f58a67edb02b538a38e803ce6c23758f2",
+      "value": "d157d6920a73c6a3171d796ad0f40d2ea26074983cbfcbcb6c70ebfb23c8b530",
       "domain": ".test-dxp.azurewebsites.net",
       "path": "/",
       "expires": -1,

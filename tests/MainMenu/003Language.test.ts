@@ -1,7 +1,6 @@
 import test, { expect } from "@fixtures/basePages";
 import * as data from "@testData/login.cred.json"
-import Env from "@utils/environment";
-import { readFileSync } from 'fs'
+
 
 
 

@@ -14,8 +14,8 @@ const config: PlaywrightTestConfig = {
     
 
 
-    // workers: 4,
-    // fullyParallel: true,
+    workers: 1,
+    fullyParallel: false,
     // projects: [
     //     {
     //         name: 'chromium',
@@ -41,27 +41,27 @@ const config: PlaywrightTestConfig = {
         // Tell all tests to load signed-in state from 'storageState.json'.
         // storageState: 'storageState.json',
         viewport: null,
-        headless: !true,
-        // browserName: "chromium",
+        headless: false,
+        browserName: "chromium",
         screenshot: "on",
         video: "off",
         // trace: "on",
         baseURL: "https://garrett.testingdxp.com/",
         // baseURL: "https://dev107189.service-now.com/api/now/table/incident",
-        extraHTTPHeaders: {
-            "Authorization": "Basic YWRtaW46U0NxN2pDb2tDbFI4"
-        }
+        // extraHTTPHeaders: {
+        //     "Authorization": "Basic YWRtaW46U0NxN2pDb2tDbFI4"
+        // }
         // baseURL: "",
         // contextOptions: {
         //     permissions: ["clipboard-read"]
         // }
-        ,
+        // ,
         launchOptions: {
             args: ["--start-maximized"],
 
             // logger: {
-            //     // isEnabled: (name, severity) => true,
-            //     // log: (name, severity, message, args) => console.log(name, severity)
+            //     isEnabled: (name, severity) => true,
+            //     log: (name, severity, message, args) => console.log(name, severity)
             // }
         }
     },
@@ -79,20 +79,23 @@ const config: PlaywrightTestConfig = {
     /* Retry on CI only */
     
     /* Opt out of parallel tests on CI. */
-    workers: process.env.CI ? 1 : undefined,
+    // workers: process.env.CI ? 1 : undefined,
     /* Reporter to use. See https://playwright.dev/docs/test-reporters */
     
     /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
     // grep: [new RegExp("@smoke"), new RegExp("@reg")],
     testMatch: [
-                "TL001Login.test.ts",
-                "TL002MD.test.ts",           
-                "TL003Language.test.ts"
+                "001Login.test.ts",
+                "002MobileDesign.test.ts",           
+                "003Language.test.ts",
+                "004Menu.test.ts",
+                // "report.test.ts"
                 ],
     retries: 0,
-    // reporter: "./customReport/myReporter.ts"
+    // reporter: "./customReport/myReporter.ts", 
     reporter: [
-        ["dot"], // -> console
+        ["./customReport/myReporter.ts"],
+        ["list"], // -> console
         ["json", { outputFile: "test-result.json" }], //  -> JSON
         ['html', {
             open: "never"

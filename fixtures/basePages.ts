@@ -2,6 +2,7 @@ import LoginPage from "@pages/Login.page";
 import MobileDesign from "@pages/mobileDesign.page";
 import languagePage from "@pages/language.page";
 import { test as baseTest } from "@playwright/test";
+import menuPage from "@pages/menu.page";
 
 
 
@@ -10,6 +11,7 @@ const test = baseTest.extend<{
     loginPage: LoginPage;
     MainMenu: MobileDesign;
     languagePage: languagePage;
+    menuPage: menuPage;
 
 }>({
     loginPage: async ({ page }, use) => {
@@ -22,6 +24,10 @@ const test = baseTest.extend<{
 
     languagePage: async ({ page }, use) => {
         await use(new languagePage(page));
+    },
+
+    menuPage: async ({ page }, use) => {
+        await use(new menuPage(page));
     }
     
 })

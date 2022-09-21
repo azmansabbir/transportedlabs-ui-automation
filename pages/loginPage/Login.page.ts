@@ -11,6 +11,15 @@ export default class LoginPage {
         await this.enterEmail(username);
         await this.enterLoginPassword(password);
         await this.clickLoginBtn();
+        
+    }
+
+    async loginNegative(invalidusername: string, invalidpassword: string) {
+        
+        await this.enterEmail(invalidusername);
+        await this.enterLoginPassword(invalidpassword);
+        await this.clickLoginBtn();
+
     }
 
     async enterEmail(emailaddress: string) {
