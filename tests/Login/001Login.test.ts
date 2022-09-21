@@ -36,9 +36,9 @@ declare const reporter: any;
                 await page.waitForSelector("button[type='button']");
 
                 //verify the full login page screen
-                expect(await page.screenshot({
-                        fullPage: true
-                    })).toMatchSnapshot("login-page-UI.png")
+                // expect(await page.screenshot({
+                //         fullPage: true
+                //     })).toMatchSnapshot("login-page-UI.png")
                 
                 //Login with valid credentials 
                 await loginPage.login(data.username, data.password)
