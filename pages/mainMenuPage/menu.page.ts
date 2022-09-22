@@ -56,10 +56,292 @@ export default class menuPage {
 
         //Language Controls Text Element
         async clickFirstMenuBarColorInputField() {
-                const ele = this.page.locator("(//div[@class='MuiBox-root css-njrrwe'])[1]")
+                const ele = this.page.locator("(//button[contains(@class,'MuiButtonBase-root MuiButton-root')]//div)[1]")
                 expect(ele).toBeVisible()
                 await ele.click();
         }
+
+        //input menubar first color
+        async inputMenuBarRgbFirstFieldColor() {
+                const ele = this.page.locator("//input[@type='number']")
+                expect(ele).toBeVisible()
+                await ele.fill('40');
+        }
+
+        //input menubar second field color
+        async inputMenuBarRgbSecondFieldColor() {
+                const ele = this.page.locator("#P-1259377942")
+                expect(ele).toBeVisible()
+                await ele.fill('167');
+        }
+
+        //input menubar second field color
+        async inputMenuBarRgbThirdFieldColor() {
+                const ele = this.page.locator("#P-18645472")
+                expect(ele).toBeVisible()
+                await ele.fill('164');
+        }
+
+        //input menubar second field color
+        async inputMenuBarColorFieldOpacity() {
+                const ele = this.page.locator("#P1222087002")
+                expect(ele).toBeVisible()
+                await ele.fill('100');
+        }
+
+        //input menubar second field color
+        async inputMenuBarSolidFieldColor() {
+                const ele = this.page.locator("#P19063127662")
+                expect(ele).toBeVisible()
+                await ele.fill('2aA8D9');
+        }
+
+
+        //Click on the second color input field
+        async clickSecondMenuBarColorInputField() {
+                const ele = this.page.locator("(//button[contains(@class,'MuiButtonBase-root MuiButton-root')]//div)[2]")
+                expect(ele).toBeVisible()
+                await ele.click();
+        }
+
+        //input menubar first color
+        async inputSecondMenuBarRgbFirstFieldColor() {
+                const ele = this.page.locator("//input[@type='number']")
+                expect(ele).toBeVisible()
+                await ele.fill('40');
+        }
+
+        //input menubar second field color
+        async inputSecondMenuBarRgbSecondFieldColor() {
+                const ele = this.page.locator("#P1259377942")
+                expect(ele).toBeVisible()
+                await ele.fill('167');
+        }
+
+        //input menubar second field color
+        async inputSecondMenuBarRgbThirdFieldColor() {
+                const ele = this.page.locator("//input[@id='P-18645472']")
+                expect(ele).toBeVisible()
+                await ele.fill('164');
+        }
+
+        //input menubar second field color
+        async inputSecondMenuBarColorFieldOpacity() {
+                const ele = this.page.locator("#P1222087002")
+                expect(ele).toBeVisible()
+                await ele.fill('100');
+        }
+
+        //input menubar second field color
+        async inputSecondMenuBarSolidFieldColor() {
+                const ele = this.page.locator("#P19063127662")
+                expect(ele).toBeVisible()
+                await ele.fill('2aA8D9');
+        }
+
+        //input menubar second field color
+        async clickColorPickerWindowSaveBtn() {
+                const ele = this.page.locator("//button[text()='Save']")
+                expect(ele).toBeVisible()
+                await ele.click()
+        }
+
+        //Check Alignment Text
+        async checkAlignmentText() {
+                const ele = this.page.locator("//h4[text()='Alignment']")
+                expect(ele).toContainText('Alignment')
+
+        }
+
+        //click top Alignment button
+        async clickTopAlignmentBtn() {
+                const ele = this.page.locator("//h5[text()='Top']")
+                expect(ele).toBeVisible()
+                await ele.click()
+
+        }
+
+        //click Bottom Alignment button
+        async clickBottomAlignmentBtn() {
+                const ele = this.page.locator("//h5[text()='Bottom']")
+                expect(ele).toBeVisible()
+                await ele.click()
+
+        }
+
+        //click 3 line options Alignment button
+        async click3lineOptionAlignmentBtn() {
+                const ele = this.page.locator("//h5[text()='3 Line Option']")
+                expect(ele).toBeVisible()
+                await ele.click()
+
+        }
+
+        //check all icon text 
+        async checkAllIconText() {
+                const ele = this.page.locator("//h4[text()='Show All Icons']")
+                expect(ele).toContainText('Show All Icons')
+
+        }
+
+        //check all icon text 
+        async enableShowAllIconBtn() {
+
+                // const showalliconcheckbox = this.page.locator("//input[@type='checkbox'])[1]")
+                // expect(showalliconcheckbox).not.toBeEnabled()
+                // await showalliconcheckbox.click()
+
+                if (await this.page.isHidden("(//div[@class='MuiBox-root css-74zz35'])[1]")) {
+                        await this.page.click("(//input[@type='checkbox'])[1]");
+                }
+
+
+        }
+
+        //enabled home button
+        async enabledHomeIconCheckBox() {
+
+                if (await this.page.isDisabled("//input[@id='P-19239526022']")) {
+                        await this.page.click("(//input[@type='checkbox'])[2]", { force: true });
+                }
+
+
+        }
+
+        //enabled prize button 
+        async enabledPrizeIconCheckBox() {
+
+                if (await this.page.isDisabled("//input[@id='P-18230406352']")) {
+                        await this.page.click("(//input[@type='checkbox'])[3]", { force: true });
+                }
+
+
+        }
+
+        //enabled how to play icon
+        async enabledHowToPlayIconCheckBox() {
+
+                if (await this.page.isDisabled("//input[@id='P-17221286682']")) {
+                        await this.page.click("(//input[@type='checkbox'])[4]", { force: true });
+                }
+
+
+        }
+
+        //enabled rules icon checkbox
+        async enabledRulesIconCheckBox() {
+
+                if (await this.page.isDisabled("//input[@id='P-16212167012']")) {
+                        await this.page.click("(//input[@type='checkbox'])[5]", { force: true });
+                }
+
+
+        }
+
+        //enabled user profile icon checkbox
+        async enabledUserProfileIconCheckBox() {
+
+                if (await this.page.isDisabled("//input[@id='P-15203047342']")) {
+                        await this.page.click("(//input[@type='checkbox'])[6]", { force: true });
+                }
+
+
+        }
+
+        //delete home icon
+        async deleteHomeIcon() {
+
+                if (await this.page.isVisible("(//div[@class='MuiBox-root css-1puu0mq'])[1]")) {
+                        await this.page.click("(//div[@class='MuiBox-root css-1puu0mq'])[1]", { force: true });
+                }
+
+
+        }
+
+        //delete prize icon
+        async deletePrizeIcon() {
+
+                if (await this.page.isVisible("(//div[@class='MuiBox-root css-1puu0mq'])[2]")) {
+                        await this.page.click("(//div[@class='MuiBox-root css-1puu0mq'])[2]", { force: true });
+                }
+
+
+        }
+
+        //delete prize icon
+        async deleteHowToPlayIcon() {
+
+                if (await this.page.isVisible("(//div[@class='MuiBox-root css-1puu0mq'])[3]")) {
+                        await this.page.click("(//div[@class='MuiBox-root css-1puu0mq'])[3]", { force: true });
+                }
+
+
+        }
+
+        //delete prize icon
+        async deleteRulesIcon() {
+
+                if (await this.page.isVisible("(//div[@class='MuiBox-root css-1puu0mq'])[4]")) {
+                        await this.page.click("(//div[@class='MuiBox-root css-1puu0mq'])[4]", { force: true });
+                }
+
+
+        }
+
+        //delete Profile icon
+        async deleteProfileIcon() {
+
+                if (await this.page.isVisible("(//div[@class='MuiBox-root css-1puu0mq'])[5]")) {
+                        await this.page.click("(//div[@class='MuiBox-root css-1puu0mq'])[5]", { force: true });
+                }
+
+
+        }
+
+        //Start function from here
+        async uplodHomeIcon() {
+                const homeicon = "testData/icons/home.png"
+                this.page.on("filechooser", async (filechooser) => {
+                        await filechooser.setFiles([homeicon])
+                })
+                await this.page.click("(//div[@class='MuiBox-root css-74zz35'])[1]")
+        }
+
+        //Start function from here
+        async uplodPrizeIcon() {
+                const prizeicon = "testData/icons/prize.png"
+                this.page.on("filechooser", async (filechooser) => {
+                        await filechooser.setFiles([prizeicon])
+                })
+                await this.page.click("(//div[@class='MuiBox-root css-74zz35'])[2]")
+        }
+
+                //Start function from here
+        async uplodHowToPlayIcon() {
+                const howtoplayicon = "testData/icons/howtoplay.png"
+                this.page.on("filechooser", async (filechooser) => {
+                        await filechooser.setFiles([howtoplayicon])
+                })
+                await this.page.click("(//div[@class='MuiBox-root css-74zz35'])[3]")
+        }
+                //Start function from here
+        async uplodRulesIcon() {
+                const rulesicon = "testData/icons/rules.png"
+                this.page.on("filechooser", async (filechooser) => {
+                        await filechooser.setFiles([rulesicon])
+                })
+                await this.page.click("(//div[@class='MuiBox-root css-74zz35'])[4]")
+        }
+
+                //Start function from here
+        async uplodProfileIcon() {
+                const profileicon = "testData/icons/profile.png"
+                this.page.on("filechooser", async (filechooser) => {
+                        await filechooser.setFiles([profileicon])
+                })
+                await this.page.click("(//div[@class='MuiBox-root css-74zz35'])[5]")
+        }
+
 
 
 

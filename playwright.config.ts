@@ -89,7 +89,7 @@ const config: PlaywrightTestConfig = {
                 "002MobileDesign.test.ts",           
                 "003Language.test.ts",
                 "004Menu.test.ts",
-                // "report.test.ts"
+                "005SignUp.test.ts"
                 ],
     retries: 0,
     // reporter: "./customReport/myReporter.ts", 
