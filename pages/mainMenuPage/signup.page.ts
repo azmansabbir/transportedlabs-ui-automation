@@ -152,11 +152,11 @@ export default class singupPage {
                 // await ele.check()
 
                               
-                        const ele = await this.page.locator("//input[contains(@class,'PrivateSwitchBase-input MuiSwitch-input')]").isVisible()
+                        const ele = await this.page.locator("input.PrivateSwitchBase-input.MuiSwitch-input").isVisible()
                            if ((ele == true)) {
                                 console.log("click Automataclly Assign Username Btn")
                                 await this.page
-                                        .locator("//input[contains(@class,'PrivateSwitchBase-input MuiSwitch-input')]")
+                                        .locator("input.PrivateSwitchBase-input.MuiSwitch-input")
                                                 .click()
                            }        
                    
