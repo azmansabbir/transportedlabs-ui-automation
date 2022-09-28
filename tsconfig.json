@@ -14,7 +14,8 @@
             "paths": {
                 "@pages/*": [
                     "pages/loginPage/*",
-                    "pages/mainMenuPage/*"
+                    "pages/mainMenuPage/*",
+                    "pages/gamesPage/*",
                 ],
                 "@fixtures/*": [
                     "fixtures/*"

@@ -2,7 +2,7 @@ import test, { expect } from "@fixtures/basePages";
 import * as data from "@testData/login.cred.json"
 import { readFileSync } from 'fs'
 
-test.describe('Mobile Design Functionality', async () => {
+test.describe('Validate Mobile Design Functionality', async () => {
 
         const filePath0 = './videos/a.png';
 
@@ -46,7 +46,7 @@ test.describe('Mobile Design Functionality', async () => {
                 })
 
 
-                await test.step("MD003-01 | Verify that admin saccessfully upload a font into", async () => {
+                await test.step("MD002-01 | Verify that admin saccessfully upload a font into", async () => {
                         // let ele = MainMenu.clickMobileDesign()
                         // expect(await ele.getAtribute("placeholder")).toBe("Mobile Deseign")
                         // console.log(await MainMenu.mobileDesign())
@@ -83,7 +83,7 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-02 | Verify that admin saccessfully input parimary color", async () => {
+                await test.step("MD002-02 | Verify that admin saccessfully input parimary color", async () => {
 
 
                         await MainMenu.clickClearAllBtn();
@@ -139,7 +139,7 @@ test.describe('Mobile Design Functionality', async () => {
 
 
                 })
-                await test.step("MD003-03 | Verify that admin saccessfully input secondary color", async () => {
+                await test.step("MD002-03 | Verify that admin saccessfully input secondary color", async () => {
 
 
 
@@ -173,7 +173,7 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-04 | Verify that admin saccessfully input Tertiary color", async () => {
+                await test.step("MD002-04 | Verify that admin saccessfully input Tertiary color", async () => {
 
 
                         await MainMenu.checkTertiaryText();
@@ -201,7 +201,7 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-05 | Verify that admin saccessfully input Button color", async () => {
+                await test.step("MD002-05 | Verify that admin saccessfully input Button color", async () => {
 
 
                         await MainMenu.checkButtonText();
@@ -227,7 +227,7 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-05 | Verify that admin saccessfully input Button Glow color", async () => {
+                await test.step("MD002-06 | Verify that admin saccessfully input Button Glow color", async () => {
 
 
                         await MainMenu.checkButtonGlowText();
@@ -253,7 +253,7 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-06 | Verify that admin saccessfully input Text Field color", async () => {
+                await test.step("MD002-07 | Verify that admin saccessfully input Text Field color", async () => {
 
 
                         await MainMenu.checkTextText();
@@ -279,7 +279,7 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-07 | Verify that admin saccessfully input Text Field color", async () => {
+                await test.step("MD002-08 | Verify that admin saccessfully input Text Field color", async () => {
 
 
                         await MainMenu.checkTextDialogBoxText();
@@ -305,7 +305,7 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-08 | Verify that admin saccessfully input Header Field color", async () => {
+                await test.step("MD002-09 | Verify that admin saccessfully input Header Field color", async () => {
 
 
                         await MainMenu.checkHeaderFieldText();
@@ -331,7 +331,7 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-09 | Verify that admin saccessfully input Header Text Field color", async () => {
+                await test.step("MD002-10 | Verify that admin saccessfully input Header Text Field color", async () => {
 
 
                         await MainMenu.checkHeaderTextFieldText();
@@ -357,7 +357,7 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-010 | Verify that admin saccessfully input Gamification Field color", async () => {
+                await test.step("MD002-011 | Verify that admin saccessfully input Gamification Field color", async () => {
 
 
                         await MainMenu.checkGamificationFieldText();
@@ -383,7 +383,7 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-011 | Verify that admin saccessfully input Gamification Glow Line Field color", async () => {
+                await test.step("MD002-012 | Verify that admin saccessfully input Gamification Glow Line Field color", async () => {
 
 
                         await MainMenu.checkGamificationGlowLineFieldText();
@@ -409,7 +409,33 @@ test.describe('Mobile Design Functionality', async () => {
 
                 })
 
-                await test.step("MD003-012 | Upload Landscape Background Image", async () => {
+                await test.step("MD002-012 | Verify that admin saccessfully input Gamification Glow Line Field color", async () => {
+
+                        //delete Uploaded Landscape BG
+                        await MainMenu.deleteUploadedLandscapeBG()
+
+                        await page.waitForTimeout(3000)
+
+                        //delete Uploaded Portrait BG
+                        await MainMenu.deleteUploadedPortraitBG()
+                        await page.waitForTimeout(3000)
+
+                        //delete Uploaded Landscape BG Header
+                        await MainMenu.deleteUploadedLandscapeBGHeader()
+
+                        await page.waitForTimeout(3000)
+
+                        //delete Uploaded Portrait BG Header
+                        await MainMenu.deleteUploadedPortraitBGHeader()
+                        await page.waitForTimeout(3000)
+
+                        //delete Uploaded MainLogo
+                        await MainMenu.deleteUploadedMainLogo()
+                        await page.waitForTimeout(3000)
+
+                })
+
+                await test.step("MD002-013 | Upload Landscape Background Image", async () => {
 
                         // const [fileChooser] = await Promise.all([
                         // // It is important to call waitForEvent before click to set up waiting.
@@ -469,7 +495,7 @@ test.describe('Mobile Design Functionality', async () => {
 
 
 
-                        const buffer = readFileSync('./videos/a.png');
+                        const buffer = readFileSync('testData/images/banner.png');
                         // Create the DataTransfer and File
                         const dataTransfer = await page.evaluateHandle((data) => {
                                 const dt = new DataTransfer();
@@ -479,42 +505,17 @@ test.describe('Mobile Design Functionality', async () => {
                                 return dt;
                         }, buffer);
 
-                        // Now dispatch
-                        await page.dispatchEvent("(//div[@type='image']//div)[1]", 'drop', { dataTransfer });
-
-
-                        await page.waitForTimeout(6000)
-
-
-
-                })
-
-                await test.step("MD003-013 | Upload Portrait Background Image", async () => {
-
-
-
-                        const buffer = readFileSync('./videos/a.png');
-                        // Create the DataTransfer and File
-                        const dataTransfer = await page.evaluateHandle((data) => {
-                                const dt = new DataTransfer();
-                                // Convert the buffer to a hex array
-                                const file = new File([data.toString('hex')], 'a.png', { type: 'application/png' });
-                                dt.items.add(file);
-                                return dt;
-                        }, buffer);
 
                         // Now dispatch
-                        await page.dispatchEvent("(//div[@type='image']//div)[2]", 'drop', { dataTransfer });
+                        await page.dispatchEvent("(//div[@class='MuiBox-root css-78n4oq']//div)[1]", 'drop', { dataTransfer });
 
-
-                        await page.waitForTimeout(6000)
 
 
 
 
                 })
 
-                await test.step("MD003-014 | Upload Portrait Background Header Image", async () => {
+                await test.step("MD002-014 | Upload Portrait Background Image", async () => {
 
 
 
@@ -529,15 +530,83 @@ test.describe('Mobile Design Functionality', async () => {
                         }, buffer);
 
                         // Now dispatch
-                        await page.dispatchEvent("(//div[@type='image']//div)[3]", 'drop', { dataTransfer });
+                        await page.dispatchEvent("(//div[@class='MuiBox-root css-vjb914'])[2]", 'drop', { dataTransfer });
 
 
-                        await page.waitForTimeout(6000)
+
 
 
 
                 })
 
+                await test.step("MD002-015 | Upload Landscape Background Header Image", async () => {
+
+
+
+                        const buffer = readFileSync('testData/images/TitleBanner.jpg');
+                        // Create the DataTransfer and File
+                        const dataTransfer = await page.evaluateHandle((data) => {
+                                const dt = new DataTransfer();
+                                // Convert the buffer to a hex array
+                                const file = new File([data.toString('hex')], 'a.png', { type: 'application/png' });
+                                dt.items.add(file);
+                                return dt;
+                        }, buffer);
+
+                        // Now dispatch
+                        await page.dispatchEvent("(//div[@class='MuiBox-root css-v2612'])[2]", 'drop', { dataTransfer });
+
+
+
+
+
+                })
+
+                await test.step("MD002-016 | Upload Portrait Background Header Image", async () => {
+
+
+
+                        const buffer = readFileSync('./videos/a.png');
+                        // Create the DataTransfer and File
+                        const dataTransfer = await page.evaluateHandle((data) => {
+                                const dt = new DataTransfer();
+                                // Convert the buffer to a hex array
+                                const file = new File([data.toString('hex')], 'a.png', { type: 'application/png' });
+                                dt.items.add(file);
+                                return dt;
+                        }, buffer);
+
+                        // Now dispatch
+                        await page.dispatchEvent("(//div[@class='MuiBox-root css-v2612'])[2]", 'drop', { dataTransfer });
+
+
+
+
+
+                })
+
+                await test.step("MD002-017 | Upload Main Logo", async () => {
+
+
+
+                        const buffer = readFileSync('testData/logos/Logo.jpg');
+                        // Create the DataTransfer and File
+                        const dataTransfer = await page.evaluateHandle((data) => {
+                                const dt = new DataTransfer();
+                                // Convert the buffer to a hex array
+                                const file = new File([data.toString('hex')], 'a.png', { type: 'application/png' });
+                                dt.items.add(file);
+                                return dt;
+                        }, buffer);
+
+                        // Now dispatch
+                        await page.dispatchEvent("(//div[@class='MuiBox-root css-v2612'])[2]", 'drop', { dataTransfer });
+
+
+
+
+
+                })
 
         })
 

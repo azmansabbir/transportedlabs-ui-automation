@@ -45,7 +45,7 @@ export default class menuPage {
                 }, buffer);
 
                 // Now dispatch
-                await this.page.dispatchEvent("//div[@class='MuiBox-root css-1bfcot9']//div[1]", 'drop', { dataTransfer });
+                await this.page.dispatchEvent("//div[@class='MuiBox-root css-v2612']", 'drop', { dataTransfer });
         }
 
         //Fonts Header Text Elemant
@@ -56,7 +56,7 @@ export default class menuPage {
 
         //Language Controls Text Element
         async clickFirstMenuBarColorInputField() {
-                const ele = this.page.locator("(//button[contains(@class,'MuiButtonBase-root MuiButton-root')]//div)[1]")
+                const ele = this.page.locator("(//div[@class='MuiBox-root css-njrrwe']//button)[1]")
                 expect(ele).toBeVisible()
                 await ele.click();
         }
@@ -201,9 +201,20 @@ export default class menuPage {
         //enabled home button
         async enabledHomeIconCheckBox() {
 
-                if (await this.page.isDisabled("//input[@id='P-19239526022']")) {
-                        await this.page.click("(//input[@type='checkbox'])[2]", { force: true });
-                }
+                             
+                        const ele = await this.page.locator("(//input[@type='checkbox'])[1]").isVisible()
+                           if ((ele == true)) {
+                                console.log("enabled Home Icon Check Box")
+                                await this.page
+                                        .locator("(//input[@type='checkbox'])[1]")
+                                                .click()
+                           }        
+                   
+                 
+
+                // if (await this.page.isDisabled("//input[@id='P-19239526022']")) {
+                //         await this.page.click("(//input[@type='checkbox'])[2]", { force: true });
+                // }
 
 
         }
@@ -211,9 +222,17 @@ export default class menuPage {
         //enabled prize button 
         async enabledPrizeIconCheckBox() {
 
-                if (await this.page.isDisabled("//input[@id='P-18230406352']")) {
-                        await this.page.click("(//input[@type='checkbox'])[3]", { force: true });
-                }
+                const ele = await this.page.locator("(//input[@type='checkbox'])[2]").isVisible()
+                           if ((ele == true)) {
+                                console.log("enabled Prize Icon CheckBox")
+                                await this.page
+                                        .locator("(//input[@type='checkbox'])[2]")
+                                                .click()
+                           }  
+
+                // if (await this.page.isDisabled("//input[@id='P-18230406352']")) {
+                //         await this.page.click("(//input[@type='checkbox'])[3]", { force: true });
+                // }
 
 
         }
@@ -221,19 +240,34 @@ export default class menuPage {
         //enabled how to play icon
         async enabledHowToPlayIconCheckBox() {
 
-                if (await this.page.isDisabled("//input[@id='P-17221286682']")) {
-                        await this.page.click("(//input[@type='checkbox'])[4]", { force: true });
-                }
+                const ele = await this.page.locator("(//input[@type='checkbox'])[3]").isVisible()
+                           if ((ele == true)) {
+                                console.log("enabled Prize Icon CheckBox")
+                                await this.page
+                                        .locator("(//input[@type='checkbox'])[3]")
+                                                .click()
+                           }  
+
+                // if (await this.page.isDisabled("//input[@id='P-17221286682']")) {
+                //         await this.page.click("(//input[@type='checkbox'])[4]", { force: true });
+                // }
 
 
         }
 
         //enabled rules icon checkbox
         async enabledRulesIconCheckBox() {
+                const ele = await this.page.locator("(//input[@type='checkbox'])[4]").isVisible()
+                           if ((ele == true)) {
+                                console.log("enabled rules Icon CheckBox")
+                                await this.page
+                                        .locator("(//input[@type='checkbox'])[4]")
+                                                .click()
+                           }  
 
-                if (await this.page.isDisabled("//input[@id='P-16212167012']")) {
-                        await this.page.click("(//input[@type='checkbox'])[5]", { force: true });
-                }
+                // if (await this.page.isDisabled("//input[@id='P-16212167012']")) {
+                //         await this.page.click("(//input[@type='checkbox'])[5]", { force: true });
+                // }
 
 
         }
@@ -241,9 +275,17 @@ export default class menuPage {
         //enabled user profile icon checkbox
         async enabledUserProfileIconCheckBox() {
 
-                if (await this.page.isDisabled("//input[@id='P-15203047342']")) {
-                        await this.page.click("(//input[@type='checkbox'])[6]", { force: true });
-                }
+                const ele = await this.page.locator("(//input[@type='checkbox'])[5]").isVisible()
+                if ((ele == true)) {
+                     console.log("enabled User Profile Icon CheckBox")
+                     await this.page
+                             .locator("(//input[@type='checkbox'])[5]")
+                                     .click()
+                }  
+
+                // if (await this.page.isDisabled("//input[@id='P-15203047342']")) {
+                //         await this.page.click("(//input[@type='checkbox'])[6]", { force: true });
+                // }
 
 
         }

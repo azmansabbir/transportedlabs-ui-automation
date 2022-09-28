@@ -5,7 +5,7 @@ import { readFileSync } from 'fs'
 
 
 
-test.describe('Mobile Design Functionality', async () => {
+test.describe('Validate Menu Page Functionality', async () => {
 
         const filePath0 = './videos/a.png';
 
@@ -73,6 +73,8 @@ test.describe('Mobile Design Functionality', async () => {
                                 contentType: "image/png",
                                 body: screenshot
                         })
+
+                        await page.waitForTimeout(3000)
 
                         //Input menubar RGB first field color 
                         await menuPage.inputMenuBarRgbFirstFieldColor()

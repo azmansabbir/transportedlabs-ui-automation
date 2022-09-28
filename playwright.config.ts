@@ -34,14 +34,14 @@ const config: PlaywrightTestConfig = {
     //     //     use: { ...devices['Desktop Safari'] },
     //     // },
     // ],
-    globalSetup: require.resolve('./global-setup'),
+    // globalSetup: require.resolve('./global-setup'),
     use: {
         actionTimeout: 10 * 5000,
         navigationTimeout: 30 * 6000,
         // Tell all tests to load signed-in state from 'storageState.json'.
         // storageState: 'storageState.json',
         viewport: null,
-        headless: false,
+        headless: !true,
         browserName: "chromium",
         screenshot: "on",
         video: "off",
@@ -89,7 +89,9 @@ const config: PlaywrightTestConfig = {
                 "002MobileDesign.test.ts",           
                 "003Language.test.ts",
                 "004Menu.test.ts",
-                "005SignUp.test.ts"
+                "005SignUp.test.ts",
+                "006GlobalPrizing.test.ts",
+                "008tugOfWar.test.ts"
                 ],
     retries: 0,
     // reporter: "./customReport/myReporter.ts", 

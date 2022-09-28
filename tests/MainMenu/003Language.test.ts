@@ -4,7 +4,7 @@ import * as data from "@testData/login.cred.json"
 
 
 
-test.describe('Mobile Design Functionality', async () => {
+test.describe('Validate Language Page Functionality', async () => {
 
     const filePath0 = './videos/a.png';
 

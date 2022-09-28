@@ -2,14 +2,14 @@ import { FullConfig, FullResult, Reporter, Suite, TestCase, TestError, TestResul
 export default class MyReporter implements Reporter {
 
     onBegin(config: FullConfig, suite: Suite): void {
-        console.log('Suite Title: ' + suite.suites[0].suites[0].suites[0].title);
+        console.log('Suite Title: ' + suite.suites[0].title);
     }
 
     onTestBegin(test: TestCase, result: TestResult): void {
-        console.log('Test Started: ' + test.title);
+        // console.log('Test Started: ' + test.title);
     }
     onTestEnd(test: TestCase, result: TestResult): void {
-        console.log('Test Ended: ' + test.title);
+        // console.log('Test Ended: ' + test.title);
         console.log("Result: " + result.status);
 
     }

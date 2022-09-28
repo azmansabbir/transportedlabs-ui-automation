@@ -1,6 +1,7 @@
 import { expect } from "@fixtures/basePages";
 import { Page } from "@playwright/test";
-export default class MobileDesign{
+import { readFileSync } from 'fs'
+export default class MobileDesign {
     [x: string]: any;
 
     private page: Page;
@@ -8,8 +9,8 @@ export default class MobileDesign{
         this.page = page;
     }
 
-    
-   
+
+
 
     async clickHomeAvater() {
         const ele = this.page.locator('button').nth(2)
@@ -25,15 +26,15 @@ export default class MobileDesign{
         const ele = this.page.locator('text=Main Menu')
         expect(ele).toBeEnabled()
         await ele.click()
-        
+
     }
 
     async clickMobileDesign() {
         const ele = this.page.locator('text=Mobile Design')
         expect(ele).toContainText('Mobile Design')
-        await ele.click()        
+        await ele.click()
     }
-    
+
     async mobileDesign() {
         await this.page.locator('text=Mobile Design')
     }
@@ -47,14 +48,14 @@ export default class MobileDesign{
     }
 
     async clickUploadFontInputFiled() {
-        await this.page.locator("(//div[@class='MuiBox-root css-1bfcot9']//div)[1]").first().click()
+        await this.page.locator("(//div[@class='MuiBox-root css-v2612'])[1]").first().click()
     }
 
     //click on the clear button
     async clickClearAllBtn() {
         const ele = this.page.locator("//button[text()='Clear All']")
         expect(ele).toContainText('Clear All')
-        await ele.click()       
+        await ele.click()
     }
 
     //Primary Color Input field Element
@@ -73,13 +74,13 @@ export default class MobileDesign{
 
     }
 
-    
+
 
     async primaryColorFirstInputField() {
         await this.page.locator("//input[@type='number']").fill("231")
     }
 
-    
+
     async primaryColorSecondInputField() {
         await this.page.locator("(//input[@type='text'])[1]").fill("195")
     }
@@ -107,23 +108,23 @@ export default class MobileDesign{
     //Secondary Color Field Ele
     async checkSecondaryText() {
         const locator = this.page.locator("//p[text()='Secondary']");
-        await expect(locator).toContainText('Secondary');        
+        await expect(locator).toContainText('Secondary');
     }
 
     async clickSecondaryColorBtn() {
         const ele = this.page.locator("//p[text()='Secondary']/following-sibling::button")
         expect(ele).toBeVisible()
         await ele.click()
-                     
-        
+
+
     }
 
-    
+
     async SecondaryColorFirstInputField() {
         await this.page.locator("//input[@type='number']").fill("20")
     }
 
-    
+
     async SecondaryColorSecondInputField() {
         await this.page.locator("(//input[@type='text'])[1]").fill("10")
     }
@@ -143,22 +144,22 @@ export default class MobileDesign{
     //Tertiary color input field ele
     async checkTertiaryText() {
         const locator = this.page.locator("//p[text()='Tertiary']");
-        await expect(locator).toContainText('Tertiary');        
+        await expect(locator).toContainText('Tertiary');
     }
 
     async clickTertiaryColorBtn() {
         const ele = this.page.locator("//p[text()='Tertiary']/following-sibling::button")
         expect(ele).toBeVisible()
-        await ele.click()                   
-                      
-        
+        await ele.click()
+
+
     }
 
     async TertiaryColorFirstInputField() {
         await this.page.locator("//input[@type='number']").fill("20")
     }
 
-    
+
     async TertiaryColorSecondInputField() {
         await this.page.locator("(//input[@type='text'])[1]").fill("10")
     }
@@ -178,22 +179,22 @@ export default class MobileDesign{
     //Bitton color Input Field Ele
     async checkButtonText() {
         const locator = this.page.locator("//p[text()='Button']");
-        await expect(locator).toContainText('Button');        
+        await expect(locator).toContainText('Button');
     }
 
     async clickButtonColorBtn() {
         const ele = this.page.locator("//p[text()='Button']/following-sibling::button")
         expect(ele).toBeVisible()
         await ele.click()
-                        
-        
+
+
     }
 
     async ButtonColorFirstInputField() {
         await this.page.locator("//input[@type='number']").fill("50")
     }
 
-    
+
     async ButtonColorSecondInputField() {
         await this.page.locator("(//input[@type='text'])[1]").fill("303")
     }
@@ -213,23 +214,23 @@ export default class MobileDesign{
     //Element of the Button Glow Field
     async checkButtonGlowText() {
         const locator = this.page.locator("//p[text()='Button Glow']");
-        await expect(locator).toContainText('Button');        
+        await expect(locator).toContainText('Button');
     }
 
     async clickButtonGlowColorBtn() {
         const ele = this.page.locator("//p[text()='Button Glow']/following-sibling::button")
         expect(ele).toBeVisible()
-        await ele.click()      
-        
-                       
-        
+        await ele.click()
+
+
+
     }
 
     async ButtonGlowColorFirstInputField() {
         await this.page.locator("//input[@type='number']").fill("110")
     }
 
-    
+
     async ButtonGlowColorSecondInputField() {
         await this.page.locator("(//input[@type='text'])[1]").fill("302")
     }
@@ -250,22 +251,22 @@ export default class MobileDesign{
     //Text Filed Eelement
     async checkTextText() {
         const locator = this.page.locator("//p[text()='Text']");
-        await expect(locator).toContainText('Text');        
+        await expect(locator).toContainText('Text');
     }
 
     async clickTextColorBtn() {
         const ele = this.page.locator("//p[text()='Text']/following-sibling::button")
         expect(ele).toBeVisible()
-        await ele.click()          
-                       
-        
+        await ele.click()
+
+
     }
 
     async TextColorFirstInputField() {
         await this.page.locator('//input[@type="number"]').fill("123")
     }
 
-    
+
     async TextColorSecondInputField() {
         await this.page.locator('(//input[@type="text"])[1]').fill("313")
     }
@@ -283,25 +284,25 @@ export default class MobileDesign{
     }
 
 
-     //Text Dialog Box Filed Eelement
-     async checkTextDialogBoxText() {
+    //Text Dialog Box Filed Eelement
+    async checkTextDialogBoxText() {
         const locator = this.page.locator("//p[text()='Text Dialog Box']");
-        await expect(locator).toContainText('Text Dialog Box');        
+        await expect(locator).toContainText('Text Dialog Box');
     }
 
     async clickTextDialogBoxColorBtn() {
         const ele = this.page.locator("//p[text()='Text Dialog Box']/following-sibling::button")
         expect(ele).toBeVisible()
-        await ele.click()  
-        
-        
+        await ele.click()
+
+
     }
 
     async TextDialogBoxColorFirstInputField() {
         await this.page.locator('//input[@type="number"]').fill("123")
     }
 
-    
+
     async TextDialogBoxColorSecondInputField() {
         await this.page.locator('(//input[@type="text"])[1]').fill("313")
     }
@@ -319,25 +320,25 @@ export default class MobileDesign{
     }
 
 
-     //Text Header Filed Eelement
-     async checkHeaderFieldText() {
+    //Text Header Filed Eelement
+    async checkHeaderFieldText() {
         const locator = this.page.locator("//p[text()='Header']");
-        await expect(locator).toContainText('Header');        
+        await expect(locator).toContainText('Header');
     }
 
     async clickHeaderFieldColorBtn() {
         const ele = this.page.locator("//p[text()='Header']/following-sibling::button")
         expect(ele).toBeVisible()
-        await ele.click()  
-        
-        
+        await ele.click()
+
+
     }
 
     async HeaderColorFirstInputField() {
         await this.page.locator('//input[@type="number"]').fill("23")
     }
 
-    
+
     async HeaderColorSecondInputField() {
         await this.page.locator('(//input[@type="text"])[1]').fill("13")
     }
@@ -355,26 +356,26 @@ export default class MobileDesign{
     }
 
 
-    
-     //Text Header Text Filed Eelement
-     async checkHeaderTextFieldText() {
+
+    //Text Header Text Filed Eelement
+    async checkHeaderTextFieldText() {
         const locator = this.page.locator("//p[text()='Header Text']");
-        await expect(locator).toContainText('Header Text');        
+        await expect(locator).toContainText('Header Text');
     }
 
     async clickHeaderTextFieldColorBtn() {
         const ele = this.page.locator("//p[text()='Header Text']/following-sibling::button")
         expect(ele).toBeVisible()
-        await ele.click()  
-        
-        
+        await ele.click()
+
+
     }
 
     async HeaderTextColorFirstInputField() {
         await this.page.locator('//input[@type="number"]').fill("123")
     }
 
-    
+
     async HeaderTextColorSecondInputField() {
         await this.page.locator('(//input[@type="text"])[1]').fill("313")
     }
@@ -392,24 +393,24 @@ export default class MobileDesign{
     }
 
 
-       //Text Gamification Filed Eelement
-     async checkGamificationFieldText() {
+    //Text Gamification Filed Eelement
+    async checkGamificationFieldText() {
         const locator = this.page.locator("//p[text()='Gamification']");
-        await expect(locator).toContainText('Gamification');        
+        await expect(locator).toContainText('Gamification');
     }
 
     async clickGamificationFieldColorBtn() {
         const ele = this.page.locator("//p[text()='Gamification']/following-sibling::button")
         expect(ele).toBeVisible()
         await ele.click()
-        
+
     }
 
     async GamificationColorFirstInputField() {
         await this.page.locator('//input[@type="number"]').fill("123")
     }
 
-    
+
     async GamificationColorSecondInputField() {
         await this.page.locator('(//input[@type="text"])[1]').fill("31")
     }
@@ -426,25 +427,25 @@ export default class MobileDesign{
         await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
     }
 
-      //Text Gamification Glow Line Filed Eelement
-      async checkGamificationGlowLineFieldText() {
+    //Text Gamification Glow Line Filed Eelement
+    async checkGamificationGlowLineFieldText() {
         const locator = this.page.locator("//p[text()='Gamification Glow Line']");
-        await expect(locator).toContainText('Gamification Glow Line');        
+        await expect(locator).toContainText('Gamification Glow Line');
     }
 
     async clickGamificationGlowLineFieldColorBtn() {
         const ele = this.page.locator("//p[text()='Gamification Glow Line']/following-sibling::button")
         expect(ele).toBeVisible()
         await ele.click()
-        
-        
+
+
     }
 
     async GamificationGlowLineColorFirstInputField() {
         await this.page.locator('//input[@type="number"]').fill("123")
     }
 
-    
+
     async GamificationGlowLineColorSecondInputField() {
         await this.page.locator('(//input[@type="text"])[1]').fill("313")
     }
@@ -466,27 +467,91 @@ export default class MobileDesign{
     }
 
 
-
-
-
-    
-    
-
-    
-
-    
-
-
-    
-
+    async deleteUploadedLandscapeBG() {
+                     
+            let ele = await this.page.locator("(//div[@class='MuiBox-root css-1tejaop'])[1]").isVisible()
+               if ((ele == true)) {
+                    console.log("delete Uploaded Landscape BG ")
+                    await this.page
+                            .locator("(//div[@class='MuiBox-root css-1tejaop'])[1]")
+                                    .click()
+               }        
+       
+               
+       
+    }
+    async deleteUploadedPortraitBG() {
+                     
+        let ele = await this.page.locator("(//div[@class='MuiBox-root css-1tejaop'])[1]").isVisible()
+           if ((ele == true)) {
+                console.log("delete Uploaded Portrait BG ")
+                await this.page
+                        .locator("(//div[@class='MuiBox-root css-1tejaop'])[1]")
+                                .click()
+           }        
    
+           
+   
+}
 
-    
+async deleteUploadedLandscapeBGHeader() {
+                     
+    let ele = await this.page.locator("(//div[@class='MuiBox-root css-1tejaop'])[1]").isVisible()
+       if ((ele == true)) {
+            console.log("delete Uploaded Landscape BG Header ")
+            await this.page
+                    .locator("(//div[@class='MuiBox-root css-1tejaop'])[1]")
+                            .click()
+       }        
+
+       
+
+}
+
+async deleteUploadedPortraitBGHeader() {
+                     
+    let ele = await this.page.locator("(//div[@class='MuiBox-root css-1tejaop'])[1]").isVisible()
+       if ((ele == true)) {
+            console.log("delete Uploaded Portrait BG Header ")
+            await this.page
+                    .locator("(//div[@class='MuiBox-root css-1tejaop'])[1]")
+                            .click()
+       }        
+
+       
+
+}
+
+
+async deleteUploadedMainLogo() {
+                     
+    const ele = await this.page.locator("(//div[@class='MuiBox-root css-8eu9qp']//button)[2]").isVisible()
+       if ((ele == true)) {
+            console.log("delete Uploaded Portrait BG Header ")
+            await this.page.locator("(//div[@class='MuiBox-root css-8eu9qp']//button)[2]")
+                            .click()
+       }        
+
+       
+
+}
 
 
 
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -501,9 +566,23 @@ export default class MobileDesign{
     }
 
 
-    
 
-   
+    //>>>Upload Image
+
+    async dragAndDropUploadHelper() {
+
+        const buffer = readFileSync('./videos/a.png');
+        // Create the DataTransfer and File
+        const dataTransfer = await this.page.evaluateHandle((data) => {
+            const dt = new DataTransfer();
+            // Convert the buffer to a hex array
+            const file = new File([data.toString('hex')], 'a.png', { type: 'application/png' });
+            dt.items.add(file);
+            return dt;
+        }, buffer);
+
+        await this.page.dispatchEvent("(//div[@class='MuiBox-root css-78n4oq']//div)[1]", 'drop', { dataTransfer });
+
+    }
+
 }
-
-

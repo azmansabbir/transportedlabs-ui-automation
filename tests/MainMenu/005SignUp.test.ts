@@ -5,12 +5,12 @@ import { readFileSync } from 'fs'
 
 
 
-test.describe('Mobile Design Functionality', async () => {
+test.describe('Validate SignUp Page Functionality', async () => {
 
         const filePath0 = './videos/a.png';
 
 
-        test("E2E test", async ({ loginPage, MainMenu, languagePage, menuPage, singupPage, page, }, testInfo) => {
+        test("E2E test", async ({ loginPage, MainMenu, languagePage, menuPage, singupPage,globalPrizingPage, page, }, testInfo) => {
 
 
                 await test.step("Verify that admin saccessfully go to the mobiledesign page", async () => {
@@ -158,23 +158,180 @@ test.describe('Mobile Design Functionality', async () => {
 
                         //check set text title 
                         await singupPage.checkSetTitleText()
-                        
+
                         //input set title data  
                         await singupPage.inputSetTitleData()
 
-//check upload picture text 
-await singupPage.checkUploadPictureText()
+                        //check upload picture text 
+                        await singupPage.checkUploadPictureText()
 
-//upload profile image 
-await singupPage.uploadProfileSet()
-                
-await page.waitForTimeout(4000)
+                        //upload profile image 
+                        await singupPage.uploadProfileSet()
 
-//click on the save button
-await singupPage.clickSaveBtn()
+                        await page.waitForTimeout(4000)
+
+                        //click on the save button
+                        await singupPage.clickSaveBtn()
+
+
+                })
+                await test.step("Verify Terms And Condition Section", async () => {
+                        const screenshot = await page.screenshot();
+
+
+                        //Verify terms and condition text is visible
+                        await singupPage.verifyTermsAndConditionVisibility()
+
+                        //if there any terms and condition is visible then delete it
+                        await singupPage.deleteTermsAndConditionUrl()
+
+                        //input terms and condition title text
+                        await singupPage.inputTermsAndConditionTitleText()
+                        await testInfo.attach("input terms and condition title text", {
+                                contentType: "image/png",
+                                body: screenshot
+                        })
+
+                        //input terms and condition Url
+                        await singupPage.inputTermsAndConditionUrl()
+
+                        //click on the add terms and conditon button 
+                        await singupPage.clickTermsAndConditionAddNewUrlBtn()
+
+                        //verify terms and condition add url section title   
+                        await singupPage.verifyTermsAndConditionAddUrlSectionTitle()
 
 
                 })
 
+                await test.step("Verify Additional Information Section", async () => {
+                        const screenshot = await page.screenshot();
+
+
+                        //Verify Additional Information Title text is visible
+                        await singupPage.verifyAdditionalInformationTitleText()
+
+                        //if there phone number checkbox is uncheck then check it
+                        await singupPage.clickPhoneNumberCheckBox()
+
+                        //click Email Address CheckBox
+                        await singupPage.clickEmailAddressCheckBox()
+                        await testInfo.attach("click Email Address CheckBox", {
+                                contentType: "image/png",
+                                body: screenshot
+                        })
+
+                        //click AgeCheck Box
+                        await singupPage.clickAgeCheckBox()
+
+                        //click DateOfBirth CheckBox 
+                        await singupPage.clickDateOfBirthCheckBox()
+
+                        //click Postal Code CheckBox   
+                        await singupPage.clickPostalCodeCheckBox()
+                        //click Custom Question CheckBox  
+                        await singupPage.clickCustomQuestionCheckBox()
+                        //click Add Question Add Btn  
+                        await singupPage.clickAddQuestionAddBtn()
+
+                        await page.waitForTimeout(4000)
+
+                        //verify Custom Question Text  
+                        await singupPage.verifyCustomQuestionText()
+
+                        //verify Custom Question Type Text  
+                        await singupPage.verifyCustomQuestionTypeText()
+
+
+                        //click Free Form CheckBox 
+                        await singupPage.clickFreeFormCheckBox()
+
+
+                        //input Free Form Custom Question  
+                        await singupPage.inputFreeFormCustomQuestion()
+
+
+                        //enabled Mandotary Btn  
+                        await singupPage.enabledMandotaryBtn()
+
+                        //click Custom Question Window SaveBtn  
+                        await singupPage.clickCustomQuestionWindowSaveBtn()
+
+                        await page.waitForTimeout(3000)
+
+                        //click Add Question Add Btn  
+                        await singupPage.clickAddQuestionAddBtn()
+
+                        await page.waitForTimeout(2000)
+
+
+                        //click Multiple Choice CheckBox 
+                        await singupPage.clickMultipleChoiceCheckBox()
+
+
+                        //click Add Choice Btn 
+                        await singupPage.clickAddChoiceBtn()
+
+                        //input Choice Text 
+                        await singupPage.inputChoiceText()
+
+                        //click Custom Question Window SaveBtn  
+                        await singupPage.clickCustomQuestionWindowSaveBtn()
+
+
+                })
+
+                await test.step("Verify Where Custom Opt-Ins appear Section", async () => {
+                        const screenshot = await page.screenshot();
+
+
+                        //delete Custom Question
+                        await singupPage.deleteCustomQuestion()
+
+                        //clcik SignUp ShowOn Home Checkbox
+                        await singupPage.clcikSignUpShowOnHomeCheckbox()
+
+                        //clcik Custom Question Screen Checkbox
+                        await singupPage.clcikCustomQuestionScreenCheckbox()
+                        await testInfo.attach("clcik Custom Question Screen Checkbox", {
+                                contentType: "image/png",
+                                body: screenshot
+                        })
+
+                        //clcik Custom Option Checkbox
+                        await singupPage.clcikCustomOptionCheckbox()
+
+                        //clcik Add Custom OptionIn 
+                        await singupPage.clcikAddCustomOptionIn()
+
+                        await page.waitForTimeout(3000)
+                        //clcik SmsCheck Box   
+                        await singupPage.clcikSmsCheckBox()
+
+                        //clcik Email CheckBox  
+                        await singupPage.clcikEmailCheckBox()
+
+                        //clcik Custom CheckBox
+                        await singupPage.clcikCustomCheckBox()
+
+
+
+                        //input Custom Backend Name 
+                        await singupPage.inputCustomBackendName()
+
+                        //input Custom Options Discription 
+                        await singupPage.inputCustomOptionsDiscription()
+
+
+                        //click AutoCheck Checkbox 
+                        await singupPage.clickAutoCheckCheckbox()
+
+
+                        //click Custom OptionIn SaveBtn  
+                        await singupPage.clickCustomOptionInSaveBtn()
+
+
+
+                })
         })
 })

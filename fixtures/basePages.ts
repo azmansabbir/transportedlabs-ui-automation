@@ -4,6 +4,8 @@ import languagePage from "@pages/language.page";
 import { test as baseTest } from "@playwright/test";
 import menuPage from "@pages/menu.page";
 import singupPage from "@pages/signup.page";
+import globalPrizingPage from "@pages/globalPrizing.page";
+import tugOfWarPage from "@pages/tugOfWar.page"
 
 
 
@@ -14,6 +16,8 @@ const test = baseTest.extend<{
     languagePage: languagePage;
     menuPage: menuPage;
     singupPage: singupPage;
+    globalPrizingPage: globalPrizingPage;
+    tugOfWarPage: tugOfWarPage;
 
 }>({
     loginPage: async ({ page }, use) => {
@@ -34,9 +38,14 @@ const test = baseTest.extend<{
 
     singupPage: async ({ page }, use) => {
         await use(new singupPage(page));
+    },
+
+    globalPrizingPage: async ({ page }, use) => {
+        await use(new globalPrizingPage(page));
+    },
+    tugOfWarPage: async ({ page }, use) => {
+        await use(new tugOfWarPage(page));
     }
-
-
     
     
 })
