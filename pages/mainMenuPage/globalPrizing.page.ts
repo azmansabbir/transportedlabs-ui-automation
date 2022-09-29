@@ -27,13 +27,13 @@ export default class globalPrizingPage {
         async inputPrizeName() {
                 const locator = this.page.locator("//input[@placeholder='Enter prize name...']")
                 expect(locator).toBeVisible()
-                await locator.fill("Global Prize")
+                await locator.fill("Auto Test")
         }
 
         //select Prize Category
         async selectPrizeCategory() {
                 const locator = this.page.locator("div[role='button']")
-                await locator.click()
+                await locator.dblclick()
                 // // expect(locator).toBeVisible()
                 // await locator.selectOption({ label: 'Option 2' })
         }
@@ -47,8 +47,8 @@ export default class globalPrizingPage {
         }
 
         async selectPrizeCategoryGeneral() {
-                const locator = this.page.locator("text=General")
-                await locator.click()
+                const locator = this.page.locator("//li[@data-value='general']")
+                await locator.click({force:true})
                 // // expect(locator).toBeVisible()
                 // await locator.selectOption({ label: 'Option 2' })
         }
@@ -89,7 +89,7 @@ export default class globalPrizingPage {
                 let ele = await this.page.locator("(//input[@type='checkbox'])[1]").isVisible()
 
                 if ((ele == false)) {
-                        console.log("Prize Expiration Select None")
+                        // console.log("Prize Expiration Select None")
                         await this.page.locator("(//input[@type='checkbox'])[1]").click()
 
                 }
@@ -100,7 +100,7 @@ export default class globalPrizingPage {
                 let ele = await this.page.locator("input[value='csv']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("click Load CSV Check Box")
+                        // console.log("click Load CSV Check Box")
                         await this.page.locator("input[value='csv']").click()
 
                 }
@@ -126,7 +126,7 @@ export default class globalPrizingPage {
                 let ele = await this.page.locator("input[value = 'textcode']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("click Generate Text code Check Box")
+                        // console.log("click Generate Text code Check Box")
                         await this.page.locator("input[value='barcode']").click()
 
                 }
@@ -143,7 +143,7 @@ export default class globalPrizingPage {
                 let ele = await this.page.locator("input[value='auto']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("click Auto generate Check Box")
+                        // console.log("click Auto generate Check Box")
                         await this.page.locator("input[value='auto']").click()
 
                 }
@@ -159,7 +159,7 @@ export default class globalPrizingPage {
                 let ele = await this.page.locator("(//span[text()='Prefix']/following::input)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("click SMS Sharing Check Box")
+                        // console.log("click SMS Sharing Check Box")
                         await this.page.locator("(//span[text()='Prefix']/following::input)[1]").click()
 
                 }
@@ -169,7 +169,7 @@ export default class globalPrizingPage {
                 let ele = await this.page.locator("(//span[text()='SMS sharing']/following::input)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("click Email Sharing Check Box")
+                        // console.log("click Email Sharing Check Box")
                         await this.page.locator("(//span[text()='SMS sharing']/following::input)[1]").click()
 
                 }
@@ -179,7 +179,7 @@ export default class globalPrizingPage {
                 let ele = await this.page.locator("(//span[text()='Email sharing']/following::input)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("click Wallet Sharing Check Box")
+                        // console.log("click Wallet Sharing Check Box")
                         await this.page.locator("(//span[text()='Email sharing']/following::input)[1]").click()
 
                 }
@@ -189,7 +189,7 @@ export default class globalPrizingPage {
                 let ele = await this.page.locator("(//span[text()='Wallet sharing']/following::input)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("click Limit Per User Check Box")
+                        // console.log("click Limit Per User Check Box")
                         await this.page.locator("(//span[text()='Wallet sharing']/following::input)[1]").click()
 
                 }
@@ -223,5 +223,59 @@ export default class globalPrizingPage {
                 
 
         } 
+
+
+//Deleted Prize Element
+
+async searchPrize() {
+        let ele = await this.page.locator("//input[@placeholder='Search...']").isVisible()
+
+        if ((ele == true)) {
+                // console.log("click Limit Per User Check Box")
+                await this.page.locator("//input[@placeholder='Search...']").fill("Auto Test")
+
+        }
+        // const ele = await this.page.locator("//input[@placeholder='Search...']")
+        // expect(ele).toBeVisible()
+        // await ele.fill("Auto Test")
+
+        
+
+} 
+
+async deletePrize() {
+
+        let ele = await this.page.locator("//button[text()='Delete']").isVisible()
+
+                if ((ele == true)) {
+                        // console.log("click Limit Per User Check Box")
+                        await this.page.locator("//button[text()='Delete']").click()
+
+                }
+
+
+        
+
+} 
+
+async clickOkBtn() {
+
+        let ele = await this.page.locator("//button[text()='Ok']").isVisible()
+
+                if ((ele == true)) {
+                        // console.log("click Limit Per User Check Box")
+                        await this.page.locator("//button[text()='Ok']").click()
+
+                }
+
+
+        
+
+} 
+
+
+
+
+        
 
 }

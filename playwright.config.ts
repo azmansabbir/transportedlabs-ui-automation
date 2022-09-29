@@ -1,4 +1,4 @@
-import type { devices, PlaywrightTestConfig } from '@playwright/test';
+import { devices, PlaywrightTestConfig } from '@playwright/test';
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -20,11 +20,12 @@ const config: PlaywrightTestConfig = {
     //     {
     //         name: 'chromium',
     //         use: { ...devices['Desktop Chrome'] },
+ 
     //     },
-    //     {
-    //         name: 'Pixel',
-    //         use: { ...devices['Pixel 5'] },
-    //     },
+    //     // {
+    //     //     name: 'Pixel',
+    //     //     use: { ...devices['Pixel 5'] },
+    //     // },
     //     // {
     //     //     name: 'firefox',
     //     //     use: { ...devices['Desktop Firefox'] },
@@ -33,6 +34,7 @@ const config: PlaywrightTestConfig = {
     //     //     name: 'webkit',
     //     //     use: { ...devices['Desktop Safari'] },
     //     // },
+    
     // ],
     // globalSetup: require.resolve('./global-setup'),
     use: {
@@ -56,14 +58,16 @@ const config: PlaywrightTestConfig = {
         //     permissions: ["clipboard-read"]
         // }
         // ,
+
         launchOptions: {
             args: ["--start-maximized"],
+        },
 
             // logger: {
             //     isEnabled: (name, severity) => true,
             //     log: (name, severity, message, args) => console.log(name, severity)
             // }
-        }
+        
     },
     expect: {
         /**
@@ -72,7 +76,7 @@ const config: PlaywrightTestConfig = {
          */
      },
     
-    timeout: 120000,
+    timeout: 1000000,
    
 
     forbidOnly: !!process.env.CI,
@@ -86,12 +90,14 @@ const config: PlaywrightTestConfig = {
     // grep: [new RegExp("@smoke"), new RegExp("@reg")],
     testMatch: [
                 "001Login.test.ts",
-                "002MobileDesign.test.ts",           
+                "002MobileDesign.test.ts",
                 "003Language.test.ts",
                 "004Menu.test.ts",
                 "005SignUp.test.ts",
                 "006GlobalPrizing.test.ts",
-                "008tugOfWar.test.ts"
+                "007PrizeDrop.test.ts",
+                "008TugOfWar.test.ts"
+               
                 ],
     retries: 0,
     // reporter: "./customReport/myReporter.ts", 

@@ -77,24 +77,24 @@ export default class MobileDesign {
 
 
     async primaryColorFirstInputField() {
-        await this.page.locator("//input[@type='number']").fill("231")
+        await this.page.locator("(//input[@type='text'])[1]").fill("231")
     }
 
 
     async primaryColorSecondInputField() {
-        await this.page.locator("(//input[@type='text'])[1]").fill("195")
+        await this.page.locator("(//input[@type='text'])[2]").fill("195")
     }
 
     async primaryColorThirdInputField() {
-        await this.page.locator("(//input[@type='text'])[2]").fill("14")
+        await this.page.locator("(//input[@type='text'])[3]").fill("14")
     }
 
     async primaryColorOpacityInputField() {
-        await this.page.locator("(//input[@type='text'])[3]").fill("50")
+        await this.page.locator("(//input[@type='text'])[4]").fill("50")
     }
 
     async primaryColorHexInputField() {
-        await this.page.locator("(//input[@type='text'])[4]").fill("ff2b6aff")
+        await this.page.locator("(//input[@type='text'])[5]").fill("ff2b6aff")
     }
 
     async clickSaveBtn() {
@@ -121,24 +121,24 @@ export default class MobileDesign {
 
 
     async SecondaryColorFirstInputField() {
-        await this.page.locator("//input[@type='number']").fill("20")
+        await this.page.locator("(//input[@type='text'])[1]").fill("20")
     }
 
 
     async SecondaryColorSecondInputField() {
-        await this.page.locator("(//input[@type='text'])[1]").fill("10")
+        await this.page.locator("(//input[@type='text'])[2]").fill("10")
     }
 
     async SecondaryColorThirdInputField() {
-        await this.page.locator("(//input[@type='text'])[2]").fill("13")
+        await this.page.locator("(//input[@type='text'])[3]").fill("13")
     }
 
     async SecondaryColorOpacityInputField() {
-        await this.page.locator("(//input[@type='text'])[3]").fill("55")
+        await this.page.locator("(//input[@type='text'])[4]").fill("55")
     }
 
     async SecondaryColorHexInputField() {
-        await this.page.locator("(//input[@type='text'])[4]").fill("fd2b6aff")
+        await this.page.locator("(//input[@type='text'])[5]").fill("fd2b6aff")
     }
 
     //Tertiary color input field ele
@@ -156,24 +156,24 @@ export default class MobileDesign {
     }
 
     async TertiaryColorFirstInputField() {
-        await this.page.locator("//input[@type='number']").fill("20")
+        await this.page.locator("(//input[@type='text'])[1]").fill("20")
     }
 
 
     async TertiaryColorSecondInputField() {
-        await this.page.locator("(//input[@type='text'])[1]").fill("10")
+        await this.page.locator("(//input[@type='text'])[2]").fill("10")
     }
 
     async TertiaryColorThirdInputField() {
-        await this.page.locator("(//input[@type='text'])[2]").fill("13")
+        await this.page.locator("(//input[@type='text'])[3]").fill("13")
     }
 
     async TertiaryColorOpacityInputField() {
-        await this.page.locator("(//input[@type='text'])[3]").fill("55")
+        await this.page.locator("(//input[@type='text'])[4]").fill("55")
     }
 
     async TertiaryColorHexInputField() {
-        await this.page.locator("(//input[@type='text'])[4]").fill("fd2b6aff")
+        await this.page.locator("(//input[@type='text'])[5]").fill("fd2b6aff")
     }
 
     //Bitton color Input Field Ele
@@ -191,24 +191,24 @@ export default class MobileDesign {
     }
 
     async ButtonColorFirstInputField() {
-        await this.page.locator("//input[@type='number']").fill("50")
+        await this.page.locator("(//input[@type='text'])[1]").fill("50")
     }
 
 
     async ButtonColorSecondInputField() {
-        await this.page.locator("(//input[@type='text'])[1]").fill("303")
+        await this.page.locator("(//input[@type='text'])[2]").fill("303")
     }
 
     async ButtonColorThirdInputField() {
-        await this.page.locator("(//input[@type='text'])[2]").fill("432")
+        await this.page.locator("(//input[@type='text'])[3]").fill("432")
     }
 
     async ButtonColorOpacityInputField() {
-        await this.page.locator("(//input[@type='text'])[3]").fill("53")
+        await this.page.locator("(//input[@type='text'])[4]").fill("53")
     }
 
     async ButtonColorHexInputField() {
-        await this.page.locator("(//input[@type='text'])[4]").fill("573c98ff")
+        await this.page.locator("(//input[@type='text'])[5]").fill("573c98ff")
     }
 
     //Element of the Button Glow Field
@@ -227,24 +227,24 @@ export default class MobileDesign {
     }
 
     async ButtonGlowColorFirstInputField() {
-        await this.page.locator("//input[@type='number']").fill("110")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[1]").fill("110")
     }
 
 
     async ButtonGlowColorSecondInputField() {
-        await this.page.locator("(//input[@type='text'])[1]").fill("302")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[2]").fill("302")
     }
 
     async ButtonGlowColorThirdInputField() {
-        await this.page.locator("(//input[@type='text'])[2]").fill("431")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[3]").fill("431")
     }
 
     async ButtonGlowColorOpacityInputField() {
-        await this.page.locator("(//input[@type='text'])[3]").fill("51")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[4]").fill("51")
     }
 
     async ButtonGlowColorHexInputField() {
-        await this.page.locator("(//input[@type='text'])[4]").fill("573c98ff")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[5]").fill("573c98ff")
     }
 
 
@@ -263,24 +263,24 @@ export default class MobileDesign {
     }
 
     async TextColorFirstInputField() {
-        await this.page.locator('//input[@type="number"]').fill("123")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[1]").fill("123")
     }
 
 
     async TextColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("313")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[2]").fill("313")
     }
 
     async TextColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("402")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[3]").fill("402")
     }
 
     async TextColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("53")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[4]").fill("53")
     }
 
     async TextColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("7bffff87")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[5]").fill("7bffff87")
     }
 
 
@@ -299,24 +299,24 @@ export default class MobileDesign {
     }
 
     async TextDialogBoxColorFirstInputField() {
-        await this.page.locator('//input[@type="number"]').fill("123")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[1]").fill("123")
     }
 
 
     async TextDialogBoxColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("313")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[2]").fill("313")
     }
 
     async TextDialogBoxColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("402")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[3]").fill("402")
     }
 
     async TextDialogBoxColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("53")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[4]").fill("53")
     }
 
     async TextDialogBoxColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[5]").fill("573e98ff")
     }
 
 
@@ -335,24 +335,24 @@ export default class MobileDesign {
     }
 
     async HeaderColorFirstInputField() {
-        await this.page.locator('//input[@type="number"]').fill("23")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[1]").fill("23")
     }
 
 
     async HeaderColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("13")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[2]").fill("13")
     }
 
     async HeaderColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("40")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[3]").fill("40")
     }
 
     async HeaderColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("53")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[4]").fill("53")
     }
 
     async HeaderColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[5]").fill("573e98ff")
     }
 
 
@@ -372,24 +372,24 @@ export default class MobileDesign {
     }
 
     async HeaderTextColorFirstInputField() {
-        await this.page.locator('//input[@type="number"]').fill("123")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[1]").fill("123")
     }
 
 
     async HeaderTextColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("313")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[2]").fill("313")
     }
 
     async HeaderTextColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("402")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[3]").fill("402")
     }
 
     async HeaderTextColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("53")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[4]").fill("53")
     }
 
     async HeaderTextColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[5]").fill("573e98ff")
     }
 
 
@@ -407,24 +407,24 @@ export default class MobileDesign {
     }
 
     async GamificationColorFirstInputField() {
-        await this.page.locator('//input[@type="number"]').fill("123")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[1]").fill("123")
     }
 
 
     async GamificationColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("31")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[2]").fill("31")
     }
 
     async GamificationColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("40")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[3]").fill("40")
     }
 
     async GamificationColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("100")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[4]").fill("100")
     }
 
     async GamificationColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[5]").fill("573e98ff")
     }
 
     //Text Gamification Glow Line Filed Eelement
@@ -442,24 +442,24 @@ export default class MobileDesign {
     }
 
     async GamificationGlowLineColorFirstInputField() {
-        await this.page.locator('//input[@type="number"]').fill("123")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[1]").fill("123")
     }
 
 
     async GamificationGlowLineColorSecondInputField() {
-        await this.page.locator('(//input[@type="text"])[1]').fill("313")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[2]").fill("313")
     }
 
     async GamificationGlowLineColorThirdInputField() {
-        await this.page.locator('(//input[@type="text"])[2]').fill("402")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[3]").fill("402")
     }
 
     async GamificationGlowLineColorOpacityInputField() {
-        await this.page.locator('(//input[@type="text"])[3]').fill("53")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[4]").fill("53")
     }
 
     async GamificationGlowLineColorHexInputField() {
-        await this.page.locator('(//input[@type="text"])[4]').fill("573e98ff")
+        await this.page.locator("(//input[contains(@class,'MuiInputBase-input MuiOutlinedInput-input')])[5]").fill("573e98ff")
     }
 
     async clickLandscapeBackgroundInputField() {
@@ -471,7 +471,7 @@ export default class MobileDesign {
                      
             let ele = await this.page.locator("(//div[@class='MuiBox-root css-1tejaop'])[1]").isVisible()
                if ((ele == true)) {
-                    console.log("delete Uploaded Landscape BG ")
+                    // console.log("delete Uploaded Landscape BG ")
                     await this.page
                             .locator("(//div[@class='MuiBox-root css-1tejaop'])[1]")
                                     .click()
@@ -484,7 +484,7 @@ export default class MobileDesign {
                      
         let ele = await this.page.locator("(//div[@class='MuiBox-root css-1tejaop'])[1]").isVisible()
            if ((ele == true)) {
-                console.log("delete Uploaded Portrait BG ")
+                // console.log("delete Uploaded Portrait BG ")
                 await this.page
                         .locator("(//div[@class='MuiBox-root css-1tejaop'])[1]")
                                 .click()
@@ -498,7 +498,7 @@ async deleteUploadedLandscapeBGHeader() {
                      
     let ele = await this.page.locator("(//div[@class='MuiBox-root css-1tejaop'])[1]").isVisible()
        if ((ele == true)) {
-            console.log("delete Uploaded Landscape BG Header ")
+            // console.log("delete Uploaded Landscape BG Header ")
             await this.page
                     .locator("(//div[@class='MuiBox-root css-1tejaop'])[1]")
                             .click()
@@ -512,7 +512,7 @@ async deleteUploadedPortraitBGHeader() {
                      
     let ele = await this.page.locator("(//div[@class='MuiBox-root css-1tejaop'])[1]").isVisible()
        if ((ele == true)) {
-            console.log("delete Uploaded Portrait BG Header ")
+            // console.log("delete Uploaded Portrait BG Header ")
             await this.page
                     .locator("(//div[@class='MuiBox-root css-1tejaop'])[1]")
                             .click()
@@ -527,7 +527,7 @@ async deleteUploadedMainLogo() {
                      
     const ele = await this.page.locator("(//div[@class='MuiBox-root css-8eu9qp']//button)[2]").isVisible()
        if ((ele == true)) {
-            console.log("delete Uploaded Portrait BG Header ")
+            // console.log("delete Uploaded Portrait BG Header ")
             await this.page.locator("(//div[@class='MuiBox-root css-8eu9qp']//button)[2]")
                             .click()
        }        
@@ -537,6 +537,33 @@ async deleteUploadedMainLogo() {
 }
 
 
+async deleteFont() {
+                     
+    let ele = await this.page.locator("(//div[@class='MuiBox-root css-718jsx'])[1]").isVisible()
+       if ((ele == true)) {
+            // console.log("delete Uploaded Landscape BG ")
+            await this.page
+                    .locator("(//div[@class='MuiBox-root css-718jsx'])[1]")
+                            .click()
+       }        
+
+       
+
+}
+
+async clickVideoCheckBox() {
+                     
+    let ele = await this.page.locator("(//input[@class='PrivateSwitchBase-input css-1m9pwf3'])[1]").isChecked()
+       if ((ele == true)) {
+            // console.log("delete Uploaded Landscape BG ")
+            await this.page
+                    .locator("(//input[@class='PrivateSwitchBase-input css-1m9pwf3'])[2]")
+                            .check()
+       }        
+
+       
+
+}
 
 
 
@@ -560,7 +587,7 @@ async deleteUploadedMainLogo() {
     async clickUploadFontAndUploadFiles() {
         const filePath0 = "files/Thin.otf"
         this.page.on("filechooser", async (filechooser) => {
-            await filechooser.setFiles([filePath0])
+            await filechooser.setFiles([filePath0]);
         })
         await this.clickUploadFontInputFiled();
     }

@@ -6,6 +6,8 @@ import menuPage from "@pages/menu.page";
 import singupPage from "@pages/signup.page";
 import globalPrizingPage from "@pages/globalPrizing.page";
 import tugOfWarPage from "@pages/tugOfWar.page"
+import functions from "@testData/functions";
+import prizeDropPage from "@pages/prizeDrop.page";
 
 
 
@@ -18,8 +20,13 @@ const test = baseTest.extend<{
     singupPage: singupPage;
     globalPrizingPage: globalPrizingPage;
     tugOfWarPage: tugOfWarPage;
+    prizeDropPage: prizeDropPage;
+    functions: functions;
 
 }>({
+    functions: async ({ page }, use) => {
+        await use(new functions(page));
+    },
     loginPage: async ({ page }, use) => {
         await use(new LoginPage(page));
     },
@@ -45,8 +52,10 @@ const test = baseTest.extend<{
     },
     tugOfWarPage: async ({ page }, use) => {
         await use(new tugOfWarPage(page));
+    },
+    prizeDropPage: async ({ page }, use) => {
+        await use(new prizeDropPage(page));
     }
-    
     
 })
 export default test;

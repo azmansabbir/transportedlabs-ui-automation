@@ -29,7 +29,7 @@ export default class singupPage {
                 let ele = await this.page.locator("input[name = 'socialMediaLogins']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Social Media Login Button Is Disabled")
+                        // console.log("Social Media Login Button Is Disabled")
                         await this.page.locator("input[name = 'socialMediaLogins']").click()
 
                 }
@@ -50,10 +50,10 @@ export default class singupPage {
                 let ele = await this.page.locator("input[value='emailValidation']").isVisible()
 
                 if ((ele == false)) {
-                        console.log("Social Media Login Button Is Disabled")
+                        // console.log("Social Media Login Button Is Disabled")
 
                 } else {
-                        console.log("Enabled Social Media Login Button")
+                        // console.log("Enabled Social Media Login Button")
                         await this.page.locator("input[value='emailValidation']").click()
                 }
 
@@ -154,7 +154,7 @@ export default class singupPage {
                               
                         const ele = await this.page.locator("input.PrivateSwitchBase-input.MuiSwitch-input").isVisible()
                            if ((ele == true)) {
-                                console.log("click Automataclly Assign Username Btn")
+                                // console.log("click Automataclly Assign Username Btn")
                                 await this.page
                                         .locator("input.PrivateSwitchBase-input.MuiSwitch-input")
                                                 .click()
@@ -245,7 +245,7 @@ export default class singupPage {
                 let ele = await this.page.locator("(//div[@class='MuiBox-root css-1u725a8']//button)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Delete Url")
+                        // console.log("Delete Url")
                         await this.page.locator("(//div[@class='MuiBox-root css-1u725a8']//button)[1]").click()
 
                 }
@@ -294,7 +294,7 @@ export default class singupPage {
                 let ele = await this.page.locator("(//label[text()='Url or link']/following::input)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Radio button is not checked")
+                        // console.log("Radio button is not checked")
                         await this.page.locator("(//label[text()='Url or link']/following::input)[1]").check()
 
                 }
@@ -305,7 +305,7 @@ export default class singupPage {
                 let ele = await this.page.locator("(//span[text()='Phone Number']/following::input)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the Email Address Checkbox")
+                        // console.log("Click on the Email Address Checkbox")
                         await this.page.locator("(//span[text()='Phone Number']/following::input)[1]").check()
 
                 }
@@ -316,7 +316,7 @@ export default class singupPage {
                 let ele = await this.page.locator("(//span[text()='Email Address']/following::input)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the Age Checkbox")
+                        // console.log("Click on the Age Checkbox")
                         await this.page.locator("(//span[text()='Email Address']/following::input)[1]").check()
 
                 }
@@ -326,7 +326,7 @@ export default class singupPage {
                 let ele = await this.page.locator("(//span[text()='Age']/following::input)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the Deth of Birth Checkbox")
+                        // console.log("Click on the Deth of Birth Checkbox")
                         await this.page.locator("(//span[text()='Age']/following::input)[1]").check()
 
                 }
@@ -337,7 +337,7 @@ export default class singupPage {
                 let ele = await this.page.locator("(//span[text()='Date of Birth']/following::input)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the Postal Code Checkbox")
+                        // console.log("Click on the Postal Code Checkbox")
                         await this.page.locator("(//span[text()='Date of Birth']/following::input)[1]").check()
 
                 }
@@ -347,7 +347,7 @@ export default class singupPage {
                 let ele = await this.page.locator("(//span[text()='Zip Code / Postal Code']/following::input)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the Postal Code Checkbox")
+                        // console.log("Click on the Postal Code Checkbox")
                         await this.page.locator("(//span[text()='Zip Code / Postal Code']/following::input)[1]").check()
 
                 }
@@ -358,7 +358,7 @@ export default class singupPage {
                 let ele = await this.page.locator("//button[text()='Add question']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the Postal Code Checkbox")
+                        // console.log("Click on the Postal Code Checkbox")
                         await this.page.locator("//button[text()='Add question']").click()
 
                 }
@@ -382,7 +382,7 @@ export default class singupPage {
                 let ele = await this.page.locator("//input[@value='freeform']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the FreeForm Checkbox")
+                        // console.log("Click on the FreeForm Checkbox")
                         await this.page.locator("//input[@value='freeform']").click()
 
                 }
@@ -399,7 +399,7 @@ export default class singupPage {
                 let ele = await this.page.locator("(//input[contains(@class,'PrivateSwitchBase-input MuiSwitch-input')])[2]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the mandortary btn")
+                        // console.log("Click on the mandortary btn")
                         await this.page.locator("(//input[contains(@class,'PrivateSwitchBase-input MuiSwitch-input')])[2]").click()
 
                 }
@@ -417,7 +417,7 @@ export default class singupPage {
                 let ele = await this.page.locator("//input[@value='multipleChoice']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the multipleChoice Checkbox")
+                        // console.log("Click on the multipleChoice Checkbox")
                         await this.page.locator("//input[@value='multipleChoice']").click()
 
                 }
@@ -427,7 +427,7 @@ export default class singupPage {
                 let ele = await this.page.locator("//button[text()='Add Choice']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the add choice button")
+                        // console.log("Click on the add choice button")
                         await this.page.locator("//button[text()='Add Choice']").click()
 
                 }
@@ -446,7 +446,7 @@ export default class singupPage {
                 let ele = await this.page.locator("(//button[contains(@class,'MuiButtonBase-root MuiButton-root')]/following-sibling::button)[1]").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Delete Custom Question")
+                        // console.log("Delete Custom Question")
                         await this.page.locator("(//button[contains(@class,'MuiButtonBase-root MuiButton-root')]/following-sibling::button)[1]").click()
 
                 }
@@ -457,7 +457,7 @@ export default class singupPage {
                 let ele = await this.page.locator("//input[@value='signUpHome']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on signup option show on home checkbox")
+                        // console.log("Click on signup option show on home checkbox")
                         await this.page.locator("//input[@value='signUpHome']").click()
 
                 }
@@ -467,7 +467,7 @@ export default class singupPage {
                 let ele = await this.page.locator("//input[@value='customQuestionScreen']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on signup option show on custom option checkbox")
+                        // console.log("Click on signup option show on custom option checkbox")
                         await this.page.locator("//input[@value='customQuestionScreen']").click()
 
                 }
@@ -477,7 +477,7 @@ export default class singupPage {
                 let ele = await this.page.locator("//span[text()='Custom Opt-In']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on custom option checkbox")
+                        // console.log("Click on custom option checkbox")
                         await this.page.locator("//span[text()='Custom Opt-In']").click()
 
                 }
@@ -502,7 +502,7 @@ export default class singupPage {
                 let ele = await this.page.locator("//input[@value='sms']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on the sms checkbox")
+                        // console.log("Click on the sms checkbox")
                         await this.page.locator("//input[@value='sms']").click()
 
                 }
@@ -512,7 +512,7 @@ export default class singupPage {
                 let ele = await this.page.locator("//input[@value='email']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on Email Checkbox")
+                        // console.log("Click on Email Checkbox")
                         await this.page.locator("//input[@value='email']").click()
 
                 }
@@ -523,7 +523,7 @@ export default class singupPage {
                 let ele = await this.page.locator("//input[@value='custom']").isVisible()
 
                 if ((ele == true)) {
-                        console.log("Click on Custom Checkbox")
+                        // console.log("Click on Custom Checkbox")
                         await this.page.locator("//input[@value='custom']").click()
 
                 }

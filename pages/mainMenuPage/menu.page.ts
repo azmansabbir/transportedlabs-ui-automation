@@ -63,35 +63,35 @@ export default class menuPage {
 
         //input menubar first color
         async inputMenuBarRgbFirstFieldColor() {
-                const ele = this.page.locator("//input[@type='number']")
+                const ele = this.page.locator("(//input[@inputmode='numeric'])[1]")
                 expect(ele).toBeVisible()
                 await ele.fill('40');
         }
 
         //input menubar second field color
         async inputMenuBarRgbSecondFieldColor() {
-                const ele = this.page.locator("#P-1259377942")
+                const ele = this.page.locator("(//input[@inputmode='numeric'])[2]")
                 expect(ele).toBeVisible()
                 await ele.fill('167');
         }
 
         //input menubar second field color
         async inputMenuBarRgbThirdFieldColor() {
-                const ele = this.page.locator("#P-18645472")
+                const ele = this.page.locator("(//input[@inputmode='numeric'])[3]")
                 expect(ele).toBeVisible()
                 await ele.fill('164');
         }
 
         //input menubar second field color
         async inputMenuBarColorFieldOpacity() {
-                const ele = this.page.locator("#P1222087002")
+                const ele = this.page.locator("(//input[@inputmode='numeric'])[4]")
                 expect(ele).toBeVisible()
                 await ele.fill('100');
         }
 
         //input menubar second field color
         async inputMenuBarSolidFieldColor() {
-                const ele = this.page.locator("#P19063127662")
+                const ele = this.page.locator("//div[@class='MuiBox-root css-zfy2p9']/following-sibling::input[1]")
                 expect(ele).toBeVisible()
                 await ele.fill('2aA8D9');
         }
@@ -106,35 +106,35 @@ export default class menuPage {
 
         //input menubar first color
         async inputSecondMenuBarRgbFirstFieldColor() {
-                const ele = this.page.locator("//input[@type='number']")
+                const ele = this.page.locator("(//input[@inputmode='numeric'])[1]")
                 expect(ele).toBeVisible()
                 await ele.fill('40');
         }
 
         //input menubar second field color
         async inputSecondMenuBarRgbSecondFieldColor() {
-                const ele = this.page.locator("#P1259377942")
+                const ele = this.page.locator("(//input[@inputmode='numeric'])[2]")
                 expect(ele).toBeVisible()
                 await ele.fill('167');
         }
 
         //input menubar second field color
         async inputSecondMenuBarRgbThirdFieldColor() {
-                const ele = this.page.locator("//input[@id='P-18645472']")
+                const ele = this.page.locator("(//input[@inputmode='numeric'])[3]")
                 expect(ele).toBeVisible()
                 await ele.fill('164');
         }
 
         //input menubar second field color
         async inputSecondMenuBarColorFieldOpacity() {
-                const ele = this.page.locator("#P1222087002")
+                const ele = this.page.locator("(//input[@inputmode='numeric'])[4]")
                 expect(ele).toBeVisible()
                 await ele.fill('100');
         }
 
         //input menubar second field color
         async inputSecondMenuBarSolidFieldColor() {
-                const ele = this.page.locator("#P19063127662")
+                const ele = this.page.locator("//div[@class='MuiBox-root css-zfy2p9']/following-sibling::input[1]")
                 expect(ele).toBeVisible()
                 await ele.fill('2aA8D9');
         }
@@ -204,7 +204,7 @@ export default class menuPage {
                              
                         const ele = await this.page.locator("(//input[@type='checkbox'])[1]").isVisible()
                            if ((ele == true)) {
-                                console.log("enabled Home Icon Check Box")
+                                // console.log("enabled Home Icon Check Box")
                                 await this.page
                                         .locator("(//input[@type='checkbox'])[1]")
                                                 .click()
@@ -224,7 +224,7 @@ export default class menuPage {
 
                 const ele = await this.page.locator("(//input[@type='checkbox'])[2]").isVisible()
                            if ((ele == true)) {
-                                console.log("enabled Prize Icon CheckBox")
+                                // console.log("enabled Prize Icon CheckBox")
                                 await this.page
                                         .locator("(//input[@type='checkbox'])[2]")
                                                 .click()
@@ -242,7 +242,7 @@ export default class menuPage {
 
                 const ele = await this.page.locator("(//input[@type='checkbox'])[3]").isVisible()
                            if ((ele == true)) {
-                                console.log("enabled Prize Icon CheckBox")
+                                // console.log("enabled Prize Icon CheckBox")
                                 await this.page
                                         .locator("(//input[@type='checkbox'])[3]")
                                                 .click()
@@ -259,7 +259,7 @@ export default class menuPage {
         async enabledRulesIconCheckBox() {
                 const ele = await this.page.locator("(//input[@type='checkbox'])[4]").isVisible()
                            if ((ele == true)) {
-                                console.log("enabled rules Icon CheckBox")
+                                // console.log("enabled rules Icon CheckBox")
                                 await this.page
                                         .locator("(//input[@type='checkbox'])[4]")
                                                 .click()
@@ -277,7 +277,7 @@ export default class menuPage {
 
                 const ele = await this.page.locator("(//input[@type='checkbox'])[5]").isVisible()
                 if ((ele == true)) {
-                     console.log("enabled User Profile Icon CheckBox")
+                //      console.log("enabled User Profile Icon CheckBox")
                      await this.page
                              .locator("(//input[@type='checkbox'])[5]")
                                      .click()
