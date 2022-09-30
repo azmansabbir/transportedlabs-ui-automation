@@ -926,29 +926,29 @@ test("007PD-009 | Validate Analytics Section Functionality", async ({ loginPage,
 
                 await page.waitForTimeout(3000)
                 //click Prizing Section
-                await prizeDropPage.clickAnalyticsSection()
+                // await prizeDropPage.clickAnalyticsSection()
 
-                await prizeDropPage.clickToStopLiveGame()
+                // await prizeDropPage.clickToStopLiveGame()
 
-                //click Prizing Section
-                await prizeDropPage.clickStopGameOkBtn()
+                // //click Prizing Section
+                // await prizeDropPage.clickStopGameOkBtn()
 
-                await prizeDropPage.clickPrizingSection()
+                // await prizeDropPage.clickPrizingSection()
 
-                await page.waitForTimeout(3000)
+                // await page.waitForTimeout(3000)
 
-                //click Prizing Section
-                await prizeDropPage.clickAnalyticsSection()
+                // //click Prizing Section
+                // await prizeDropPage.clickAnalyticsSection()
 
-                //click Prizing Section
-                await prizeDropPage.verifySessionAnalyticsText()
+                // //click Prizing Section
+                // await prizeDropPage.verifySessionAnalyticsText()
 
-                // const [download] = await Promise.all([
-                //         page.waitForEvent('download'),
-                //         page.frameLocator('iframe').locator('text=Export').click()
-                // ]);
+                // // const [download] = await Promise.all([
+                // //         page.waitForEvent('download'),
+                // //         page.frameLocator('iframe').locator('text=Export').click()
+                // // ]);
 
-                await prizeDropPage.downloadAnlytics()
+                // await prizeDropPage.downloadAnlytics()
 
                 await page.waitForTimeout(6000)
 
