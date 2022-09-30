@@ -1,9 +1,9 @@
 import { FullConfig, FullResult, Reporter, Suite, TestCase, TestError, TestResult, TestStep } from "@playwright/test/reporter"
 export default class MyReporter implements Reporter {
 
-    // onBegin(config: FullConfig, suite: Suite): void {
-    //     console.log('Suite Title: ' + suite.suites[0].title);
-    // }
+    onBegin(config: FullConfig, suite: Suite): void {
+        console.log('Suite Title: ' + suite.suites[0].title);
+    }
 
     // onTestBegin(test: TestCase, result: TestResult): void {
     //     // console.log('Test Started: ' + test.title);

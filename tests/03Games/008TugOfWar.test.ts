@@ -108,32 +108,38 @@ test("Verify All Stage Section And Game Design on New Config", async ({ loginPag
                 await tugOfWarPage.deleteUploadedSponsorLogo()
                 await page.waitForTimeout(3000)
 
+                await tugOfWarPage.clickVideoUploadCheckbox()
+                //upload Sponsor Logo
+                await tugOfWarPage.uploadSponsorLogo()
+
+                //upload Team Logo
+                await tugOfWarPage.uploadTeamLogo()
+                // await page.waitForTimeout(3000)
+
+                //upload Game Title Image
+                await tugOfWarPage.uploadGameTitleImage()
+                // await page.waitForTimeout(3000)
 
                 // //upload Title Background
                 // await tugOfWarPage.uploadTitleBackgroundImage()
                 // await page.waitForTimeout(6000)
 
-                await tugOfWarPage.clickVideoUploadCheckbox()
+               
+
+
 
 
                 await tugOfWarPage.uploadTitleBackgroundVideo()
-                await page.waitForTimeout(3000)
+                // await page.waitForTimeout(3000)
 
 
 
-                //upload Game Title Image
-                await tugOfWarPage.uploadGameTitleImage()
-                await page.waitForTimeout(3000)
-
-                //upload Team Logo
-                await tugOfWarPage.uploadTeamLogo()
-                await page.waitForTimeout(3000)
 
 
-                //upload Sponsor Logo
-                await tugOfWarPage.uploadSponsorLogo()
 
-                await page.waitForTimeout(3000)
+
+
+                // await page.waitForTimeout(3000)
 
                 //enable Custom Selection Massage
                 await tugOfWarPage.enableCustomSelectionMassage()
@@ -506,109 +512,143 @@ test("Verify All Stage Section And Game Design on New Config", async ({ loginPag
 
         })
 
-        await test.step("008TOFW-009 | Verify Game Design", async () => {
+  
 
 
 
-                await tugOfWarPage.clickGameDesignBtn()
-
-                await page.waitForTimeout(3000)
-
-                await functions.fontUploadFunction()
-                await page.waitForTimeout(1000)
-
-                await tugOfWarPage.clickUploadFontBtn()
-
-                await page.waitForTimeout(3000)
+})
 
 
+test("Verify Game Design", async ({ loginPage, tugOfWarPage, functions, page, }, testInfo) => {
 
 
-                //click Primary Color Picker Btn
-                await tugOfWarPage.clickPrimaryColorPickerBtn()
+        await test.step("Login Admin And land To Home Screen", async () => {
 
-                //input Primary RGB First Color
-                await tugOfWarPage.inputPrimaryRGBFirstColor()
+                await page.goto('/admin/#/sign-in')
+                await loginPage.login(data.username, data.password)
+                const title = await page.title();
+                expect(title).toBe('DXP Admin')
 
-                //input Primary RGB Second Color
-                await tugOfWarPage.inputPrimaryRGBSecondColor()
+                const screenshot = await page.screenshot();
+                await testInfo.attach("login screenshot", {
+                        contentType: "image/png",
+                        body: screenshot
+                })
 
-                //input Primary RGB Third Color
-                await tugOfWarPage.inputPrimaryRGBThirdColor()
-
-                //input Primary Color Opacity
-                await tugOfWarPage.inputPrimaryColorOpacity()
-
-                //input Primary Color HEX
-                await tugOfWarPage.inputPrimaryColorHEX()
-
-                //clic Save Btn
-                await tugOfWarPage.clicSaveBtn()
-
-                //click Secondary Color Picker Btn
-                await tugOfWarPage.clickSecondaryColorPickerBtn()
-
-                await page.waitForTimeout(3000)
+                //click Tug Of War Page
+                await tugOfWarPage.clickTugOfWarPage()
 
 
-                //input Secondary RGB First Color
-                await tugOfWarPage.inputSecondaryRGBFirstColor()
+        })
 
-                //input Secondary RGB Second Color
-                await tugOfWarPage.inputSecondaryRGBSecondColor()
-
-                //input Secondary RGB Third Color
-                await tugOfWarPage.inputSecondaryRGBThirdColor()
-
-                //input Secondary Color Opacity
-                await tugOfWarPage.inputSecondaryColorOpacity()
-
-                //input Secondary Color HEX
-                await tugOfWarPage.inputSecondaryColorHEX()
-                //clic Save Btn
-                await tugOfWarPage.clicSaveBtn()
-
-                //click Text Color Picker Btn
-                await tugOfWarPage.clickTextColorPickerBtn()
-
-                await page.waitForTimeout(3000)
+        await test.step("008TOFW-003 | Test In mobile Device", async () => {
 
 
-                //input Text RGB First Color
-                await tugOfWarPage.inputTextRGBFirstColor()
+                await test.step("008TOFW-009 | Verify Game Design", async () => {
 
 
-                //input Text RGB SecondColor
-                await tugOfWarPage.inputTextRGBSecondColor()
 
-
-                //input Text RGB Third Color
-                await tugOfWarPage.inputTextRGBThirdColor()
-
-
-                //input Text Color Opacity
-                await tugOfWarPage.inputTextColorOpacity()
-
-                //input Text Color HEX
-                await tugOfWarPage.inputTextColorHEX()
-
-                //clic Save Btn
-                await tugOfWarPage.clicSaveBtn()
-
-
-                //function for banner upload
-                await functions.bannerImageUploadFunction()
-                //click For Upload Mainboard BG
-                await tugOfWarPage.clickForUploadMainboardBG()
-                await page.waitForTimeout(6000)
-
-                //function for banner upload
-                await functions.bannerImageUploadFunction()
-                //click For Upload Mobile BG
-                await tugOfWarPage.clickForUploadMobileBG()
-
-
-                await page.waitForTimeout(6000)
+                        await tugOfWarPage.clickGameDesignBtn()
+        
+                        await page.waitForTimeout(3000)
+        
+                        await functions.fontUploadFunction()
+                        await page.waitForTimeout(1000)
+        
+                        await tugOfWarPage.clickUploadFontBtn()
+        
+                        await page.waitForTimeout(3000)
+        
+        
+        
+        
+                        //click Primary Color Picker Btn
+                        await tugOfWarPage.clickPrimaryColorPickerBtn()
+        
+                        //input Primary RGB First Color
+                        await tugOfWarPage.inputPrimaryRGBFirstColor()
+        
+                        //input Primary RGB Second Color
+                        await tugOfWarPage.inputPrimaryRGBSecondColor()
+        
+                        //input Primary RGB Third Color
+                        await tugOfWarPage.inputPrimaryRGBThirdColor()
+        
+                        //input Primary Color Opacity
+                        await tugOfWarPage.inputPrimaryColorOpacity()
+        
+                        //input Primary Color HEX
+                        await tugOfWarPage.inputPrimaryColorHEX()
+        
+                        //clic Save Btn
+                        await tugOfWarPage.clicSaveBtn()
+        
+                        //click Secondary Color Picker Btn
+                        await tugOfWarPage.clickSecondaryColorPickerBtn()
+        
+                        await page.waitForTimeout(3000)
+        
+        
+                        //input Secondary RGB First Color
+                        await tugOfWarPage.inputSecondaryRGBFirstColor()
+        
+                        //input Secondary RGB Second Color
+                        await tugOfWarPage.inputSecondaryRGBSecondColor()
+        
+                        //input Secondary RGB Third Color
+                        await tugOfWarPage.inputSecondaryRGBThirdColor()
+        
+                        //input Secondary Color Opacity
+                        await tugOfWarPage.inputSecondaryColorOpacity()
+        
+                        //input Secondary Color HEX
+                        await tugOfWarPage.inputSecondaryColorHEX()
+                        //clic Save Btn
+                        await tugOfWarPage.clicSaveBtn()
+        
+                        //click Text Color Picker Btn
+                        await tugOfWarPage.clickTextColorPickerBtn()
+        
+                        await page.waitForTimeout(3000)
+        
+        
+                        //input Text RGB First Color
+                        await tugOfWarPage.inputTextRGBFirstColor()
+        
+        
+                        //input Text RGB SecondColor
+                        await tugOfWarPage.inputTextRGBSecondColor()
+        
+        
+                        //input Text RGB Third Color
+                        await tugOfWarPage.inputTextRGBThirdColor()
+        
+        
+                        //input Text Color Opacity
+                        await tugOfWarPage.inputTextColorOpacity()
+        
+                        //input Text Color HEX
+                        await tugOfWarPage.inputTextColorHEX()
+        
+                        //clic Save Btn
+                        await tugOfWarPage.clicSaveBtn()
+        
+        
+                        //function for banner upload
+                        await functions.bannerImageUploadFunction()
+                        //click For Upload Mainboard BG
+                        await tugOfWarPage.clickForUploadMainboardBG()
+                        await page.waitForTimeout(6000)
+        
+                        //function for banner upload
+                        await functions.bannerImageUploadFunction()
+                        //click For Upload Mobile BG
+                        await tugOfWarPage.clickForUploadMobileBG()
+        
+        
+                        await page.waitForTimeout(6000)
+        
+                })
 
         })
 

@@ -26,11 +26,11 @@ export default class singupPage {
         async checkSocialMediaLogins() {
 
 
-                let ele = await this.page.locator("input[name = 'socialMediaLogins']").isVisible()
+                const ele = await this.page.locator("//input[@value='socialMediaLogins']").isChecked()
 
-                if ((ele == true)) {
-                        // console.log("Social Media Login Button Is Disabled")
-                        await this.page.locator("input[name = 'socialMediaLogins']").click()
+                if ((ele == false)) {
+                        // console.log("Social Media Login Button Is Disabled")                        
+                        await this.page.locator("//input[@value='socialMediaLogins']").check()
 
                 }
 

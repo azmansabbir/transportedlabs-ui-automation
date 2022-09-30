@@ -88,6 +88,16 @@ export default class languagePage {
     
     //Language Controls Elable disable btn Element
     async clickUserSelectableRadioBtn() {
+
+        // let ele = await this.page.frameLocator('iframe').locator("//input[@value='user']").isChecked()
+        //         if ((ele == false)) {
+        //                 // console.log("delete Uploaded Leaderboard BG")
+        //                 await this.page.frameLocator('iframe')
+        //                         .locator("//input[@value='user']")
+        //                         .check({force:true})
+        //         }
+
+
         if (await this.page.isHidden("//h5[text()='Landing page of the user registration flow:']"))
         {
             await this.page.check("(//input[@type='radio'])[1]", {force:true});
@@ -97,7 +107,7 @@ export default class languagePage {
         //Language Controls Elable disable btn Element
     async clickUserRegistrationSelectableInputField() {
         
-            const ele = this.page.locator("(//div[@role='button'])[1]");
+            const ele = this.page.locator("(//div[contains(@class,'MuiSelect-select MuiSelect-outlined')])[1]");
             expect(ele).toBeVisible()
             await ele.click()
        
@@ -145,9 +155,18 @@ export default class languagePage {
             await ele.click()       
     }
 
+    //Language Controls Elable disable btn Element
+    async clickUserSelectablesRadioBtn() {
+        const ele = this.page.locator("(//div[@role='button'])[2]");
+        expect(ele).toBeVisible()
+        await ele.dblclick()
+
+   
+    }  
+
         //Language Controls Elable disable btn Element
         async clickUserProfileSelectableInputField() {
-            const ele = this.page.locator("(//div[@role='button'])[2]");
+            const ele = this.page.locator("(//div[contains(@class,'MuiSelect-select MuiSelect-outlined')])[2]");
             expect(ele).toBeVisible()
             await ele.dblclick()
 
@@ -168,18 +187,45 @@ export default class languagePage {
 
         //Language Controls Elable disable btn Element
         async clickUserForceLanguageOption() {
+
+                // const ele = await this.page.frameLocator('iframe').locator("input[value='forced']").isChecked()
+                // if ((ele == false)) {
+                //         // console.log("delete Uploaded Leaderboard BG")
+                //         await this.page.locator("input[value='forced']")
+                //                 .check({force:true})
+                // }
          const ele = this.page.locator("input[value='forced']");
             expect(ele).toBeVisible()
             await ele.click()   
         }
+
         
+         async clickUserForceLanguageinputfield() {
+
+                const ele = await this.page.frameLocator('iframe').locator("//div[@role='button']").isVisible()
+                if ((ele == true)) {
+                        // console.log("delete Uploaded Leaderboard BG")
+                        await this.page.locator("//div[@role='button']")
+                                .click({force:true})
+                }
+        //  const ele = this.page.locator("input[value='forced']");
+        //     expect(ele).toBeVisible()
+        //     await ele.click()   
+        }
 
     
-        //Language Controls Elable disable btn Element
-        async clickUserForceLanguageinputfield() {
-            const ele = this.page.locator("//div[@role='button']");
-            expect(ele).toBeVisible()
-            await ele.click({force:true})
+        // //Language Controls Elable disable btn Element
+        async clickForceLanguageInputField() {
+
+                // let ele = await this.page.frameLocator('iframe').locator("//div[@role='button']").isVisible()
+                // if ((ele == true)) {
+                //         // console.log("delete Uploaded Leaderboard BG")
+                //         await this.page.locator("//div[@role='button']")
+                //                 .click({force:true})
+                // }
+
+            const ele = this.page.locator("//div[contains(@class,'MuiSelect-select MuiSelect-outlined')]")
+            await ele.click()
 
        
         }

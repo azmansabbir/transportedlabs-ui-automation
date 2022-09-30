@@ -27,8 +27,8 @@ export default class prizeDropPage {
                 //         await this.page.waitForSelector(ele)        
 
                 const ele = await this.page.frameLocator('iframe').locator('text=Configurations')
-                expect(ele).toContainText("Configurations") 
-                        
+                expect(ele).toContainText("Configurations")
+
 
         }
 
@@ -43,7 +43,7 @@ export default class prizeDropPage {
 
         }
 
-        
+
         async inputConfigurationName() {
                 const ele = await this.page.frameLocator('iframe').locator('input[type="text"]')
                 await ele.fill("Auto")
@@ -57,12 +57,12 @@ export default class prizeDropPage {
 
         }
 
-        
-//🔚 Closed Add New Config Section Element 
-//=======================================================
-//▶▶Start Game Design Section Element  
+
+        //🔚 Closed Add New Config Section Element 
+        //=======================================================
+        //▶▶Start Game Design Section Element  
         async clickGameDesign() {
-        await this.page.frameLocator('iframe').locator('text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> p').nth(0).click()
+                await this.page.frameLocator('iframe').locator('text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> p').nth(0).click()
 
         }
 
@@ -81,10 +81,10 @@ export default class prizeDropPage {
         }
 
 
-  
-//start main color section element
+
+        //start main color section element
         async verifyMainColorText() {
-                const ele =   await this.page.frameLocator('iframe').locator('text=Main Color')
+                const ele = await this.page.frameLocator('iframe').locator('text=Main Color')
                 expect(ele).toContainText("Main Color")
 
         }
@@ -140,266 +140,599 @@ export default class prizeDropPage {
 
         }
 
-//start accent color section element
+        //start accent color section element
 
-async verifyAccentColorText() {
-        const ele =   await this.page.frameLocator('iframe').locator('text=Accent Color')
-        expect(ele).toContainText("Accent Color")
+        async verifyAccentColorText() {
+                const ele = await this.page.frameLocator('iframe').locator('text=Accent Color')
+                expect(ele).toContainText("Accent Color")
 
-}
+        }
 
 
-async clickAccentColorPicker() {
-        const ele = await this.page.frameLocator('iframe').locator("//p[text()='Accent Color']/following-sibling::button").first()
-        expect(ele).toBeVisible()
-        await ele.click()
+        async clickAccentColorPicker() {
+                const ele = await this.page.frameLocator('iframe').locator("//p[text()='Accent Color']/following-sibling::button").first()
+                expect(ele).toBeVisible()
+                await ele.click()
 
-}
+        }
 
-async inputAccentRGRFirstColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[1]")
-        expect(ele).toBeVisible()
-        await ele.fill("189")
+        async inputAccentRGRFirstColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[1]")
+                expect(ele).toBeVisible()
+                await ele.fill("189")
 
-}
-async inputAccentRGRSecondColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[2]")
-        expect(ele).toBeVisible()
-        await ele.fill("189")
+        }
+        async inputAccentRGRSecondColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[2]")
+                expect(ele).toBeVisible()
+                await ele.fill("189")
 
-}
+        }
 
 
-async inputAccentRGRThirdColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[3]")
-        expect(ele).toBeVisible()
-        await ele.fill("9")
+        async inputAccentRGRThirdColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[3]")
+                expect(ele).toBeVisible()
+                await ele.fill("9")
 
-}
+        }
 
-async inputAccentRGRFourColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
-        expect(ele).toBeVisible()
-        await ele.fill("90")
+        async inputAccentRGRFourColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
+                expect(ele).toBeVisible()
+                await ele.fill("90")
 
-}
+        }
 
-async inputAccentRGRFiveColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
-        expect(ele).toBeVisible()
-        await ele.fill("005782FF")
+        async inputAccentRGRFiveColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
+                expect(ele).toBeVisible()
+                await ele.fill("005782FF")
 
-}
+        }
 
-//start Text color section element
+        //start Text color section element
 
-async verifyTextColorText() {
-        const ele =   await this.page.frameLocator('iframe').locator('text=Text Color')
-        expect(ele).toContainText("Text Color")
+        async verifyTextColorText() {
+                const ele = await this.page.frameLocator('iframe').locator('text=Text Color')
+                expect(ele).toContainText("Text Color")
 
-}
+        }
 
 
-async clickTextColorPicker() {
-        const ele = await this.page.frameLocator('iframe').locator("//p[text()='Text Color']/following-sibling::button").first()
-        expect(ele).toBeVisible()
-        await ele.click()
+        async clickTextColorPicker() {
+                const ele = await this.page.frameLocator('iframe').locator("//p[text()='Text Color']/following-sibling::button").first()
+                expect(ele).toBeVisible()
+                await ele.click()
 
-}
+        }
 
-async inputTextRGRFirstColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[1]")
-        expect(ele).toBeVisible()
-        await ele.fill("189")
+        async inputTextRGRFirstColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[1]")
+                expect(ele).toBeVisible()
+                await ele.fill("189")
 
-}
-async inputTextRGRSecondColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[2]")
-        expect(ele).toBeVisible()
-        await ele.fill("179")
+        }
+        async inputTextRGRSecondColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[2]")
+                expect(ele).toBeVisible()
+                await ele.fill("179")
 
-}
+        }
 
 
-async inputTextRGRThirdColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[3]")
-        expect(ele).toBeVisible()
-        await ele.fill("229")
+        async inputTextRGRThirdColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[3]")
+                expect(ele).toBeVisible()
+                await ele.fill("229")
 
-}
+        }
 
-async inputTextRGRFourColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
-        expect(ele).toBeVisible()
-        await ele.fill("190")
+        async inputTextRGRFourColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
+                expect(ele).toBeVisible()
+                await ele.fill("190")
 
-}
+        }
 
-async inputTextRGRFiveColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
-        expect(ele).toBeVisible()
-        await ele.fill("FFdFFFFF")
+        async inputTextRGRFiveColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
+                expect(ele).toBeVisible()
+                await ele.fill("FFdFFFFF")
 
-}
+        }
 
 
-//start Text color section element
+        //start Text color section element
 
-async verifyButtonColorText() {
-        const ele =   await this.page.frameLocator('iframe').locator('text=Button Color')
-        expect(ele).toContainText("Button Color")
+        async verifyButtonColorText() {
+                const ele = await this.page.frameLocator('iframe').locator('text=Button Color')
+                expect(ele).toContainText("Button Color")
 
-}
+        }
 
 
-async clickButtonColorPicker() {
-        const ele = await this.page.frameLocator('iframe').locator("//p[text()='Button Color']/following-sibling::button").first()
-        expect(ele).toBeVisible()
-        await ele.click()
+        async clickButtonColorPicker() {
+                const ele = await this.page.frameLocator('iframe').locator("//p[text()='Button Color']/following-sibling::button").first()
+                expect(ele).toBeVisible()
+                await ele.click()
 
-}
+        }
 
-async inputButtonRGRFirstColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[1]")
-        expect(ele).toBeVisible()
-        await ele.fill("189")
+        async inputButtonRGRFirstColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[1]")
+                expect(ele).toBeVisible()
+                await ele.fill("189")
 
-}
-async inputButtonRGRSecondColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[2]")
-        expect(ele).toBeVisible()
-        await ele.fill("179")
+        }
+        async inputButtonRGRSecondColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[2]")
+                expect(ele).toBeVisible()
+                await ele.fill("179")
 
-}
+        }
 
 
-async inputButtonRGRThirdColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[3]")
-        expect(ele).toBeVisible()
-        await ele.fill("229")
+        async inputButtonRGRThirdColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[3]")
+                expect(ele).toBeVisible()
+                await ele.fill("229")
 
-}
+        }
 
-async inputButtonRGRFourColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
-        expect(ele).toBeVisible()
-        await ele.fill("190")
+        async inputButtonRGRFourColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
+                expect(ele).toBeVisible()
+                await ele.fill("190")
 
-}
+        }
 
-async inputButtonRGRFiveColor() {
-        const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
-        expect(ele).toBeVisible()
-        await ele.fill("577C98FF")
+        async inputButtonRGRFiveColor() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
+                expect(ele).toBeVisible()
+                await ele.fill("577C98FF")
 
-}
+        }
+        async verifyFullScreenLogoText() {
+                const ele = await this.page.frameLocator('iframe').locator("//h5[text()='Full Screen Logo']")
+                expect(ele).toContainText("Full Screen Logo")
 
-async clickToUploadFullScreenLogo() {
-        const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[2]")
-        expect(ele).toBeVisible()
-        await ele.click()
+        }
 
-}
+        async verifyGameTitleImageTitleText() {
+                const ele = await this.page.frameLocator('iframe').locator("//h5[text()='Game Title Image']")
+                expect(ele).toContainText("Game Title Image")
 
-async clickToUploadGameTitleImage() {
-        const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[2]")
-        expect(ele).toBeVisible()
-        await ele.click()
+        }
 
-}
+        //Upload Game Desgin Image
+        async clickToUploadFullScreenLogo() {
+                // const buffer = readFileSync('./videos/a.png');
+                // // Create the DataTransfer and File
+                // const dataTransfer = await this.page.evaluateHandle((data) => {
+                //     const dt = new DataTransfer();
+                //     // Convert the buffer to a hex array
+                //     const file = new File([data.toString('hex')], 'a.png', { type: 'application/png' });
+                //     dt.items.add(file);
+                //     return dt;
+                // }, buffer);
 
+                // await this.page.dispatchEvent("(//div[@class='MuiBox-root css-78n4oq']//div)[2]", 'drop', { dataTransfer });
 
+                // const filePath0 = "testData/images/banner.png"
+                // await this.page.on("filechooser", async (filechooser) => {
+                //         await filechooser.setFiles([filePath0])
+                // })
+                // await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-vjb914']//div)[2]").dblclick({ force: true })
 
+                // const filePath0 = "testData/logos/Logo.jpg"
+                // this.page.on("filechooser", async (filechooser) => {
+                //         await filechooser.setFiles([filePath0]);
+                // })
+                // await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-vjb914']//div)[2]").click()
 
 
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-vjb914']//div)[2]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
 
+        async clickToUploadGameTitleImage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[3]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
+        ///////
+        async clickToUploadFrameImage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[4]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
 
+        async clickToUploadParachutePrizeImage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[5]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
 
+        async clickToUploadNoPrizeWonImage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[6]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
+        /// Sponsor Images
+        async clickToUploadSponsorImage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[7]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
 
+        async clickToUploadSponsorLogo() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[8]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
 
+        async clickToUploadSponsorTeamLogo() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[9]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
 
+        async clickToUploadGameBackgroundImage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[10]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
 
+        async clickToUploadHowtoPlayImage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[11]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
 
+        async clickToUploadSplashScreenImage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[12]")
+                expect(ele).toBeVisible()
+                await ele.click()
 
+        }
 
+        async clickToUploadRulesImage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[13]")
+                await ele.click()
 
+        }
 
 
 
+        //🔚 Closed Game Desgin Section Element 
+        //=======================================================
+        //▶▶Start Game Settings Section Element  
 
 
+        async clickGameSettings() {
+                await this.page.frameLocator('iframe').locator('text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> p').nth(1).click()
 
+        }
 
+        async inputTotalRewards() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[1]")
+                expect(ele).toBeVisible()
+                await ele.fill("20")
+        }
 
 
 
+        async inputTotalRewardsPerDay() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[2]")
+                expect(ele).toBeVisible()
+                await ele.fill("15")
+        }
 
+        async inputDurationTimeHour() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[3]")
+                expect(ele).toBeVisible()
+                await ele.fill("1")
+        }
 
+        async inputDurationTimeMinutes() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[4]")
+                expect(ele).toBeVisible()
+                await ele.fill("10")
+        }
 
 
+        async inputDurationTimeSecond() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[5]")
+                expect(ele).toBeVisible()
+                await ele.fill("5")
+        }
+        async inputStandByMessage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='notranslate public-DraftEditor-content']//div)[2]")
+                expect(ele).toBeVisible()
+                await ele.fill("In publishing and graphic design, Lorem ipsum is a placeholder")
+        }
 
+        async inputEndingGameMassage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr'])[2]")
+                expect(ele).toBeVisible()
+                await ele.fill("In publishing and graphic design, Lorem ipsum is a placeholder")
+        }
 
+        async inputSelectionMessage() {
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='public-DraftStyleDefault-block public-DraftStyleDefault-ltr'])[3]")
+                expect(ele).toBeVisible()
+                await ele.fill("In publishing and graphic design, Lorem ipsum is a placeholder")
+        }
 
+        async clickEntryScreen() {
+                const ele = await this.page.frameLocator('iframe').locator("//div[contains(@class,'MuiSelect-select MuiSelect-outlined')]")
+                expect(ele).toBeVisible()
+                await ele.click()
+        }
 
+        async selectHowToScreen() {
+                const ele = await this.page.frameLocator('iframe').locator("text= How to Screen")
+                expect(ele).toBeVisible()
+                await ele.click()
+        }
 
 
 
 
+        //🔚 Closed Game Settings Section Element 
+        //=======================================================
+        //▶▶Start Add Banner Settings Section Element  
 
 
+        async clickAddBannerSection() {
+                await this.page.frameLocator('iframe').locator('text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> p').nth(2).click()
 
+        }
 
+        async verifyMarketingMassageText() {
+                const ele = await this.page.frameLocator('iframe').locator("//h5[text()='Marketing Message']")
+                expect(ele).toContainText("Marketing Message")
+        }
 
+        async verifyDragYourImageText() {
+                const ele = await this.page.frameLocator('iframe').locator("//p[text()='Drag your image here, or browse']")
+                expect(ele).toContainText("Drag your image here, or browse")
+        }
 
 
+        async clickToUploadBanner() {
+                const ele = await this.page.frameLocator('iframe').locator("//div[@class='MuiBox-root css-v2612']")
+                expect(ele).toBeVisible()
+                await ele.click()
+        }
 
 
+        //🔚 Closed Game Settings Section Element 
+        //=======================================================
+        //▶▶Start Add Banner Settings Section Element  
 
 
 
+        async clickPrizingSection() {
+                await this.page.frameLocator('iframe').locator('text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> p').nth(3).click()
 
-async clickGameDeleteBtn() {
-        await this.page.frameLocator('iframe').locator('text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> p').nth(5).click()
+        }
 
+        async verifyPrizingListText() {
+                const ele = await this.page.frameLocator('iframe').locator("//h4[text()='Prizing List']")
+                expect(ele).toContainText("Prizing List")
+        }
 
-}
-async confirmDeleteBtn() {
-        await this.page.frameLocator('iframe').locator("//button[text()='Delete']").click();
+        async clickAddNewPrizeBtn() {
+                const ele = await this.page.frameLocator('iframe').locator("//button[text()='Award All']/following-sibling::button")
+                expect(ele).toBeVisible()
+                await ele.click()
+        }
 
-}
+        async inputCouponName() {
+                const ele = await this.page.frameLocator('iframe').locator("//input[@placeholder='Coupon name']")
+                expect(ele).toBeVisible()
+                await ele.fill("AutoCoupon")
+        }
 
+        async inputAmountOfAwarding() {
+                const ele = await this.page.frameLocator('iframe').locator("//input[@placeholder='Amount Of Awarding']")
+                await ele.fill("20")
+        }
 
+        async inputPercentageAwarded() {
+                const ele = await this.page.frameLocator('iframe').locator("//input[@placeholder='Percentage Value']")
+                await ele.fill("10")
+        }
 
+        async clickCouponPrizeSelectBtn() {
+                // await page.frameLocator('iframe').locator('text=Coupon Prize Select *Select a coupon >> div').nth(2).click();
+                const ele = await this.page.frameLocator('iframe').locator("//div[@class='MuiBox-root css-1qf0ezp']")
+                await ele.click()
+        }
+        async selectCouponPrizeSelect() {
+                const ele = await this.page.frameLocator('iframe').locator("(//button[text()='Select'])[1]")
+                await ele.click()
+        }
+        async clickSaveBtn() {
+                const ele = await this.page.frameLocator('iframe').locator("//button[text()='Save']")
+                await ele.click()
+        }
 
 
+        async clickDeleteBtn() {
+                let ele = await this.page.frameLocator('iframe').locator("(//button[text()='Delete'])[1]").isVisible()
+                if ((ele == true)) {
+                        // console.log("delete Uploaded Leaderboard BG")
+                        await this.page.frameLocator('iframe')
+                                .locator("(//button[text()='Delete'])[1]")
+                                .click()
+                }
 
+        }
 
+        async clickConfirmDeleteBtn() {
+                let ele = await this.page.frameLocator('iframe').locator("//div[contains(@class,'MuiDialogActions-root MuiDialogActions-spacing')]//button[1]").isVisible()
+                if ((ele == true)) {
+                        // console.log("delete Uploaded Leaderboard BG")
+                        await this.page.frameLocator('iframe')
+                                .locator("//div[contains(@class,'MuiDialogActions-root MuiDialogActions-spacing')]//button[1]")
+                                .click()
+                }
 
+        }
 
 
 
 
+        //🔚 Closed Prizing  Section Element 
+        //=======================================================
+        //▶▶Start Anlaytics  Section Element  
 
 
 
 
+        async clickAnalyticsSection() {
+                await this.page.frameLocator('iframe').locator('text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> p').nth(4).click()
 
+        }
 
+        async clickToStopLiveGame() {
+                // Click text=AutoStart
+                await this.page.frameLocator('iframe').locator('text=AutoLive').click();
 
+        }
 
-//🔚 Closed Add New Config Section Element 
-//=======================================================
-//▶▶Start Game Design Section Element  
+
+
+        async verifySessionAnalyticsText() {
+                const ele = await this.page.frameLocator('iframe').locator("//h4[text()='Session Analytics']")
+                expect(ele).toContainText("Session Analytics")
+        }
+
+        async downloadAnlytics() {
+                // Click text=Export 
+                const [download] = await Promise.all([
+                        this.page.waitForEvent('download'),
+                        this.page.frameLocator('iframe').locator("(//button[text()='Export'])[1]").click()
+                ]);
+        }
+
+
+
+
+
+
+
+        async clickStartGameBtn() {
+
+                await this.page.frameLocator('iframe').locator('text=AutoStart').click();
+
+                // const ele = await this.page.frameLocator('iframe').locator('text=Start').nth(1)
+                // expect(ele).toBeVisible()
+                // await ele.click({force:true})
+
+        }
+
+        async clickStartGameOkBtn() {
+
+                await this.page.frameLocator('iframe').locator("//button[text()='Ok']").click();
+
+                // const ele = await this.page.frameLocator('iframe').locator('text=Start').nth(1)
+                // expect(ele).toBeVisible()
+                // await ele.click({force:true})
+
+        }
+
+        async clickStopGameOkBtn() {
+
+                await this.page.frameLocator('iframe').locator("//button[text()='Ok']").click();
+
+                // const ele = await this.page.frameLocator('iframe').locator('text=Start').nth(1)
+                // expect(ele).toBeVisible()
+                // await ele.click({force:true})
+
+        }
+
+
+
+        async clickMobileLinkBtn() {
+                // Click text=AutoStart >> button >> nth=1
+                await this.page.frameLocator('iframe').locator('text=AutoStart >> button').nth(1).click();
+
+                // const ele = await this.page.frameLocator('iframe').locator('text=AutoStop >> [data-testid="MobileScreenShareIcon"]')
+                // expect(ele).toBeVisible()
+                // await ele.click({force:true})
+
+        }
+
+        async clickMobileLinkOpenBtn() {
+
+                // Click text=Open Link
+                const [page1] = await Promise.all([
+                        this.page.waitForEvent('popup'),
+                        this.page.frameLocator('iframe').locator('text=Open Link').click()
+                ]);
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        async clickGameDeleteBtn() {
+                await this.page.frameLocator('iframe').locator('text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> p').nth(5).click()
+
+
+        }
+        async confirmDeleteBtn() {
+                await this.page.frameLocator('iframe').locator("//button[text()='Delete']").click();
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //🔚 Closed Add New Config Section Element 
+        //=======================================================
+        //▶▶Start Game Design Section Element  
 
 
 
@@ -413,7 +746,7 @@ async confirmDeleteBtn() {
 
         async enableStage() {
                 const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'PrivateSwitchBase-input MuiSwitch-input')])[1]")
-                
+
                 await ele.click()
                 // if ((ele == false)) {
                 //         // console.log("Enable Stage to be skip and jump to next one")
@@ -424,9 +757,9 @@ async confirmDeleteBtn() {
 
 
         }
-   
 
- 
+
+
 
 }
 

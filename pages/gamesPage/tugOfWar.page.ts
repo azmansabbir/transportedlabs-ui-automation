@@ -107,7 +107,7 @@ export default class tugOfWarPage {
                 this.page.on("filechooser", async (filechooser) => {
                         await filechooser.setFiles([filePath0])
                 })
-                await this.page.frameLocator('iframe').locator('text=Title BackgroundImageVideo >> div').nth(3).click();
+                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[1]").click();
 
         }
 
@@ -131,7 +131,7 @@ export default class tugOfWarPage {
                 this.page.on("filechooser", async (filechooser) => {
                         await filechooser.setFiles([filePath0])
                 })
-                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[1]").first().click();
+                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[2]").first().click();
 
 
         }
@@ -154,7 +154,7 @@ export default class tugOfWarPage {
                 this.page.on("filechooser", async (filechooser) => {
                         await filechooser.setFiles([filePath0])
                 })
-                await this.page.frameLocator('iframe').locator("//div[@class='MuiBox-root css-v2612']").first().click();
+                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[3]").first().click();
 
 
         }
@@ -178,7 +178,7 @@ export default class tugOfWarPage {
                 this.page.on("filechooser", async (filechooser) => {
                         await filechooser.setFiles([filePath0])
                 })
-                await this.page.frameLocator('iframe').locator("//div[@class='MuiBox-root css-v2612']").first().click();
+                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[4]").first().click();
 
 
         }
@@ -1023,7 +1023,7 @@ export default class tugOfWarPage {
         async clickGameDesignBtn() {
                 await this.page.frameLocator('iframe').locator('text=AutoStartStagesGame DesignDelete >> p').nth(1).click();
 
-        }
+        } 
 
 
         async clickUploadFontBtn() {
@@ -1204,9 +1204,11 @@ export default class tugOfWarPage {
 
 async clickStartGameBtn() {
 
-        const ele = await this.page.frameLocator('iframe').locator('text=Start').nth(1)
-        expect(ele).toBeVisible()
-        await ele.click({force:true})
+        await this.page.frameLocator('iframe').locator('text=AutoStart').click();
+
+        // const ele = await this.page.frameLocator('iframe').locator('text=Start').nth(1)
+        // expect(ele).toBeVisible()
+        // await ele.click({force:true})
 
  }
  async clickMobileLinkBtn() {
