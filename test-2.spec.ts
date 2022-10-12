@@ -2,75 +2,123 @@ import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
 
-  // Go to https://garrett.testingdxp.com//admin/#/home/air-drop
-  await page.goto('https://garrett.testingdxp.com//admin/#/home/air-drop');
+  // Go to https://qa-1.testingdxp.com//admin/#/home/live-wall
+  await page.goto('https://qa-1.testingdxp.com//admin/#/home/live-wall');
 
-  // Go to https://garrett.testingdxp.com//admin/#/splash
-  await page.goto('https://garrett.testingdxp.com//admin/#/splash');
+  // Go to https://qa-1.testingdxp.com//admin/#/splash
+  await page.goto('https://qa-1.testingdxp.com//admin/#/splash');
 
-  // Go to https://garrett.testingdxp.com//admin/#/sign-in
-  await page.goto('https://garrett.testingdxp.com//admin/#/sign-in');
+  // Go to https://qa-1.testingdxp.com//admin/#/sign-in
+  await page.goto('https://qa-1.testingdxp.com//admin/#/sign-in');
 
   // Click input[type="text"]
   await page.locator('input[type="text"]').click();
 
   // Fill input[type="text"]
-  await page.locator('input[type="text"]').fill('garrett');
+  await page.locator('input[type="text"]').fill('qa-1');
 
   // Click input[type="password"]
   await page.locator('input[type="password"]').click();
 
   // Fill input[type="password"]
-  await page.locator('input[type="password"]').fill('LFQIISIc');
+  await page.locator('input[type="password"]').fill('mFkTylCDNC');
 
   // Click button:has-text("Login")
   await page.locator('button:has-text("Login")').click();
-  await expect(page).toHaveURL('https://garrett.testingdxp.com//admin/#/home/air-drop');
+  await expect(page).toHaveURL('https://qa-1.testingdxp.com//admin/#/home/live-wall');
 
-  // Click text=Prize Drop
-  await page.locator('text=Prize Drop').click();
-  await expect(page).toHaveURL('https://garrett.testingdxp.com//admin/#/home/air-drop');
+  // Click button >> nth=1
+  await page.locator('button').nth(1).click();
+
+  // Click text=Live Wall
+  await page.locator('text=Live Wall').click();
+  await expect(page).toHaveURL('https://qa-1.testingdxp.com//admin/#/home/live-wall');
+
+  // Click text=STOP
+  await page.frameLocator('iframe').locator('text=STOP').click();
+
+  // Click text=START
+  await page.frameLocator('iframe').locator('text=START').click();
 
   // Click .MuiButtonBase-root >> nth=0
   await page.frameLocator('iframe').locator('.MuiButtonBase-root').first().click();
 
-  // Click input[type="text"]
-  await page.frameLocator('iframe').locator('input[type="text"]').click();
+  // Click text=Open Link
+  const [page1] = await Promise.all([
+    page.waitForEvent('popup'),
+    page.frameLocator('iframe').locator('text=Open Link').click()
+  ]);
+
+  // Click #app
+  await page1.locator('#app').click({
+    button: 'right'
+  });
+  await expect(page1).toHaveURL('https://qa-1.testingdxp.com/?gameId=live-wall#/username');
 
   // Fill input[type="text"]
-  await page.frameLocator('iframe').locator('input[type="text"]').fill('Auto');
+  await page1.locator('input[type="text"]').fill('jon doe');
+  await expect(page1).toHaveURL('https://qa-1.testingdxp.com/?gameId=live-wall#/game');
 
-  // Click button:has-text("ADD")
-  await page.frameLocator('iframe').locator('button:has-text("ADD")').click();
+  // Click [aria-label="Close"]
+  await page.frameLocator('iframe').locator('[aria-label="Close"]').click();
 
-  // Click text=Auto
-  await page.frameLocator('iframe').locator('text=Auto').click();
+  // Click text=Refresh
+  await page.frameLocator('iframe').locator('text=Refresh').click();
 
-  // Click text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> ul
-  await page.frameLocator('iframe').locator('text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> ul').click();
+  // Click text=Refresh
+  await page.frameLocator('iframe').locator('text=Refresh').click();
 
-  // Click text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> ul
-  await page.frameLocator('iframe').locator('text=AutoStartGame DesignGame SettingsAdd BannerPrizingAnalyticsDelete >> ul').click();
+  // Click text=Noise Meter
+  await page.locator('text=Noise Meter').click();
+  await expect(page).toHaveURL('https://qa-1.testingdxp.com//admin/#/home/noise-meter');
 
-  // Click text=Game Design >> nth=2
-  await page.frameLocator('iframe').locator('text=Game Design').nth(2).click();
+  // Click text=Live Wall
+  await page.locator('text=Live Wall').click();
+  await expect(page).toHaveURL('https://qa-1.testingdxp.com//admin/#/home/live-wall');
 
-  // Click text=Game Settings >> nth=2
-  await page.frameLocator('iframe').locator('text=Game Settings').nth(2).click();
+  // Click text=Refresh
+  await page.frameLocator('iframe').locator('text=Refresh').click();
 
-  // Click text=Add Banner >> nth=2
-  await page.frameLocator('iframe').locator('text=Add Banner').nth(2).click();
+  // Click text=CueLiveDelete >> button >> nth=0
+  await page.frameLocator('iframe').locator('text=CueLiveDelete >> button').first().click();
 
-  // Click text=Prizing >> nth=2
-  await page.frameLocator('iframe').locator('text=Prizing').nth(2).click();
+  // Click button:has-text("Cue")
+  await page.frameLocator('iframe').locator('button:has-text("Cue")').click();
 
-  // Click text=Analytics >> nth=2
-  await page.frameLocator('iframe').locator('text=Analytics').nth(2).click();
+  // Click text=Open Link
+  const [page2] = await Promise.all([
+    page.waitForEvent('popup'),
+    page.frameLocator('iframe').locator('text=Open Link').click()
+  ]);
 
-  // Click text=Delete >> nth=1
-  await page.frameLocator('iframe').locator('text=Delete').nth(1).click();
+  // Go to https://qa-1.testingdxp.com/games/live-wall/cue/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzQwNDBlNTUyM2NmMWNlZDE3MzcyZjciLCJyb2xlIjoyLCJjbGllbnRJZCI6InFhLTEiLCJpYXQiOjE2NjU0ODc3MzcsImV4cCI6MTY2ODA3OTczN30.t_Q9fz-ibxDCa25xXNykyQNxtPe3mkvHh6fuYdizkGY#/main
+  await page2.goto('https://qa-1.testingdxp.com/games/live-wall/cue/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzQwNDBlNTUyM2NmMWNlZDE3MzcyZjciLCJyb2xlIjoyLCJjbGllbnRJZCI6InFhLTEiLCJpYXQiOjE2NjU0ODc3MzcsImV4cCI6MTY2ODA3OTczN30.t_Q9fz-ibxDCa25xXNykyQNxtPe3mkvHh6fuYdizkGY#/main');
 
-  // Click button:has-text("Delete")
-  await page.frameLocator('iframe').locator('button:has-text("Delete")').click();
+  // Click text=LiveAlertUncue >> button >> nth=0
+  await page2.locator('text=LiveAlertUncue >> button').first().click();
+
+  // Click text=Next
+  await page2.locator('text=Next').click();
+
+  // Click [aria-label="Close"]
+  await page.frameLocator('iframe').locator('[aria-label="Close"]').click();
+
+  // Click text=Output
+  await page.frameLocator('iframe').locator('text=Output').click();
+
+  // Click text=Open Link
+  const [page3] = await Promise.all([
+    page.waitForEvent('popup'),
+    page.frameLocator('iframe').locator('text=Open Link').click()
+  ]);
+
+  // Go to https://qa-1.testingdxp.com/games/live-wall/mainboard/#/home
+  await page3.goto('https://qa-1.testingdxp.com/games/live-wall/mainboard/#/home');
+
+  // Click [aria-label="Close"]
+  await page.frameLocator('iframe').locator('[aria-label="Close"]').click();
+
+  // Click text=CueLiveDelete >> button >> nth=1
+  await page.frameLocator('iframe').locator('text=CueLiveDelete >> button').nth(1).click();
 
 });

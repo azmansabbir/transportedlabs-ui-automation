@@ -2,7 +2,7 @@ import { expect, Page } from "@playwright/test";
 export default class LoginPage {        
 
     private page: Page;
-        static login: any;        
+        // static login: any;        
     constructor(page: Page) {
         this.page = page;
     }

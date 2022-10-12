@@ -194,9 +194,9 @@ export default class languagePage {
                 //         await this.page.locator("input[value='forced']")
                 //                 .check({force:true})
                 // }
-         const ele = this.page.locator("input[value='forced']");
-            expect(ele).toBeVisible()
-            await ele.click()   
+         const ele = this.page.locator("//span[text()='Forced Language']");
+        //     expect(ele).toBeVisible()
+            await ele.click({force:true})   
         }
 
         

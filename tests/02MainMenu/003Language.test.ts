@@ -388,6 +388,7 @@ test("TL003-03 | Verify Admin Select Forced Language", async ({ loginPage, MainM
     await test.step("TL003-03 | Verify Admin Select Forced Language", async () => {
 
         await languagePage.clickLanguagePage()
+        await page.waitForTimeout(2000)
 
         // //Verify user forced language text
         // await languagePage.checkUserForcedLanguageText()

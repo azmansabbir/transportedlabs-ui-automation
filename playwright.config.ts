@@ -15,7 +15,7 @@ const config: PlaywrightTestConfig = {
 
 
     workers: 1,
-    fullyParallel: false,
+    fullyParallel: !true,
     // projects: [
     //     {
     //         name: 'chromium',
@@ -43,12 +43,19 @@ const config: PlaywrightTestConfig = {
         // Tell all tests to load signed-in state from 'storageState.json'.
         // storageState: 'storageState.json',
         viewport: null,
-        headless: !true,
+        headless: false,
         browserName: "chromium",
         screenshot: "on",
         video: "off",
-        // trace: "on",
-        baseURL: "https://garrett.testingdxp.com/",
+        trace: "on",
+        baseURL: "https://qa-1.testingdxp.com/",
+
+        // permissions: ["camera"]
+
+        
+
+        // baseURL: "https://qa-2.testingdxp.com/",
+        // baseURL: "https://garrett.testingdxp.com/",
         // baseURL: "https://dev107189.service-now.com/api/now/table/incident",
         // extraHTTPHeaders: {
         //     "Authorization": "Basic YWRtaW46U0NxN2pDb2tDbFI4"
@@ -58,10 +65,16 @@ const config: PlaywrightTestConfig = {
         //     permissions: ["clipboard-read"]
         // }
         // ,
+        // contextOptions: {
+            //     permissions: ["clipboard-read"]
+            // },
 
         launchOptions: {
             args: ["--start-maximized"],
         },
+        
+        // permissions: ["camera"],
+        permissions: ["microphone","camera"],
 
             // logger: {
             //     isEnabled: (name, severity) => true,
@@ -96,7 +109,11 @@ const config: PlaywrightTestConfig = {
                 "005SignUp.test.ts",
                 "006GlobalPrizing.test.ts",
                 "007PrizeDrop.test.ts",
-                "008TugOfWar.test.ts"
+                "008TugOfWar.test.ts",
+                "009LiveWall.test.ts",
+                // "test-1.spec.ts"
+                // "tests/03Games/demotugofwar.spec.ts"
+                
                
                 ],
     retries: 0,
@@ -109,7 +126,7 @@ const config: PlaywrightTestConfig = {
             open: "never"
         }] // -> HTML
     ],
-    // globalTeardown: './helper/globalsetup.ts'
+    globalTeardown: './helper/globalsetup.ts'
 
  /* Folder for test artifacts such as screenshots, videos, traces, etc. */
   // outputDir: 'test-results/',

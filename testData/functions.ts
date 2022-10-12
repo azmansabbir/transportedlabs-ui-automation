@@ -54,6 +54,13 @@ export default class functions{
                 })                
         }
 
+        async frameUploadFunction() {
+                const filePath0 = "testData/Frames/mobileFrame.png"
+                this.page.on("filechooser", async (filechooser) => {
+                        await filechooser.setFiles([filePath0]);
+                })                
+        }
+
 
 
 }

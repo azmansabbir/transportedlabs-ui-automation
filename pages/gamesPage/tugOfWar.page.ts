@@ -1,7 +1,7 @@
 import { expect, Page } from "@playwright/test";
 import { readFileSync } from 'fs'
 export default class tugOfWarPage {
-        [x: string]: any;
+        // [x: string]: any;
 
         private page: Page;
         static buffer: void;

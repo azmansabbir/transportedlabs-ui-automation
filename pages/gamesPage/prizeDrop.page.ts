@@ -1,10 +1,10 @@
 import { expect, Page } from "@playwright/test";
 import { readFileSync } from 'fs'
 export default class prizeDropPage {
-        [x: string]: any;
+        // [x: string]: any;
 
         private page: Page;
-        static buffer: void;
+        // static buffer: void;
         constructor(page: Page) {
                 this.page = page;
         }

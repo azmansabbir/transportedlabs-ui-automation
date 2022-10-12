@@ -2,228 +2,126 @@ import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
 
-  // Go to https://garrett.testingdxp.com//admin/#/home/air-drop
-  await page.goto('https://garrett.testingdxp.com//admin/#/home/air-drop');
+  // Go to https://qa-1.testingdxp.com//admin/#/home
+  await page.goto('https://qa-1.testingdxp.com//admin/#/home');
 
-  // Go to https://garrett.testingdxp.com//admin/#/splash
-  await page.goto('https://garrett.testingdxp.com//admin/#/splash');
+  // Go to https://qa-1.testingdxp.com//admin/#/splash
+  await page.goto('https://qa-1.testingdxp.com//admin/#/splash');
 
-  // Go to https://garrett.testingdxp.com//admin/#/sign-in
-  await page.goto('https://garrett.testingdxp.com//admin/#/sign-in');
+  // Go to https://qa-1.testingdxp.com//admin/#/sign-in
+  await page.goto('https://qa-1.testingdxp.com//admin/#/sign-in');
 
   // Click input[type="text"]
   await page.locator('input[type="text"]').click();
 
   // Fill input[type="text"]
-  await page.locator('input[type="text"]').fill('garrett');
+  await page.locator('input[type="text"]').fill('qa-1');
 
   // Click input[type="password"]
   await page.locator('input[type="password"]').click();
 
   // Fill input[type="password"]
-  await page.locator('input[type="password"]').fill('LFQIISIc');
+  await page.locator('input[type="password"]').fill('mFkTylCDNC');
 
   // Click button:has-text("Login")
   await page.locator('button:has-text("Login")').click();
-  await expect(page).toHaveURL('https://garrett.testingdxp.com//admin/#/home/air-drop');
+  await expect(page).toHaveURL('https://qa-1.testingdxp.com//admin/#/home/air-drop');
 
-  // Click text=Prize Drop
-  await page.locator('text=Prize Drop').click();
-  await expect(page).toHaveURL('https://garrett.testingdxp.com//admin/#/home/air-drop');
+  // Click button >> nth=1
+  await page.locator('button').nth(1).click();
 
-  // Click text=Configurations
-  await page.frameLocator('iframe').locator('text=Configurations').click();
+  // Click text=Live Wall
+  await page.locator('text=Live Wall').click();
+  await expect(page).toHaveURL('https://qa-1.testingdxp.com//admin/#/home/live-wall');
 
-  // Click button >> nth=0
-  await page.frameLocator('iframe').locator('button').first().click();
+  // Click text=CueLiveDelete >> button >> nth=0
+  await page.frameLocator('iframe').locator('text=CueLiveDelete >> button').first().click();
 
-  // Click input[type="text"]
-  await page.frameLocator('iframe').locator('input[type="text"]').click();
+  // Click text=CueLiveDelete >> button >> nth=1
+  await page.frameLocator('iframe').locator('text=CueLiveDelete >> button').nth(1).click();
 
-  // Fill input[type="text"]
-  await page.frameLocator('iframe').locator('input[type="text"]').fill('Auto');
+  // Click button:has-text("Cue")
+  await page.frameLocator('iframe').locator('button:has-text("Cue")').click();
 
-  // Click button:has-text("ADD")
-  await page.frameLocator('iframe').locator('button:has-text("ADD")').click();
+  // Click text=Open Link
+  const [page1] = await Promise.all([
+    page.waitForEvent('popup'),
+    page.frameLocator('iframe').locator('text=Open Link').click()
+  ]);
 
-  // Click text=Auto
-  await page.frameLocator('iframe').locator('text=Auto').click();
+  // Click text=Next
+  await page1.locator('text=Next').click();
 
-  // Click text=Game Design >> nth=1
-  await page.frameLocator('iframe').locator('text=Game Design').nth(1).click();
+  // Click text=Enable Auto Rotation
+  await page1.locator('text=Enable Auto Rotation').click();
 
-  // Click text=Upload Font
-  await page.frameLocator('iframe').locator('text=Upload Font').click();
+  // Click text=Fancue
+  await page1.locator('text=Fancue').click();
 
-  // Click text=Colors
-  await page.frameLocator('iframe').locator('text=Colors').click();
+  // Click text=→
+  await page1.locator('text=→').click();
 
-  // Click text=Clear All
-  await page.frameLocator('iframe').locator('text=Clear All').click();
+  // Click text=Next
+  await page1.locator('text=Next').click();
 
-  // Click text=Main Color
-  await page.frameLocator('iframe').locator('text=Main Color').click();
+  // Click [aria-label="Close"]
+  await page.frameLocator('iframe').locator('[aria-label="Close"]').click();
 
-  // Click text=Main ColorAccent ColorText ColorButton Color >> button >> nth=0
-  await page.frameLocator('iframe').locator('text=Main ColorAccent ColorText ColorButton Color >> button').first().click();
+  // Click text=Output
+  await page.frameLocator('iframe').locator('text=Output').click();
 
-  // Click #mui-39
-  await page.frameLocator('iframe').locator('#mui-39').click();
+  // Click text=Open Link
+  const [page2] = await Promise.all([
+    page.waitForEvent('popup'),
+    page.frameLocator('iframe').locator('text=Open Link').click()
+  ]);
 
-  // Click #mui-40
-  await page.frameLocator('iframe').locator('#mui-40').click();
+  // Click img
+  await page2.locator('img').click();
 
-  // Click #mui-41
-  await page.frameLocator('iframe').locator('#mui-41').click();
+  // Click [aria-label="Close"]
+  await page.frameLocator('iframe').locator('[aria-label="Close"]').click();
 
-  // Click text=%​ >> input[type="text"]
-  await page.frameLocator('iframe').locator('text=%​ >> input[type="text"]').click();
+  // Click text=CueLiveDelete >> button >> nth=0
+  await page.frameLocator('iframe').locator('text=CueLiveDelete >> button').first().click();
 
-  // Click text=#​ >> input[type="text"]
-  await page.frameLocator('iframe').locator('text=#​ >> input[type="text"]').click();
+  // Click button:has-text("Cue")
+  await page.frameLocator('iframe').locator('button:has-text("Cue")').click();
 
-  // Click text=Save
-  await page.frameLocator('iframe').locator('text=Save').click();
+  // Click text=Open Link
+  const [page3] = await Promise.all([
+    page.waitForEvent('popup'),
+    page.frameLocator('iframe').locator('text=Open Link').click()
+  ]);
 
-  // Click h4:has-text("Game Design")
-  await page.frameLocator('iframe').locator('h4:has-text("Game Design")').click();
+  // Go to https://qa-1.testingdxp.com/games/live-wall/cue/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzQwNDBlNTUyM2NmMWNlZDE3MzcyZjciLCJyb2xlIjoyLCJjbGllbnRJZCI6InFhLTEiLCJpYXQiOjE2NjU0Mjk4MDIsImV4cCI6MTY2ODAyMTgwMn0.L4bdnD9EFgndOpmjJul63aas_GwmY-1bgbEqmaMpPp4#/main
+  await page3.goto('https://qa-1.testingdxp.com/games/live-wall/cue/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzQwNDBlNTUyM2NmMWNlZDE3MzcyZjciLCJyb2xlIjoyLCJjbGllbnRJZCI6InFhLTEiLCJpYXQiOjE2NjU0Mjk4MDIsImV4cCI6MTY2ODAyMTgwMn0.L4bdnD9EFgndOpmjJul63aas_GwmY-1bgbEqmaMpPp4#/main');
 
-  // Click text=Full Screen Logo
-  await page.frameLocator('iframe').locator('text=Full Screen Logo').click();
+  // Click text=LiveAlertUncue >> button >> nth=0
+  await page3.locator('text=LiveAlertUncue >> button').first().click();
 
-  // Click text=Ratio: 9:16 Resolution: 1080:1920 type: PNG, SVG, JPEG, JPG
-  await page.frameLocator('iframe').locator('text=Ratio: 9:16 Resolution: 1080:1920 type: PNG, SVG, JPEG, JPG').click();
+  // Click text=Next
+  await page3.locator('text=Next').click();
 
-  // Click div:nth-child(3) > div > div > div > div:nth-child(2) > div > div > .MuiBox-root >> nth=0
-  await page.frameLocator('iframe').locator('div:nth-child(3) > div > div > div > div:nth-child(2) > div > div > .MuiBox-root').first().click();
+  // Click text=No streamsNext >> div
+  await page3.locator('text=No streamsNext >> div').click();
 
-  // Click text=About Game
-  await page.frameLocator('iframe').locator('text=About Game').click();
+  // Click [aria-label="Close"]
+  await page.frameLocator('iframe').locator('[aria-label="Close"]').click();
 
-  // Check input[name="mui-32"] >> nth=1
-  await page.frameLocator('iframe').locator('input[name="mui-32"]').nth(1).check();
+  // Click text=Output
+  await page.frameLocator('iframe').locator('text=Output').click();
 
-  // Click text=Game Settings >> nth=1
-  await page.frameLocator('iframe').locator('text=Game Settings').nth(1).click();
+  // Click text=Open Link
+  const [page4] = await Promise.all([
+    page.waitForEvent('popup'),
+    page.frameLocator('iframe').locator('text=Open Link').click()
+  ]);
 
-  // Click text=Total Rewards​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Total Rewards​ >> input[type="number"]').click();
+  // Click [aria-label="Close"]
+  await page.frameLocator('iframe').locator('[aria-label="Close"]').click();
 
-  // Fill text=Total Rewards​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Total Rewards​ >> input[type="number"]').fill('11');
-
-  // Click text=Total Rewards Per Day​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Total Rewards Per Day​ >> input[type="number"]').click();
-
-  // Click text=Total Rewards Per Day​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Total Rewards Per Day​ >> input[type="number"]').click();
-
-  // Fill text=Total Rewards Per Day​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Total Rewards Per Day​ >> input[type="number"]').fill('1022');
-
-  // Click text=Hours​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Hours​ >> input[type="number"]').click();
-
-  // Fill text=Hours​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Hours​ >> input[type="number"]').fill('23');
-
-  // Click text=Minutes​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Minutes​ >> input[type="number"]').click();
-
-  // Fill text=Minutes​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Minutes​ >> input[type="number"]').fill('33');
-
-  // Click text=Seconds​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Seconds​ >> input[type="number"]').click();
-
-  // Fill text=Seconds​ >> input[type="number"]
-  await page.frameLocator('iframe').locator('text=Seconds​ >> input[type="number"]').fill('3');
-
-  // Click .rdw-editor-main >> nth=0
-  await page.frameLocator('iframe').locator('.rdw-editor-main').first().click();
-
-  // Click text=Ending Game Message
-  await page.frameLocator('iframe').locator('text=Ending Game Message').click();
-
-  // Click text=Ending Game Message16FontNormal0/120 Characters >> [aria-label="rdw-editor"] div >> nth=2
-  await page.frameLocator('iframe').locator('text=Ending Game Message16FontNormal0/120 Characters >> [aria-label="rdw-editor"] div').nth(2).click();
-
-  // Click text=Selection Message
-  await page.frameLocator('iframe').locator('text=Selection Message').click();
-
-  // Click #rdw-wrapper-7838 > .rdw-editor-main
-  await page.frameLocator('iframe').locator('#rdw-wrapper-7838 > .rdw-editor-main').click();
-
-  // Click text=Entry Screen
-  await page.frameLocator('iframe').locator('text=Entry Screen').click();
-
-  // Click div[role="button"]:has-text("Choose the screen")
-  await page.frameLocator('iframe').locator('div[role="button"]:has-text("Choose the screen")').click();
-
-  // Click text=How to Screen
-  await page.frameLocator('iframe').locator('text=How to Screen').click();
-
-  // Click text=Add Banner >> nth=1
-  await page.frameLocator('iframe').locator('text=Add Banner').nth(1).click();
-
-  // Click text=Marketing Message
-  await page.frameLocator('iframe').locator('text=Marketing Message').click();
-
-  // Click text=Marketing MessageDrag your image here, or browse >> div >> nth=4
-  await page.frameLocator('iframe').locator('text=Marketing MessageDrag your image here, or browse >> div').nth(4).click();
-
-  // Click text=Prizing >> nth=1
-  await page.frameLocator('iframe').locator('text=Prizing').nth(1).click();
-
-  // Click text=Add New Prize
-  await page.frameLocator('iframe').locator('text=Add New Prize').click();
-
-  // Click [placeholder="Coupon name"]
-  await page.frameLocator('iframe').locator('[placeholder="Coupon name"]').click();
-
-  // Click [placeholder="Amount Of Awarding"]
-  await page.frameLocator('iframe').locator('[placeholder="Amount Of Awarding"]').click();
-
-  // Click [placeholder="Percentage Value"]
-  await page.frameLocator('iframe').locator('[placeholder="Percentage Value"]').click();
-
-  // Click text=Select a coupon
-  await page.frameLocator('iframe').locator('text=Select a coupon').click();
-
-  // Click text=Coca ColaNoneNoneair-dropSelect >> button
-  await page.frameLocator('iframe').locator('text=Coca ColaNoneNoneair-dropSelect >> button').click();
-
-  // Click text=Save
-  await page.frameLocator('iframe').locator('text=Save').click();
-
-  // Click text=Ok
-  await page.frameLocator('iframe').locator('text=Ok').click();
-
-  // Click text=Analytics >> nth=1
-  await page.frameLocator('iframe').locator('text=Analytics').nth(1).click();
-
-  // Click text=Date
-  await page.frameLocator('iframe').locator('text=Date').click();
-
-  // Click text=Time >> nth=0
-  await page.frameLocator('iframe').locator('text=Time').first().click();
-
-  // Click text=Total Players
-  await page.frameLocator('iframe').locator('text=Total Players').click();
-
-  // Click text=Total Time Played
-  await page.frameLocator('iframe').locator('text=Total Time Played').click();
-
-  // Click text=5
-  await page.frameLocator('iframe').locator('text=5').click();
-
-  // Click div[role="presentation"] div >> nth=0
-  await page.frameLocator('iframe').locator('div[role="presentation"] div').first().click();
-
-  // Click text=Delete
-  await page.frameLocator('iframe').locator('text=Delete').click();
-
-  // Click button:has-text("Delete")
-  await page.frameLocator('iframe').locator('button:has-text("Delete")').click();
+  // Click text=CueLiveDelete >> button >> nth=1
+  await page.frameLocator('iframe').locator('text=CueLiveDelete >> button').nth(1).click();
 
 });

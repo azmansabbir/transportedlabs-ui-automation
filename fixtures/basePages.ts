@@ -8,6 +8,7 @@ import globalPrizingPage from "@pages/globalPrizing.page";
 import tugOfWarPage from "@pages/tugOfWar.page"
 import functions from "@testData/functions";
 import prizeDropPage from "@pages/prizeDrop.page";
+import liveWallPage from "@pages/liveWall.page";
 
 
 
@@ -21,6 +22,7 @@ const test = baseTest.extend<{
     globalPrizingPage: globalPrizingPage;
     tugOfWarPage: tugOfWarPage;
     prizeDropPage: prizeDropPage;
+    liveWallPage: liveWallPage;
     functions: functions;
 
 }>({
@@ -55,7 +57,12 @@ const test = baseTest.extend<{
     },
     prizeDropPage: async ({ page }, use) => {
         await use(new prizeDropPage(page));
+    },
+
+    liveWallPage: async ({ page }, use) => {
+        await use(new liveWallPage(page));
     }
+    
     
 })
 export default test;
