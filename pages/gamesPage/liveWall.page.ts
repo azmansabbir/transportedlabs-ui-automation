@@ -32,8 +32,8 @@ export default class liveWallPage {
     // await this.page.frameLocator('iframe').waitForSelector("text=Design")
     const ele = await this.page
       .frameLocator("iframe")
-        .locator("//button[text()='Clear All']");
-    await ele.click();
+        .locator("text='Clear All'");
+    await ele.click({force:true});
   }
 
   async verifyFontsTitleText() {
@@ -125,9 +125,8 @@ export default class liveWallPage {
   async clickFontColorPickerInputField() {
     const ele = await this.page
       .frameLocator("iframe")
-      .locator("(//div[@class='MuiBox-root css-1e91icv'])[2]");
-    expect(ele).toBeVisible();
-    await ele.click();
+      .locator("//p[text()='Font Color']/following-sibling::button"); 
+    await ele.click({force:true});
   }
 
   async inputFontFirstRGBColor() {
@@ -406,10 +405,10 @@ export default class liveWallPage {
     async clickGameStartBtn() {
 
       //const ele = await this.page.frameLocator('iframe').locator("//div[@class='MuiBox-root css-pzp2lt']//button[1]").isVisible()
-      if (await this.page.frameLocator('iframe').locator("//div[@class='MuiBox-root css-pzp2lt']//button[1]")) {
+      if (await this.page.frameLocator('iframe').locator("//button[text()='START']")) {
               // console.log("Enable Stage to be skip and jump to next one")
               await this.page.frameLocator('iframe')
-                      .locator("//div[@class='MuiBox-root css-pzp2lt']//button[1]")
+                      .locator("//button[text()='START']")
                       .click({force:true})
       }
       
@@ -565,6 +564,26 @@ async clickOutPutLinkInNewTab() {
   expect(ele).toBeVisible()
   await ele.click();
 }
+
+async clickVIPLiveSelfieCamBtn() {
+  const ele = await this.page
+    .frameLocator("iframe")
+    .locator("(//h2[text()='Live Selfie Cam']/following-sibling::button)[3]");
+  expect(ele).toBeVisible()
+  await ele.click();
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

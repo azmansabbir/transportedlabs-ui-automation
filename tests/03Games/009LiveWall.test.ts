@@ -104,6 +104,8 @@ test("009LW-002 | Validate Color Input Functionality", async ({ loginPage, liveW
         //click Clear Btn
         await liveWallPage.clickClearBtn()
 
+        await page.waitForTimeout(2000)
+
         //verify Fonts Title Text
         await liveWallPage.verifyFontsTitleText()
 
@@ -138,6 +140,8 @@ test("009LW-002 | Validate Color Input Functionality", async ({ loginPage, liveW
 
         //click Save Btn
         await liveWallPage.clickSaveBtn()
+
+        await page.waitForTimeout(2000)
 
 
 
@@ -404,11 +408,18 @@ test("009LW-007 | Validate Live Selfie Cam OutPut Link open in Mobile", async ({
         })
 
 
+        let ele = await page.locator('input[type="text"]').isVisible()
+        if ((ele == true)) {
+                // console.log("Enable Stage to be skip and jump to next one")
+                await page
+                        .locator('input[type="text"]')
+                        .fill('Jon Doe');
+        }
 
 
-        await page.locator('input[type="text"]').fill('Jon Doe');
+        // await page.locator('input[type="text"]').fill('Jon Doe');
 
-        await page.click("//button[text()='Enter']");
+        // await page.click("//button[text()='Enter']");
 
         // await page.waitForTimeout(6000)
 
@@ -648,6 +659,52 @@ test("009LW-0010 | Validate QR Code Section", async ({ loginPage, liveWallPage, 
 
 })
 
+test("009LW-0010 | Validate Live Selfie Cam", async ({ loginPage, liveWallPage, functions, page }, testInfo) => {
+        // await test.step("Login Admin And land To Home Screen", async () => {
+
+        await page.goto('/admin/#/sign-in')
+        await loginPage.login(data.username, data.password)
+        const title = await page.title();
+        expect(title).toBe('DXP Admin')
+
+        const screenshot = await page.screenshot();
+        await testInfo.attach("login screenshot", {
+                contentType: "image/png",
+                body: screenshot
+        })
+
+
+
+        //click Live Wall Section
+        await liveWallPage.clickLiveWallSection()
+
+        //click VIP Live Selfie Cam Btn
+        await liveWallPage.clickVIPLiveSelfieCamBtn()
+
+        
+        // //click Mobile QR Code
+        // await liveWallPage.()
+
+ 
+        // //click Mobile QR Code
+        // await liveWallPage.()
+
+ 
+        // //click Mobile QR Code
+        // await liveWallPage.()
+
+ 
+        // //click Mobile QR Code
+        // await liveWallPage.()
+
+ 
+        await page.waitForTimeout(3000)
+
+
+
+
+})
+
 test("009LW-0011 | Validate Analytics Section", async ({ loginPage, liveWallPage, functions, page }, testInfo) => {
         // await test.step("Login Admin And land To Home Screen", async () => {
 
@@ -671,8 +728,8 @@ test("009LW-0011 | Validate Analytics Section", async ({ loginPage, liveWallPage
         await liveWallPage.clickAnalyticsBtn()
 
         await page.waitForTimeout(3000)
-        //download Anlytics
-        await liveWallPage.downloadAnlytics()
+        // //download Anlytics
+        // await liveWallPage.downloadAnlytics()
         //click Analytics Page Back Btn
         await liveWallPage.clickAnalyticsPageBackBtn()
         //click Game Stop Btn

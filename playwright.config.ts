@@ -43,9 +43,9 @@ const config: PlaywrightTestConfig = {
         // Tell all tests to load signed-in state from 'storageState.json'.
         // storageState: 'storageState.json',
         viewport: null,
-        headless: false,
+        headless: !true,
         browserName: "chromium",
-        screenshot: "on",
+        screenshot: "off",
         video: "off",
         trace: "on",
         baseURL: "https://qa-1.testingdxp.com/",
@@ -66,8 +66,8 @@ const config: PlaywrightTestConfig = {
         // }
         // ,
         // contextOptions: {
-            //     permissions: ["clipboard-read"]
-            // },
+        //         permissions: ["clipboard-read"]
+        //     },
 
         launchOptions: {
             args: ["--start-maximized"],
@@ -111,7 +111,9 @@ const config: PlaywrightTestConfig = {
                 "007PrizeDrop.test.ts",
                 "008TugOfWar.test.ts",
                 "009LiveWall.test.ts",
-                // "test-1.spec.ts"
+                "010Arcade.test.ts"
+                // "test-2.test.ts"
+                // "clipbord.test.ts"
                 // "tests/03Games/demotugofwar.spec.ts"
                 
                

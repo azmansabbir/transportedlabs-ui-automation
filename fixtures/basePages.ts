@@ -9,6 +9,7 @@ import tugOfWarPage from "@pages/tugOfWar.page"
 import functions from "@testData/functions";
 import prizeDropPage from "@pages/prizeDrop.page";
 import liveWallPage from "@pages/liveWall.page";
+import arcadePage from "@pages/arcade.page";
 
 
 
@@ -24,6 +25,7 @@ const test = baseTest.extend<{
     prizeDropPage: prizeDropPage;
     liveWallPage: liveWallPage;
     functions: functions;
+    arcadePage: arcadePage;
 
 }>({
     functions: async ({ page }, use) => {
@@ -61,7 +63,11 @@ const test = baseTest.extend<{
 
     liveWallPage: async ({ page }, use) => {
         await use(new liveWallPage(page));
+    },
+    arcadePage: async({ page }, use ) =>{
+        await use(new arcadePage(page))
     }
+    
     
     
 })

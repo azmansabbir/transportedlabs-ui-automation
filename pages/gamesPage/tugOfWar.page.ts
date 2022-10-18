@@ -246,7 +246,7 @@ export default class tugOfWarPage {
                 this.page.on("filechooser", async (filechooser) => {
                         await filechooser.setFiles([filePath1])
                 })
-                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-1bfcot9']//div)[1]").first().click();
+                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[1]").click();
 
 
         }
@@ -340,7 +340,7 @@ export default class tugOfWarPage {
         }
 
         async clickTeamNameBoxColorInput() {
-                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-h9vkmt'])[1]")
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-1pqer0i'])[1]")
                 await ele.click()
 
         }
@@ -382,7 +382,7 @@ export default class tugOfWarPage {
 
 
         async clickTeamSelectedMassageBoxColorInput() {
-                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-h9vkmt'])[2]")
+                const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-1pqer0i'])[2]")
                 await ele.click()
 
         }
@@ -628,10 +628,10 @@ export default class tugOfWarPage {
         }
 
         async inputCustomPowerMassage() {
-                let ele = await this.page.frameLocator('iframe').locator("//textarea[@rows='5']").isVisible()
+                let ele = await this.page.frameLocator('iframe').locator("(//textarea[@placeholder='Type message'])[1]").isVisible()
                 if ((ele == true)) {
                         await this.page.frameLocator('iframe')
-                                .locator("//textarea[@rows='5']")
+                                .locator("(//textarea[@placeholder='Type message'])[1]")
                                 .fill("In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate")
                 }
 
@@ -662,11 +662,11 @@ export default class tugOfWarPage {
 
         }
         async enableMobileMessageCheckbox() {
-                let ele = await this.page.frameLocator('iframe').locator("(//span[text()='​'])[2]/following::input").isVisible()
+                let ele = await this.page.frameLocator('iframe').locator("(//input[@type='checkbox'])[4]").isVisible()
                 if ((ele == true)) {
 
                         await this.page.frameLocator('iframe')
-                                .locator("(//span[text()='​'])[2]/following::input")
+                                .locator("(//input[@type='checkbox'])[4]")
                                 .click()
                 }
 
@@ -678,7 +678,7 @@ export default class tugOfWarPage {
                 if ((ele == true)) {
                         await this.page.frameLocator('iframe')
                                 .locator("(//textarea[@placeholder='Type message'])[3]")
-                                .fill("In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate")
+                                .fill("In publishing and graphic design, Lorem ipsum ")
                 }
 
 
@@ -778,11 +778,11 @@ export default class tugOfWarPage {
 
 
         async enableEndgameAdsBtn() {
-                let ele = await this.page.frameLocator('iframe').locator("//input[contains(@class,'PrivateSwitchBase-input MuiSwitch-input')]").isVisible()
+                let ele = await this.page.frameLocator('iframe').locator("(//input[@type='checkbox'])[1]").isVisible()
                 if ((ele == true)) {
                         // console.log("click Custom Countdown Message Checkbox")
                         await this.page.frameLocator('iframe')
-                                .locator("//input[contains(@class,'PrivateSwitchBase-input MuiSwitch-input')]")
+                                .locator("(//input[@type='checkbox'])[1]")
                                 .click()
                 }
 
@@ -813,7 +813,7 @@ export default class tugOfWarPage {
 
         async enableStageForLeaderboard() {
 
-                const ele = await this.page.frameLocator('iframe').locator("//span[contains(@class,'MuiButtonBase-root MuiSwitch-switchBase')]//input[1]")
+                const ele = await this.page.frameLocator('iframe').locator("(//input[@type='checkbox'])[1]")
                 await ele.check()
 
                 // if ((ele == true)) {
@@ -853,7 +853,7 @@ export default class tugOfWarPage {
                 this.page.on("filechooser", async (filechooser) => {
                         await filechooser.setFiles([filePath1])
                 })
-                await this.page.frameLocator('iframe').locator("//div[@class='MuiBox-root css-v2612']").first().click();
+                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[1]").click();
 
 
         }
@@ -877,7 +877,7 @@ export default class tugOfWarPage {
                 this.page.on("filechooser", async (filechooser) => {
                         await filechooser.setFiles([filePath1])
                 })
-                await this.page.frameLocator('iframe').locator("//div[@class='MuiBox-root css-1bfcot9']//div[1]").first().click();
+                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[2]").click();
 
 
         }
@@ -966,6 +966,22 @@ export default class tugOfWarPage {
         }
 
 
+        
+        async clickCustomThankYouMassageCheckBox() {
+                const ele = await this.page.frameLocator('iframe').locator("(//input[@type='checkbox'])[2]")
+                await ele.click()
+
+        }
+
+                
+        async inputCustomThankYouMassageCheckBox() {
+                const ele = await this.page.frameLocator('iframe').locator("(//textarea[@placeholder='Type message'])[2]")
+                await ele.fill("Thank You")
+
+        }
+        
+        
+
         //🔚 Closed Thankyou Stage Section Element 
         //=======================================================
         //▶▶Start Add New Config Section Element    
@@ -986,7 +1002,7 @@ export default class tugOfWarPage {
 
 
         async inputConfigurationName() {
-                const ele = await this.page.frameLocator('iframe').locator('input[type="text"]')
+                const ele = await this.page.frameLocator('iframe').locator('//input[@type="text"]')
                 await ele.fill("Auto")
 
         }
@@ -1028,7 +1044,7 @@ export default class tugOfWarPage {
 
         async clickUploadFontBtn() {
 
-                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-1bfcot9']//div)[1]").click();
+                await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[1]").click();
 
         }
 
@@ -1183,7 +1199,7 @@ export default class tugOfWarPage {
   async clickForUploadMainboardBG() {
 
        
-        const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-1bfcot9']//div)[2]")
+        const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[2]")
         expect(ele).toBeVisible()
         await ele.click({force:true})
 
@@ -1191,7 +1207,7 @@ export default class tugOfWarPage {
 
  async clickForUploadMobileBG() {
 
-        const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-1bfcot9']//div)[3]")
+        const ele = await this.page.frameLocator('iframe').locator("(//div[@class='MuiBox-root css-v2612'])[3]")
         expect(ele).toBeVisible()
         await ele.click({force:true})
 

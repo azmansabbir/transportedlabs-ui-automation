@@ -16,9 +16,9 @@ export default class prizeDropPage {
 
 
         async clickPrizeDropSection() {
-                const locator = this.page.locator('text=Prize Drop')
-                expect(locator).toContainText('Prize Drop')
-                await locator.click()
+                const locator = this.page.locator("//p[text()='Prize Drop']")
+                // expect(locator).toContainText('Prize Drop')
+                await locator.click({force:true})
                 // console.log("Successfully Click To Tug of War Page ")
         }
 
@@ -429,7 +429,7 @@ export default class prizeDropPage {
         async inputTotalRewards() {
                 const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[1]")
                 expect(ele).toBeVisible()
-                await ele.fill("20")
+                await ele.fill("30")
         }
 
 
@@ -437,7 +437,7 @@ export default class prizeDropPage {
         async inputTotalRewardsPerDay() {
                 const ele = await this.page.frameLocator('iframe').locator("(//input[contains(@class,'MuiOutlinedInput-input MuiInputBase-input')])[2]")
                 expect(ele).toBeVisible()
-                await ele.fill("15")
+                await ele.fill("5")
         }
 
         async inputDurationTimeHour() {
@@ -689,7 +689,15 @@ export default class prizeDropPage {
 
         }
 
+        async clickMobileLinkCopyBtn() {
 
+                // Click text=Open Link
+
+                await this.page.frameLocator('iframe').locator('text=Copy Link').click()
+
+
+
+        }
 
 
 

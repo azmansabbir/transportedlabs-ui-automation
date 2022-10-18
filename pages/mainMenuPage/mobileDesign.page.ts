@@ -18,6 +18,13 @@ export default class MobileDesign {
         await ele.click()
     }
 
+    
+   async clickArcadePage() {
+    const ele = this.page.locator('text=Arcade')
+    expect(ele).toContainText('Arcade')
+    await ele.click()
+}
+
     async HomeAvater() {
         await this.page.locator('button').nth(2)
     }

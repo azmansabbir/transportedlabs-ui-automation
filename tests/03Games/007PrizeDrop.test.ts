@@ -1,8 +1,13 @@
 import test, { expect } from "@fixtures/basePages";
+import { devices, chromium } from "@playwright/test";
 import * as data from "@testData/login.cred.json"
 import Env from "@utils/environment";
 import { readFileSync } from 'fs'
+// import clipboard from 'clipboardy';
+const clipboard = require("clipboardy");
+var url: any;
 
+var text: string;
 
 
 
@@ -899,8 +904,99 @@ test("007PD-008 | Validate Game Open Section Functionality", async ({ loginPage,
         })
 
 })
+test("007PD-009 | Validate Game Link Successfully Copy in clipbord", async ({ prizeDropPage, page }) => {
 
-test("007PD-009 | Validate Analytics Section Functionality", async ({ loginPage, tugOfWarPage, prizeDropPage, functions, page, }, testInfo) => {
+    
+                await page.goto("/admin/#/sign-in");
+                await page.fill("input[type='text']", "qa-1")
+                await page.fill("input[type='password']", "mFkTylCDNC")
+
+                await Promise.all([
+                        page.waitForNavigation(),
+                        page.click("button:has-text('Login')")
+                ])
+
+                await prizeDropPage.clickPrizeDropSection()
+
+                //click Mobile Link Btn
+                await prizeDropPage.clickMobileLinkBtn()
+
+
+
+                // let text = await clipboard.read();
+                // console.log('From clipboard: ' + text);
+                await page.frameLocator('iframe').locator("//button[text()='Copy Link']").click({ force: true })
+
+                // url = await clipboard.read();
+                // console.log('From clipboard URL: ' + url);
+                // const newPage = await page.context().newPage();
+                // await newPage.goto(url);
+                // console.log("Title from new tab: " + await newPage.title());
+
+})
+
+test("007PD-0010 | Validate Game Successfully open in mobile screen", async ({ loginPage, prizeDropPage }) => {
+        const browser = await chromium.launch({ headless: false });
+        const context = await browser.newContext({ ...devices["Pixel 5"], permissions: ["camera"] });
+        const page = await context.newPage();
+
+        await page.goto("/admin/#/sign-in");
+        await page.fill("input[type='text']", "qa-1")
+        await page.fill("input[type='password']", "mFkTylCDNC")
+    
+        await Promise.all([
+            page.waitForNavigation(),
+            page.click("button:has-text('Login')")
+    ])
+
+
+        await page.click("//p[text()='Prize Drop']")
+
+        await page.frameLocator('iframe').locator('text=AutoStart >> button').nth(1).click();
+
+
+//     await page.waitForTimeout(3000)
+//         await prizeDropPage.clickPrizeDropSection()
+
+        //click Mobile Link Btn
+        // await prizeDropPage.clickMobileLinkBtn()
+
+        const [page1] = await Promise.all([
+                page.waitForEvent('popup'),
+                page.frameLocator('iframe').locator('text=Open Link').click()
+        ]);
+
+
+      
+
+        await page1.click("//p[text()='USER PROFILE']");
+
+        await page1.waitForTimeout(5000)
+
+
+        await page1.click("//p[text()='RULES']");
+        await page1.waitForTimeout(6000)
+
+
+        await page1.click("//p[text()='HOW TO PLAY']");
+        await page1.waitForTimeout(6000)
+
+
+
+        await page1.click("//button[@value='prize']");
+
+        await page1.waitForTimeout(5000)
+
+        await page1.click("//p[text()='HOME']");
+        await page1.waitForTimeout(2000)
+
+        // await page.locator("//button[text()='START']").click({force:true})
+
+
+
+})
+
+test("007PD-0011 | Validate Analytics Section Functionality", async ({ loginPage, tugOfWarPage, prizeDropPage, functions, page, }, testInfo) => {
 
         await test.step("Login Admin And land To Home Screen", async () => {
 
@@ -948,7 +1044,7 @@ test("007PD-009 | Validate Analytics Section Functionality", async ({ loginPage,
                 //         page.frameLocator('iframe').locator('text=Export').click()
                 // ]);
 
-                await prizeDropPage.downloadAnlytics()
+                // await prizeDropPage.downloadAnlytics()
 
                 await page.waitForTimeout(6000)
 
@@ -957,7 +1053,7 @@ test("007PD-009 | Validate Analytics Section Functionality", async ({ loginPage,
         })
 
 })
-test("007PD-00 | Validate Game Delete Functionality", async ({ loginPage, tugOfWarPage, prizeDropPage, functions, page, }, testInfo) => {
+test("007PD-012 | Validate Game Delete Functionality", async ({ loginPage, tugOfWarPage, prizeDropPage, functions, page, }, testInfo) => {
 
         await test.step("Login Admin And land To Home Screen", async () => {
 

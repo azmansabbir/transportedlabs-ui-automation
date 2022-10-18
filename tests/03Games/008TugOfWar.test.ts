@@ -108,7 +108,7 @@ test("Verify All Stage Section And Game Design on New Config", async ({ loginPag
                 await tugOfWarPage.deleteUploadedSponsorLogo()
                 await page.waitForTimeout(3000)
 
-                await tugOfWarPage.clickVideoUploadCheckbox()
+                // await tugOfWarPage.clickVideoUploadCheckbox()
                 //upload Sponsor Logo
                 await tugOfWarPage.uploadSponsorLogo()
 
@@ -124,7 +124,7 @@ test("Verify All Stage Section And Game Design on New Config", async ({ loginPag
                 // await tugOfWarPage.uploadTitleBackgroundImage()
                 // await page.waitForTimeout(6000)
 
-               
+
 
 
 
@@ -347,19 +347,21 @@ test("Verify All Stage Section And Game Design on New Config", async ({ loginPag
                 await tugOfWarPage.enableCustomPowerMessageCheckbox()
 
 
-                //input Custom Power Massage
-                await tugOfWarPage.inputCustomPowerMassage()
-
                 //enable Mainboard Message Checkbox
                 await tugOfWarPage.enableMainboardMessageCheckbox()
 
-                //input Mainboard Massage
-                await tugOfWarPage.inputMainboardMassage()
 
 
                 //enable Mobile Message Checkbox
                 await tugOfWarPage.enableMobileMessageCheckbox()
 
+
+                //input Custom Power Massage
+                await tugOfWarPage.inputCustomPowerMassage()
+
+
+                //input Mainboard Massage
+                await tugOfWarPage.inputMainboardMassage()
 
                 //input Mobile Massage
                 await tugOfWarPage.inputMobileMassage()
@@ -431,7 +433,7 @@ test("Verify All Stage Section And Game Design on New Config", async ({ loginPag
         await test.step("008TOFW-007 | Varify Leaderboard Section", async () => {
 
 
-                //click Leaderboard Page
+                //click Leaderboard Leaderboard Head
                 await tugOfWarPage.clickLeaderboardPage()
 
                 await page.waitForTimeout(3000)
@@ -444,6 +446,12 @@ test("Verify All Stage Section And Game Design on New Config", async ({ loginPag
                 //click Leaderboard Image Text
                 await tugOfWarPage.clickLeaderboardImageText()
 
+                //delete Leaderboard Header Uploaded Image
+                await tugOfWarPage.deleteLeaderboardHeaderUploadedImage()
+
+                //upload Leaderboard Header Image
+                await tugOfWarPage.uploadLeaderboardHeaderImage()
+
                 //delete Uploaded Leaderboard BG
                 await tugOfWarPage.deleteUploadedLeaderboardBG()
 
@@ -454,11 +462,7 @@ test("Verify All Stage Section And Game Design on New Config", async ({ loginPag
                 await page.waitForTimeout(3000)
 
 
-                //delete Leaderboard Header Uploaded Image
-                await tugOfWarPage.deleteLeaderboardHeaderUploadedImage()
 
-                //upload Leaderboard Header Image
-                await tugOfWarPage.uploadLeaderboardHeaderImage()
 
                 await page.waitForTimeout(3000)
 
@@ -505,14 +509,20 @@ test("Verify All Stage Section And Game Design on New Config", async ({ loginPag
                 //input AutoReset Timer
                 await tugOfWarPage.inputAutoResetTimer()
 
-                await page.waitForTimeout(3000)
+                //click Custom Thank You Massage CheckBox
+                await tugOfWarPage.clickCustomThankYouMassageCheckBox()
+
+                //input Custom Thank You Massage CheckBox
+                await tugOfWarPage.inputCustomThankYouMassageCheckBox()
+
+                await page.waitForTimeout(2000)
 
 
 
 
         })
 
-  
+
 
 
 
@@ -549,105 +559,105 @@ test("Verify Game Design", async ({ loginPage, tugOfWarPage, functions, page, },
 
 
                         await tugOfWarPage.clickGameDesignBtn()
-        
+
                         await page.waitForTimeout(3000)
-        
+
                         await functions.fontUploadFunction()
                         await page.waitForTimeout(1000)
-        
+
                         await tugOfWarPage.clickUploadFontBtn()
-        
+
                         await page.waitForTimeout(3000)
-        
-        
-        
-        
+
+
+
+
                         //click Primary Color Picker Btn
                         await tugOfWarPage.clickPrimaryColorPickerBtn()
-        
+
                         //input Primary RGB First Color
                         await tugOfWarPage.inputPrimaryRGBFirstColor()
-        
+
                         //input Primary RGB Second Color
                         await tugOfWarPage.inputPrimaryRGBSecondColor()
-        
+
                         //input Primary RGB Third Color
                         await tugOfWarPage.inputPrimaryRGBThirdColor()
-        
+
                         //input Primary Color Opacity
                         await tugOfWarPage.inputPrimaryColorOpacity()
-        
+
                         //input Primary Color HEX
                         await tugOfWarPage.inputPrimaryColorHEX()
-        
+
                         //clic Save Btn
                         await tugOfWarPage.clicSaveBtn()
-        
+
                         //click Secondary Color Picker Btn
                         await tugOfWarPage.clickSecondaryColorPickerBtn()
-        
+
                         await page.waitForTimeout(3000)
-        
-        
+
+
                         //input Secondary RGB First Color
                         await tugOfWarPage.inputSecondaryRGBFirstColor()
-        
+
                         //input Secondary RGB Second Color
                         await tugOfWarPage.inputSecondaryRGBSecondColor()
-        
+
                         //input Secondary RGB Third Color
                         await tugOfWarPage.inputSecondaryRGBThirdColor()
-        
+
                         //input Secondary Color Opacity
                         await tugOfWarPage.inputSecondaryColorOpacity()
-        
+
                         //input Secondary Color HEX
                         await tugOfWarPage.inputSecondaryColorHEX()
                         //clic Save Btn
                         await tugOfWarPage.clicSaveBtn()
-        
+
                         //click Text Color Picker Btn
                         await tugOfWarPage.clickTextColorPickerBtn()
-        
+
                         await page.waitForTimeout(3000)
-        
-        
+
+
                         //input Text RGB First Color
                         await tugOfWarPage.inputTextRGBFirstColor()
-        
-        
+
+
                         //input Text RGB SecondColor
                         await tugOfWarPage.inputTextRGBSecondColor()
-        
-        
+
+
                         //input Text RGB Third Color
                         await tugOfWarPage.inputTextRGBThirdColor()
-        
-        
+
+
                         //input Text Color Opacity
                         await tugOfWarPage.inputTextColorOpacity()
-        
+
                         //input Text Color HEX
                         await tugOfWarPage.inputTextColorHEX()
-        
+
                         //clic Save Btn
                         await tugOfWarPage.clicSaveBtn()
-        
-        
+
+
                         //function for banner upload
                         await functions.bannerImageUploadFunction()
                         //click For Upload Mainboard BG
                         await tugOfWarPage.clickForUploadMainboardBG()
                         await page.waitForTimeout(6000)
-        
+
                         //function for banner upload
                         await functions.bannerImageUploadFunction()
                         //click For Upload Mobile BG
                         await tugOfWarPage.clickForUploadMobileBG()
-        
-        
+
+
                         await page.waitForTimeout(6000)
-        
+
                 })
 
         })

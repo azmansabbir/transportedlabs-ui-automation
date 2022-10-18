@@ -1,124 +1,60 @@
-import { test, expect } from '@playwright/test';
+import { Browser, BrowserContext, Page, chromium } from "@playwright/test";
 
-test('test', async ({ page }) => {
+describe("Window handling", () => {
 
-  // Go to https://qa-1.testingdxp.com//admin/#/home/live-wall
-  await page.goto('https://qa-1.testingdxp.com//admin/#/home/live-wall');
+    let browser: Browser;
+    let context: BrowserContext;
+    let page: Page;
+    beforeAll(async () => {
+        browser = await chromium.launch({
+            headless: false
+        });
+        context = await browser.newContext()
+        page = await context.newPage();
+        await page.goto("https://letcode.in/windows")
+    })
 
-  // Go to https://qa-1.testingdxp.com//admin/#/splash
-  await page.goto('https://qa-1.testingdxp.com//admin/#/splash');
+    test("Home Page", async () => {
+        console.log(await page.title());
+        expect(await page.title()).toBe("Window handling - LetCode");
+    })
 
-  // Go to https://qa-1.testingdxp.com//admin/#/sign-in
-  await page.goto('https://qa-1.testingdxp.com//admin/#/sign-in');
+    test("Single page handling", async () => {
+        const [newWindow] = await Promise.all([
+            context.waitForEvent("page"),
+            await page.click("#home")
+        ])
+        await newWindow.waitForLoadState();
+        expect(newWindow.url()).toContain("test");
+        await newWindow.click('"Log in"');
+        await newWindow.waitForNavigation();
+        expect(newWindow.url()).toContain("signin");
+        // await newWindow.close();
+        await page.bringToFront();
+        await page.click('"LetXPath"');
+    })
+    test("Multipage handling", async () => {
+        const [multipage] = await Promise.all([
+            context.waitForEvent("page"),
+            await page.click("#multi")
+        ])
+        await multipage.waitForLoadState();
+        const allwindows = page.context().pages();
+        console.log("no.of windows: " + allwindows.length);
+        allwindows.forEach(page => {
+            console.log(page.url());
+        });
+        await allwindows[1].bringToFront();
+        allwindows[1].on("dialog", (dialog) => {
+            console.log('Message: ' + dialog.message());
+            dialog.accept();
+        })
+        await allwindows[1].click("id=accept")
 
-  // Click input[type="text"]
-  await page.locator('input[type="text"]').click();
-
-  // Fill input[type="text"]
-  await page.locator('input[type="text"]').fill('qa-1');
-
-  // Click input[type="password"]
-  await page.locator('input[type="password"]').click();
-
-  // Fill input[type="password"]
-  await page.locator('input[type="password"]').fill('mFkTylCDNC');
-
-  // Click button:has-text("Login")
-  await page.locator('button:has-text("Login")').click();
-  await expect(page).toHaveURL('https://qa-1.testingdxp.com//admin/#/home/live-wall');
-
-  // Click button >> nth=1
-  await page.locator('button').nth(1).click();
-
-  // Click text=Live Wall
-  await page.locator('text=Live Wall').click();
-  await expect(page).toHaveURL('https://qa-1.testingdxp.com//admin/#/home/live-wall');
-
-  // Click text=STOP
-  await page.frameLocator('iframe').locator('text=STOP').click();
-
-  // Click text=START
-  await page.frameLocator('iframe').locator('text=START').click();
-
-  // Click .MuiButtonBase-root >> nth=0
-  await page.frameLocator('iframe').locator('.MuiButtonBase-root').first().click();
-
-  // Click text=Open Link
-  const [page1] = await Promise.all([
-    page.waitForEvent('popup'),
-    page.frameLocator('iframe').locator('text=Open Link').click()
-  ]);
-
-  // Click #app
-  await page1.locator('#app').click({
-    button: 'right'
-  });
-  await expect(page1).toHaveURL('https://qa-1.testingdxp.com/?gameId=live-wall#/username');
-
-  // Fill input[type="text"]
-  await page1.locator('input[type="text"]').fill('jon doe');
-  await expect(page1).toHaveURL('https://qa-1.testingdxp.com/?gameId=live-wall#/game');
-
-  // Click [aria-label="Close"]
-  await page.frameLocator('iframe').locator('[aria-label="Close"]').click();
-
-  // Click text=Refresh
-  await page.frameLocator('iframe').locator('text=Refresh').click();
-
-  // Click text=Refresh
-  await page.frameLocator('iframe').locator('text=Refresh').click();
-
-  // Click text=Noise Meter
-  await page.locator('text=Noise Meter').click();
-  await expect(page).toHaveURL('https://qa-1.testingdxp.com//admin/#/home/noise-meter');
-
-  // Click text=Live Wall
-  await page.locator('text=Live Wall').click();
-  await expect(page).toHaveURL('https://qa-1.testingdxp.com//admin/#/home/live-wall');
-
-  // Click text=Refresh
-  await page.frameLocator('iframe').locator('text=Refresh').click();
-
-  // Click text=CueLiveDelete >> button >> nth=0
-  await page.frameLocator('iframe').locator('text=CueLiveDelete >> button').first().click();
-
-  // Click button:has-text("Cue")
-  await page.frameLocator('iframe').locator('button:has-text("Cue")').click();
-
-  // Click text=Open Link
-  const [page2] = await Promise.all([
-    page.waitForEvent('popup'),
-    page.frameLocator('iframe').locator('text=Open Link').click()
-  ]);
-
-  // Go to https://qa-1.testingdxp.com/games/live-wall/cue/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzQwNDBlNTUyM2NmMWNlZDE3MzcyZjciLCJyb2xlIjoyLCJjbGllbnRJZCI6InFhLTEiLCJpYXQiOjE2NjU0ODc3MzcsImV4cCI6MTY2ODA3OTczN30.t_Q9fz-ibxDCa25xXNykyQNxtPe3mkvHh6fuYdizkGY#/main
-  await page2.goto('https://qa-1.testingdxp.com/games/live-wall/cue/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MzQwNDBlNTUyM2NmMWNlZDE3MzcyZjciLCJyb2xlIjoyLCJjbGllbnRJZCI6InFhLTEiLCJpYXQiOjE2NjU0ODc3MzcsImV4cCI6MTY2ODA3OTczN30.t_Q9fz-ibxDCa25xXNykyQNxtPe3mkvHh6fuYdizkGY#/main');
-
-  // Click text=LiveAlertUncue >> button >> nth=0
-  await page2.locator('text=LiveAlertUncue >> button').first().click();
-
-  // Click text=Next
-  await page2.locator('text=Next').click();
-
-  // Click [aria-label="Close"]
-  await page.frameLocator('iframe').locator('[aria-label="Close"]').click();
-
-  // Click text=Output
-  await page.frameLocator('iframe').locator('text=Output').click();
-
-  // Click text=Open Link
-  const [page3] = await Promise.all([
-    page.waitForEvent('popup'),
-    page.frameLocator('iframe').locator('text=Open Link').click()
-  ]);
-
-  // Go to https://qa-1.testingdxp.com/games/live-wall/mainboard/#/home
-  await page3.goto('https://qa-1.testingdxp.com/games/live-wall/mainboard/#/home');
-
-  // Click [aria-label="Close"]
-  await page.frameLocator('iframe').locator('[aria-label="Close"]').click();
-
-  // Click text=CueLiveDelete >> button >> nth=1
-  await page.frameLocator('iframe').locator('text=CueLiveDelete >> button').nth(1).click();
-
-});
+    })
+    afterAll(async () => {
+        await page.close()
+        await context.close()
+        await browser.close()
+    })
+})

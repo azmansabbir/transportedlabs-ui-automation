@@ -202,11 +202,11 @@ export default class menuPage {
         async enabledHomeIconCheckBox() {
 
                              
-                        const ele = await this.page.locator("(//input[@type='checkbox'])[1]").isVisible()
+                        const ele = await this.page.locator("(//input[@type='checkbox'])[2]").isVisible()
                            if ((ele == true)) {
                                 // console.log("enabled Home Icon Check Box")
                                 await this.page
-                                        .locator("(//input[@type='checkbox'])[1]")
+                                        .locator("(//input[@type='checkbox'])[2]")
                                                 .click()
                            }        
                    
@@ -222,11 +222,11 @@ export default class menuPage {
         //enabled prize button 
         async enabledPrizeIconCheckBox() {
 
-                const ele = await this.page.locator("(//input[@type='checkbox'])[2]").isVisible()
+                const ele = await this.page.locator("(//input[@type='checkbox'])[3]").isVisible()
                            if ((ele == true)) {
                                 // console.log("enabled Prize Icon CheckBox")
                                 await this.page
-                                        .locator("(//input[@type='checkbox'])[2]")
+                                        .locator("(//input[@type='checkbox'])[3]")
                                                 .click()
                            }  
 
@@ -240,11 +240,11 @@ export default class menuPage {
         //enabled how to play icon
         async enabledHowToPlayIconCheckBox() {
 
-                const ele = await this.page.locator("(//input[@type='checkbox'])[3]").isVisible()
+                const ele = await this.page.locator("(//input[@type='checkbox'])[4]").isVisible()
                            if ((ele == true)) {
                                 // console.log("enabled Prize Icon CheckBox")
                                 await this.page
-                                        .locator("(//input[@type='checkbox'])[3]")
+                                        .locator("(//input[@type='checkbox'])[4]")
                                                 .click()
                            }  
 
@@ -257,11 +257,11 @@ export default class menuPage {
 
         //enabled rules icon checkbox
         async enabledRulesIconCheckBox() {
-                const ele = await this.page.locator("(//input[@type='checkbox'])[4]").isVisible()
+                const ele = await this.page.locator("(//input[@type='checkbox'])[5]").isVisible()
                            if ((ele == true)) {
                                 // console.log("enabled rules Icon CheckBox")
                                 await this.page
-                                        .locator("(//input[@type='checkbox'])[4]")
+                                        .locator("(//input[@type='checkbox'])[5]")
                                                 .click()
                            }  
 
@@ -275,11 +275,11 @@ export default class menuPage {
         //enabled user profile icon checkbox
         async enabledUserProfileIconCheckBox() {
 
-                const ele = await this.page.locator("(//input[@type='checkbox'])[5]").isVisible()
+                const ele = await this.page.locator("(//input[@type='checkbox'])[6]").isVisible()
                 if ((ele == true)) {
                 //      console.log("enabled User Profile Icon CheckBox")
                      await this.page
-                             .locator("(//input[@type='checkbox'])[5]")
+                             .locator("(//input[@type='checkbox'])[6]")
                                      .click()
                 }  
 
